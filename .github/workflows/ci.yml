@@ -38,3 +38,29 @@ jobs:
           name: surefire-reports
           path: "target/surefire-reports/"
           retention-days: 14
+
+  native-test:
+    name: native tests (GraalVM 25)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: "25"
+          distribution: graalvm
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          cache: maven
+
+      # unit and golden tests compiled and run as a native image
+      - name: Native tests
+        run: ./mvnw --batch-mode --no-transfer-progress -Pnative test
+
+      - name: Upload native test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-test-reports
+          path: "target/native-test-reports/"
+          retention-days: 14

@@ -12,7 +12,11 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
 - `./mvnw verify`: unit tests, enforcer, Spotless check (palantir-java-format) and javadoc lint.
   Must pass before any commit.
 - `./mvnw spotless:apply`: fix formatting. Run it whenever `verify` fails on Spotless.
-- CI: `ci.yml` runs `verify` on ubuntu-24.04.
+- `./mvnw -Pnative package`: builds the `target/yfin` native image (`--no-fallback`, `-Os`).
+  `./mvnw -Pnative test`: the test suite as a native image. Both need GraalVM 25; locally:
+  `JAVA_HOME=~/.sdkman/candidates/java/25-graal ./mvnw -Pnative test`. Run it after changes to
+  dependencies, resources or anything picocli reads reflectively.
+- CI: `ci.yml` runs `verify` and a GraalVM `-Pnative test` job on ubuntu-24.04.
 
 ## Layout
 
@@ -38,7 +42,11 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
 - GraalVM: no reflection, classpath scanning, dynamic proxies or Jackson databind in our own code.
   picocli's reflection is covered by the `picocli-codegen` annotation processor, which generates
   `META-INF/native-image/picocli-generated/...` at compile time; there is no hand-written
-  metadata.
+  main metadata. The only hand-written file is test-scoped
+  (`src/test/resources/META-INF/native-image/.../yfin-cli-tests`): it includes the library's
+  `fixtures/**` in the native test image.
+- `slf4j-nop` is a runtime dependency so yfin-core's slf4j-api doesn't print the
+  "no providers" warning on stderr.
 - Lookup tables are Java constants, not runtime resources.
 - Every package that contains classes has a `package-info.java` with `@NullMarked` (JSpecify).
 - Javadoc lint is `all,-missing`, and its warnings fail the build. Watch for broken `{@link}`
