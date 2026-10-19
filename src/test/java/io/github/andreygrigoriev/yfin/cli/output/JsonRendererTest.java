@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.List;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
 class JsonRendererTest {
@@ -87,5 +88,15 @@ class JsonRendererTest {
                         spec, List.of(new N(Double.POSITIVE_INFINITY), new N(Double.NEGATIVE_INFINITY)), o)))
                 .contains("\"ratio\": \"Infinity\"")
                 .contains("\"ratio\": \"-Infinity\"");
+    }
+
+    @Test
+    void booleansAreJsonBooleans() {
+        record F(@Nullable Boolean value) {}
+        Spec<F> spec = Spec.<F>builder().col("itm", F::value, Kind.BOOLEAN).build();
+        assertThat(capture(o -> JsonRenderer.list(spec, List.of(new F(true), new F(false), new F(null)), o)))
+                .contains("\"itm\": true")
+                .contains("\"itm\": false")
+                .contains("\"itm\": null");
     }
 }

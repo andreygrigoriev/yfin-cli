@@ -85,7 +85,9 @@ final class JsonRenderer {
             return;
         }
         String raw = Values.raw(kind, value);
-        if (kind.numeric() && !raw.endsWith("Infinity")) {
+        if (kind instanceof Kind.Bool) {
+            g.writeBoolean(Boolean.parseBoolean(raw));
+        } else if (kind.numeric() && !raw.endsWith("Infinity")) {
             g.writeNumber(raw);
         } else {
             g.writeString(raw);

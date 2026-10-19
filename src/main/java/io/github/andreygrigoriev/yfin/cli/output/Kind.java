@@ -3,7 +3,8 @@ package io.github.andreygrigoriev.yfin.cli.output;
 /**
  * How a column's values are formatted. One kind drives all three formats; see {@link Values}.
  */
-public sealed interface Kind permits Kind.Text, Kind.Integer, Kind.Decimal, Kind.Percent, Kind.Date, Kind.Timestamp {
+public sealed interface Kind
+        permits Kind.Text, Kind.Integer, Kind.Decimal, Kind.Percent, Kind.Bool, Kind.Date, Kind.Timestamp {
     /** Free text, printed as is. */
     Kind TEXT = new Text();
 
@@ -12,6 +13,9 @@ public sealed interface Kind permits Kind.Text, Kind.Integer, Kind.Decimal, Kind
 
     /** A fraction ({@code 0.1234}) shown as a percentage ({@code 12.34%}) in tables. */
     Kind PERCENT = new Percent();
+
+    /** A flag: {@code true} or {@code false} in tables and CSV, a JSON boolean. */
+    Kind BOOLEAN = new Bool();
 
     /** A calendar date. */
     Kind DATE = new Date();
@@ -60,6 +64,9 @@ public sealed interface Kind permits Kind.Text, Kind.Integer, Kind.Decimal, Kind
 
     /** See {@link #PERCENT}. */
     record Percent() implements Kind {}
+
+    /** See {@link #BOOLEAN}. */
+    record Bool() implements Kind {}
 
     /** See {@link #DATE}. */
     record Date() implements Kind {}

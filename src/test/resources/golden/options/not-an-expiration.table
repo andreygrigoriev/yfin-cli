@@ -1,0 +1,24 @@
+exit: 2
+--- stdout
+--- stderr
+Expiration `2026-10-13` cannot be found. Available expirations are: [2026-10-12, 2026-10-14, 2026-10-16, 2026-10-19, 2026-10-21, 2026-10-23, 2026-10-30, 2026-11-06, 2026-11-13, 2026-11-20, 2026-11-27, 2026-12-18, 2027-01-15, 2027-02-19, 2027-03-19, 2027-04-16, 2027-06-17, 2027-09-17, 2027-12-17, 2028-01-21, 2028-03-17, 2028-06-16, 2028-12-15, 2029-01-19]
+Usage: yfin options [-hV] [--no-cache] [--no-color] [--verbose] [--expiry=DATE]
+                    [--format=FORMAT] [--retries=N] [--timeout=DURATION]
+                    [--calls | --puts] SYMBOL
+Option expiration dates, or the option chain of one expiration.
+      SYMBOL               Ticker symbol, e.g. AAPL.
+      --calls              Only the calls.
+      --expiry=DATE        Expiration date (YYYY-MM-DD) whose contracts to
+                             print; without it, the expirations.
+      --format=FORMAT      Output format: table, csv or json (default: table).
+  -h, --help               Show this help message and exit.
+      --no-cache           Don't read or write the on-disk cache (cookie,
+                             crumb, timezones).
+      --no-color           Never colour table output.
+      --puts               Only the puts.
+      --retries=N          Retries on rate limits and server errors; 0 disables
+                             (default: 2).
+      --timeout=DURATION   Timeout per request, e.g. 30s or 2m (default: 30s).
+  -V, --version            Print version information and exit.
+      --verbose            Print the cause chain of errors and stack traces of
+                             unexpected ones.

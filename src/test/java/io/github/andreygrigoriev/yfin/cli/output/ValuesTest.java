@@ -28,8 +28,9 @@ class ValuesTest {
 
     @Test
     void missingIsDashInTableAndEmptyRaw() {
-        for (Kind kind :
-                new Kind[] {Kind.TEXT, Kind.INTEGER, Kind.decimal(2), Kind.PERCENT, Kind.DATE, Kind.TIMESTAMP}) {
+        for (Kind kind : new Kind[] {
+            Kind.TEXT, Kind.INTEGER, Kind.decimal(2), Kind.PERCENT, Kind.BOOLEAN, Kind.DATE, Kind.TIMESTAMP
+        }) {
             assertThat(Values.table(kind, null)).as("%s", kind).isEqualTo("—");
             assertThat(Values.table(kind, Double.NaN)).as("%s", kind).isEqualTo("—");
             assertThat(Values.raw(kind, null)).as("%s", kind).isEmpty();
@@ -155,7 +156,17 @@ class ValuesTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("String");
         assertThatThrownBy(() -> Values.raw(Kind.DATE, 5)).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> Values.table(Kind.BOOLEAN, "yes")).isInstanceOf(IllegalArgumentException.class);
         assertThatThrownBy(() -> Values.raw(Kind.TIMESTAMP, LocalDate.of(2026, 1, 1)))
                 .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    void booleansAreWordsInBothForms() {
+        assertThat(Values.table(Kind.BOOLEAN, true)).isEqualTo("true");
+        assertThat(Values.table(Kind.BOOLEAN, false)).isEqualTo("false");
+        assertThat(Values.raw(Kind.BOOLEAN, true)).isEqualTo("true");
+        assertThat(Values.raw(Kind.BOOLEAN, false)).isEqualTo("false");
+        assertThat(Kind.BOOLEAN.numeric()).isFalse();
     }
 }

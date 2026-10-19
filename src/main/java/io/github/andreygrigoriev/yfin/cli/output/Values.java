@@ -75,6 +75,7 @@ public final class Values {
                 double d = number(kind, value).doubleValue();
                 yield Double.isInfinite(d) ? infinity(d) + "%" : fixed(d * 100, 2) + "%";
             }
+            case Kind.Bool b -> bool(value).toString();
             case Kind.Date dt -> date(value).toString();
             case Kind.Timestamp ts -> TABLE_TIMESTAMP.format(timestamp(value));
         };
@@ -101,6 +102,7 @@ public final class Values {
             }
             case Kind.Decimal dec -> plain(number(kind, value));
             case Kind.Percent p -> plain(number(kind, value));
+            case Kind.Bool b -> bool(value).toString();
             case Kind.Date dt -> date(value).toString();
             case Kind.Timestamp ts -> {
                 ZonedDateTime z = timestamp(value);
@@ -178,6 +180,13 @@ public final class Values {
 
     private static String infinity(double d) {
         return d > 0 ? "∞" : "-∞";
+    }
+
+    private static Boolean bool(@Nullable Object value) {
+        if (value instanceof Boolean b) {
+            return b;
+        }
+        throw mismatch(Kind.BOOLEAN, value);
     }
 
     private static LocalDate date(@Nullable Object value) {

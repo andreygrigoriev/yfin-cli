@@ -13,6 +13,7 @@ import io.github.andreygrigoriev.yfin.cli.cmd.HistoryCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.HoldersCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.InfoCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.IsinCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.OptionsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.PriceTargetCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.QuoteCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.RecommendationsCommand;
@@ -64,7 +65,8 @@ import picocli.CommandLine.Spec;
             RecommendationsCommand.class,
             UpgradesCommand.class,
             PriceTargetCommand.class,
-            EarningsCommand.class
+            EarningsCommand.class,
+            OptionsCommand.class
         },
         versionProvider = YfinCommand.VersionProvider.class,
         description = "Yahoo Finance market data from the command line.")

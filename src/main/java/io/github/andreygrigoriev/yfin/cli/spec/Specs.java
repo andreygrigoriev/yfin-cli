@@ -30,6 +30,7 @@ import io.github.andreygrigoriev.yfin.model.Sustainability;
 import io.github.andreygrigoriev.yfin.model.TickerInfo;
 import io.github.andreygrigoriev.yfin.model.UpgradeDowngrade;
 import io.github.andreygrigoriev.yfin.request.Interval;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
@@ -433,6 +434,32 @@ public final class Specs {
             .col("surprise_pct", EarningsDate::surprisePercent, RATIO)
             .build();
 
+    /** Option expiration dates, as {@code options} without {@code --expiry} prints them. */
+    public static final Spec<LocalDate> OPTION_EXPIRATION =
+            Spec.<LocalDate>builder().col("expiry", d -> d, Kind.DATE).build();
+
+    /**
+     * Option contracts, as {@code options --expiry} prints them. {@code change_pct} is a fraction
+     * like the other percentages (Yahoo gives percent); {@code implied_volatility} is a fraction.
+     */
+    public static final Spec<OptionRow> OPTION_CONTRACT = Spec.<OptionRow>builder()
+            .col("contract_symbol", r -> r.contract().contractSymbol(), Kind.TEXT)
+            .col("type", OptionRow::type, Kind.TEXT)
+            .col("strike", r -> r.contract().strike(), PRICE)
+            .col("last", r -> r.contract().lastPrice(), PRICE)
+            .col("bid", r -> r.contract().bid(), PRICE)
+            .col("ask", r -> r.contract().ask(), PRICE)
+            .col("change", r -> r.contract().change(), PRICE)
+            .col("change_pct", r -> fraction(r.contract().percentChange()), Kind.PERCENT)
+            .col("volume", r -> r.contract().volume(), Kind.INTEGER)
+            .col("open_interest", r -> r.contract().openInterest(), Kind.INTEGER)
+            .col("implied_volatility", r -> r.contract().impliedVolatility(), Kind.PERCENT)
+            .col("in_the_money", r -> r.contract().inTheMoney(), Kind.BOOLEAN)
+            .col("last_trade", r -> r.contract().lastTradeDate(), Kind.TIMESTAMP)
+            .col("currency", r -> r.contract().currency(), Kind.TEXT)
+            .col("expiry", OptionRow::expiry, Kind.DATE)
+            .build();
+
     private Specs() {}
 
     /**
@@ -482,6 +509,11 @@ public final class Specs {
     private static @Nullable Double categoryOperation(FundsData fund, String key) {
         FundsData.Metric metric = fund.operations().get(key);
         return metric == null ? null : metric.categoryAverage();
+    }
+
+    /** {@code 2.97} (percent) as the fraction {@code 0.0297}, shifted exactly; {@code null} for NaN. */
+    private static @Nullable BigDecimal fraction(double percent) {
+        return Double.isNaN(percent) ? null : BigDecimal.valueOf(percent).movePointLeft(2);
     }
 
     private static @Nullable String joined(List<String> values) {
