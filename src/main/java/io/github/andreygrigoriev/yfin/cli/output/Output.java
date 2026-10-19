@@ -79,6 +79,52 @@ public final class Output {
         }
     }
 
+    /**
+     * Prints several lists. A table prints each non-empty list, with a blank line between them;
+     * CSV prints each list (header and rows), with a blank line between them; JSON prints one
+     * object keyed by section name, each value an array.
+     *
+     * @param sections the lists, in output order
+     */
+    public void lists(List<Section<?>> sections) {
+        switch (format) {
+            case TABLE -> {
+                boolean printed = false;
+                for (Section<?> section : sections) {
+                    if (section.rows().isEmpty()) {
+                        continue;
+                    }
+                    if (printed) {
+                        out.println();
+                    }
+                    tableList(section);
+                    printed = true;
+                }
+                out.flush();
+                if (!printed) {
+                    noData();
+                }
+            }
+            case CSV -> {
+                for (int i = 0; i < sections.size(); i++) {
+                    if (i > 0) {
+                        out.println();
+                    }
+                    csvList(sections.get(i));
+                }
+            }
+            case JSON -> JsonRenderer.lists(sections, out);
+        }
+    }
+
+    private <T> void tableList(Section<T> section) {
+        table.list(section.spec(), section.rows(), out);
+    }
+
+    private <T> void csvList(Section<T> section) {
+        CsvRenderer.list(section.spec(), section.rows(), out);
+    }
+
     private void noData() {
         if (terminal.tty()) {
             err.println(NO_DATA);

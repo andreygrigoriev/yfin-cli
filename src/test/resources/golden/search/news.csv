@@ -1,0 +1,10 @@
+exit: 0
+--- stdout
+symbol,short_name,long_name,type,quote_type,exchange,exchange_name,sector,industry,score
+TECH,Bio-Techne Corp,Bio-Techne Corporation,Equity,EQUITY,NMS,NASDAQ,Healthcare,Biotechnology,10107500
+MU,"Micron Technology, Inc.","Micron Technology, Inc.",Equity,EQUITY,NMS,NASDAQ,Technology,Semiconductors,387557
+SPCX,Space Exploration Technologies ,Space Exploration Technologies Corp.,Equity,EQUITY,NMS,NASDAQ,Industrials,Aerospace & Defense,316297
+
+time,title,publisher,type,related_tickers,link,summary,id
+2026-10-12T18:32:00Z,AI Can Help Small-Caps Beat Megacap Tech Rivals. That Gives This ETF 20% Upside.,Barrons.com,STORY,"IWM, ^IXIC, ^GSPC",https://finance.yahoo.com/m/bb404e5d-d36b-3d4f-9523-a920aac9d48c/ai-can-help-small-caps-beat.html,,bb404e5d-d36b-3d4f-9523-a920aac9d48c
+2026-10-12T18:19:41Z,Alphabet Makes Surprise Move Beyond Its Core Tech Business,GuruFocus.com,STORY,"GOOG, GOOG",https://finance.yahoo.com/healthcare/articles/alphabet-makes-surprise-move-beyond-181941163.html,,736d9d16-064f-3ce7-a3be-71a072e1e983

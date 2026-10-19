@@ -1,0 +1,54 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "AAPL",
+    "short_name": "Apple Inc.",
+    "quote_type": "equity",
+    "exchange": "NMS",
+    "price": 339.9800109863281,
+    "change": 3.339996337890625,
+    "change_pct": 0.009921566843986511,
+    "rank": 176832
+  },
+  {
+    "symbol": "AAPU",
+    "short_name": "Direxion Daily AAPL Bull 2X ETF",
+    "quote_type": "etf",
+    "exchange": "NGM",
+    "price": 45.9098014831543,
+    "change": 0.889801025390625,
+    "change_pct": 0.019766680002212524,
+    "rank": 20421
+  },
+  {
+    "symbol": "APLY",
+    "short_name": "YieldMax AAPL Option Income Str",
+    "quote_type": "etf",
+    "exchange": "PCX",
+    "price": 11.890000343322754,
+    "change": 0.07000064849853516,
+    "change_pct": 0.005922220945358276,
+    "rank": 20107
+  },
+  {
+    "symbol": "AAPW",
+    "short_name": "Roundhill AAPL WeeklyPay ETF",
+    "quote_type": "etf",
+    "exchange": "BTS",
+    "price": 41.35100173950195,
+    "change": 0.37670135498046875,
+    "change_pct": 0.009193600416183472,
+    "rank": 20088
+  },
+  {
+    "symbol": "AAPD",
+    "short_name": "Direxion Daily AAPL Bear 1X ETF",
+    "quote_type": "etf",
+    "exchange": "NGM",
+    "price": 10.109999656677246,
+    "change": -0.0950002670288086,
+    "change_pct": -0.0093091881275177,
+    "rank": 20050
+  }
+]

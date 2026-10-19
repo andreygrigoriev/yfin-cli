@@ -1,0 +1,64 @@
+exit: 0
+--- stdout
+{
+  "quotes": [
+    {
+      "symbol": "TECH",
+      "short_name": "Bio-Techne Corp",
+      "long_name": "Bio-Techne Corporation",
+      "type": "Equity",
+      "quote_type": "EQUITY",
+      "exchange": "NMS",
+      "exchange_name": "NASDAQ",
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "score": 10107500
+    },
+    {
+      "symbol": "MU",
+      "short_name": "Micron Technology, Inc.",
+      "long_name": "Micron Technology, Inc.",
+      "type": "Equity",
+      "quote_type": "EQUITY",
+      "exchange": "NMS",
+      "exchange_name": "NASDAQ",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "score": 387557
+    },
+    {
+      "symbol": "SPCX",
+      "short_name": "Space Exploration Technologies ",
+      "long_name": "Space Exploration Technologies Corp.",
+      "type": "Equity",
+      "quote_type": "EQUITY",
+      "exchange": "NMS",
+      "exchange_name": "NASDAQ",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense",
+      "score": 316297
+    }
+  ],
+  "news": [
+    {
+      "time": "2026-10-12T18:32:00Z",
+      "title": "AI Can Help Small-Caps Beat Megacap Tech Rivals. That Gives This ETF 20% Upside.",
+      "publisher": "Barrons.com",
+      "type": "STORY",
+      "related_tickers": "IWM, ^IXIC, ^GSPC",
+      "link": "https://finance.yahoo.com/m/bb404e5d-d36b-3d4f-9523-a920aac9d48c/ai-can-help-small-caps-beat.html",
+      "summary": null,
+      "id": "bb404e5d-d36b-3d4f-9523-a920aac9d48c"
+    },
+    {
+      "time": "2026-10-12T18:19:41Z",
+      "title": "Alphabet Makes Surprise Move Beyond Its Core Tech Business",
+      "publisher": "GuruFocus.com",
+      "type": "STORY",
+      "related_tickers": "GOOG, GOOG",
+      "link": "https://finance.yahoo.com/healthcare/articles/alphabet-makes-surprise-move-beyond-181941163.html",
+      "summary": null,
+      "id": "736d9d16-064f-3ce7-a3be-71a072e1e983"
+    }
+  ]
+}

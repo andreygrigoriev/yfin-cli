@@ -1,0 +1,8 @@
+exit: 0
+--- stdout
+symbol  short_name                       quote_type  exchange   price  change  change_pct    rank
+AAPL    Apple Inc.                       equity      NMS       339.98    3.34       0.99%  176832
+AAPU    Direxion Daily AAPL Bull 2X ETF  etf         NGM        45.91    0.89       1.98%   20421
+APLY    YieldMax AAPL Option Income Str  etf         PCX        11.89    0.07       0.59%   20107
+AAPW    Roundhill AAPL WeeklyPay ETF     etf         BTS        41.35    0.38       0.92%   20088
+AAPD    Direxion Daily AAPL Bear 1X ETF  etf         NGM        10.11   -0.10      -0.93%   20050

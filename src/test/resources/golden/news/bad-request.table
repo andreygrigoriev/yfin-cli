@@ -1,0 +1,6 @@
+exit: 7
+--- stdout
+symbol  time              title                                                                  publisher     type   related_tickers  link                                                                                            summary  id
+AAPL    2026-10-12 18:33  Market Chatter: Apple's Tim Cook Meets Chinese Vice Premier He Lifeng  MT Newswires  STORY  AAPL             https://finance.yahoo.com/markets/stocks/articles/market-chatter-apple-apos-tim-183333193.html  —        35a540b0-3e49-3d82-8c58-498e22c4a3e9
+--- stderr
+yfin: MSFT: Yahoo finance error Bad Request: Parameter=quotesCount has an invalid type [payload: {"finance":{"result":null,"error":{"code":"Bad Request","description":"Parameter=quotesCount has an invalid type"}}}]

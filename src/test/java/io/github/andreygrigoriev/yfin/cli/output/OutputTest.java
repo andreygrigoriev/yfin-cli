@@ -101,6 +101,55 @@ class OutputTest {
     }
 
     @Test
+    void listsInEachFormat() {
+        List<Section<?>> sections = List.of(
+                new Section<>("first", SPEC, List.of(new Row("a", 0.25))),
+                new Section<>("none", SPEC, List.of()),
+                new Section<>("second", SPEC, List.of(new Row("b", -0.5))));
+        output(Format.TABLE, PIPE, false).lists(sections);
+        output(Format.CSV, PIPE, false).lists(sections);
+        output(Format.JSON, PIPE, false).lists(sections);
+        assertThat(stdout()).isEqualTo("""
+                        name  change
+                        a     25.00%
+
+                        name   change
+                        b     -50.00%
+                        name,change
+                        a,0.25
+
+                        name,change
+
+                        name,change
+                        b,-0.5
+                        {
+                          "first": [
+                            {
+                              "name": "a",
+                              "change": 0.25
+                            }
+                          ],
+                          "none": [],
+                          "second": [
+                            {
+                              "name": "b",
+                              "change": -0.5
+                            }
+                          ]
+                        }
+                        """);
+        assertThat(err.toString()).isEmpty();
+    }
+
+    @Test
+    void allEmptyListsOnTtySayNoData() {
+        List<Section<?>> sections = List.of(new Section<>("only", SPEC, List.of()));
+        output(Format.TABLE, TTY, false).lists(sections);
+        assertThat(stdout()).isEmpty();
+        assertThat(err.toString().strip()).isEqualTo("no data");
+    }
+
+    @Test
     void terminalFromEnvironment() {
         assertThat(Terminal.of(true, Map.of())).isEqualTo(new Terminal(true, 120, false));
         assertThat(Terminal.of(false, Map.of("COLUMNS", "80", "NO_COLOR", "1")))

@@ -1,0 +1,6 @@
+exit: 0
+--- stdout
+symbol  time              title                                                                  publisher      type   related_tickers                link                                                                                                                     summary  id
+AAPL    2026-10-12 18:33  Market Chatter: Apple's Tim Cook Meets Chinese Vice Premier He Lifeng  MT Newswires   STORY  AAPL                           https://finance.yahoo.com/markets/stocks/articles/market-chatter-apple-apos-tim-183333193.html                           —        35a540b0-3e49-3d82-8c58-498e22c4a3e9
+AAPL    2026-10-12 18:17  Apple cuts iPhone 18 Pro orders as AI raises the bill                  TheStreet      STORY  AAPL                           https://finance.yahoo.com/technology/ai/articles/apple-cuts-iphone-18-pro-181700565.html                                 —        447cc1ff-e1b3-35d0-98c4-9dbb318c1355
+AAPL    2026-10-12 17:55  SpaceX's Starlink could pose 3 big risks to Apple, BofA warns          Yahoo Finance  STORY  SPCX, AAPL, TSLA, T, VZ, TMUS  https://finance.yahoo.com/technology/article/spacexs-starlink-could-pose-3-big-risks-to-apple-bofa-warns-175500290.html  —        ac422392-8849-4c56-9987-715f0a4314a2

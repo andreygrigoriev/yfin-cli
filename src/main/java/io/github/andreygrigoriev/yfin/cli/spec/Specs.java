@@ -19,10 +19,13 @@ import io.github.andreygrigoriev.yfin.model.GrowthEstimate;
 import io.github.andreygrigoriev.yfin.model.Holder;
 import io.github.andreygrigoriev.yfin.model.InsiderRosterEntry;
 import io.github.andreygrigoriev.yfin.model.InsiderTransaction;
+import io.github.andreygrigoriev.yfin.model.LookupResult;
 import io.github.andreygrigoriev.yfin.model.MajorHolders;
+import io.github.andreygrigoriev.yfin.model.NewsItem;
 import io.github.andreygrigoriev.yfin.model.PriceTargets;
 import io.github.andreygrigoriev.yfin.model.Recommendation;
 import io.github.andreygrigoriev.yfin.model.RevenueEstimate;
+import io.github.andreygrigoriev.yfin.model.SearchQuote;
 import io.github.andreygrigoriev.yfin.model.SecFiling;
 import io.github.andreygrigoriev.yfin.model.SharesCount;
 import io.github.andreygrigoriev.yfin.model.Split;
@@ -460,6 +463,53 @@ public final class Specs {
             .col("expiry", OptionRow::expiry, Kind.DATE)
             .build();
 
+    /** Search scores and lookup ranks: whole numbers, never humanised in tables below a million. */
+    public static final Kind SCORE = Kind.decimal(0);
+
+    /**
+     * News articles, as {@code news} and {@code search --news} print them: the publication time in
+     * UTC, the related tickers comma-separated.
+     */
+    public static final Spec<NewsItem> NEWS = Spec.<NewsItem>builder()
+            .col("time", NewsItem::publishTime, Kind.TIMESTAMP)
+            .col("title", NewsItem::title, Kind.TEXT)
+            .col("publisher", NewsItem::publisher, Kind.TEXT)
+            .col("type", NewsItem::contentType, Kind.TEXT)
+            .col("related_tickers", n -> joined(n.relatedTickers()), Kind.TEXT)
+            .col("link", NewsItem::link, Kind.TEXT)
+            .col("summary", NewsItem::summary, Kind.TEXT)
+            .col("id", NewsItem::id, Kind.TEXT)
+            .build();
+
+    /** Search matches, as {@code search} prints them, best match first. */
+    public static final Spec<SearchQuote> SEARCH_QUOTE = Spec.<SearchQuote>builder()
+            .col("symbol", SearchQuote::symbol, Kind.TEXT)
+            .col("short_name", SearchQuote::shortName, Kind.TEXT)
+            .col("long_name", SearchQuote::longName, Kind.TEXT)
+            .col("type", SearchQuote::typeDisplay, Kind.TEXT)
+            .col("quote_type", SearchQuote::quoteType, Kind.TEXT)
+            .col("exchange", SearchQuote::exchange, Kind.TEXT)
+            .col("exchange_name", SearchQuote::exchangeDisplay, Kind.TEXT)
+            .col("sector", SearchQuote::sector, Kind.TEXT)
+            .col("industry", SearchQuote::industry, Kind.TEXT)
+            .col("score", SearchQuote::score, SCORE)
+            .build();
+
+    /**
+     * Lookup matches, as {@code lookup} prints them, in Yahoo's order. {@code change_pct} is a
+     * fraction like the other percentages (Yahoo gives percent).
+     */
+    public static final Spec<LookupResult> LOOKUP_RESULT = Spec.<LookupResult>builder()
+            .col("symbol", LookupResult::symbol, Kind.TEXT)
+            .col("short_name", LookupResult::shortName, Kind.TEXT)
+            .col("quote_type", LookupResult::quoteType, Kind.TEXT)
+            .col("exchange", LookupResult::exchange, Kind.TEXT)
+            .col("price", LookupResult::regularMarketPrice, PRICE)
+            .col("change", LookupResult::regularMarketChange, PRICE)
+            .col("change_pct", r -> fraction(r.regularMarketPercentChange()), Kind.PERCENT)
+            .col("rank", LookupResult::rank, SCORE)
+            .build();
+
     private Specs() {}
 
     /**
@@ -514,6 +564,11 @@ public final class Specs {
     /** {@code 2.97} (percent) as the fraction {@code 0.0297}, shifted exactly; {@code null} for NaN. */
     private static @Nullable BigDecimal fraction(double percent) {
         return Double.isNaN(percent) ? null : BigDecimal.valueOf(percent).movePointLeft(2);
+    }
+
+    /** {@link #fraction(double)} of a value Yahoo may not have; {@code null} when missing. */
+    private static @Nullable BigDecimal fraction(@Nullable Double percent) {
+        return percent == null ? null : fraction(percent.doubleValue());
     }
 
     private static @Nullable String joined(List<String> values) {

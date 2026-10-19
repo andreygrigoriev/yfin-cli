@@ -1,0 +1,6 @@
+exit: 0
+--- stdout
+symbol  short_name                       quote_type  exchange   price  change  change_pct   rank
+GLD     SPDR Gold Shares                 etf         PCX       381.90   -2.68      -0.70%  40966
+GDX     VanEck Gold Miners ETF           etf         PCX        88.40   -0.88      -0.98%  30482
+GPIQ    Goldman Sachs Nasdaq-100 Premiu  etf         NGM        57.85   -0.34      -0.58%  23347

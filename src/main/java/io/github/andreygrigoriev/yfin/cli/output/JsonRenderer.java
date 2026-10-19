@@ -70,6 +70,31 @@ final class JsonRenderer {
         });
     }
 
+    /**
+     * Prints one object with an array per section, keyed by section name.
+     *
+     * @param sections the lists
+     * @param out where to print
+     */
+    static void lists(List<Section<?>> sections, PrintWriter out) {
+        write(out, g -> {
+            g.writeStartObject();
+            for (Section<?> section : sections) {
+                g.writeFieldName(section.name());
+                array(g, section);
+            }
+            g.writeEndObject();
+        });
+    }
+
+    private static <T> void array(JsonGenerator g, Section<T> section) throws IOException {
+        g.writeStartArray();
+        for (T row : section.rows()) {
+            object(g, section.spec(), row);
+        }
+        g.writeEndArray();
+    }
+
     private static <T> void object(JsonGenerator g, Spec<T> spec, T row) throws IOException {
         g.writeStartObject();
         for (Column<T> column : spec.columns()) {

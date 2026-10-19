@@ -1,0 +1,37 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "AAPL",
+    "time": "2026-10-12T18:33:33Z",
+    "title": "Market Chatter: Apple's Tim Cook Meets Chinese Vice Premier He Lifeng",
+    "publisher": "MT Newswires",
+    "type": "STORY",
+    "related_tickers": "AAPL",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-apple-apos-tim-183333193.html",
+    "summary": null,
+    "id": "35a540b0-3e49-3d82-8c58-498e22c4a3e9"
+  },
+  {
+    "symbol": "AAPL",
+    "time": "2026-10-12T18:17:00Z",
+    "title": "Apple cuts iPhone 18 Pro orders as AI raises the bill",
+    "publisher": "TheStreet",
+    "type": "STORY",
+    "related_tickers": "AAPL",
+    "link": "https://finance.yahoo.com/technology/ai/articles/apple-cuts-iphone-18-pro-181700565.html",
+    "summary": null,
+    "id": "447cc1ff-e1b3-35d0-98c4-9dbb318c1355"
+  },
+  {
+    "symbol": "AAPL",
+    "time": "2026-10-12T17:55:00Z",
+    "title": "SpaceX's Starlink could pose 3 big risks to Apple, BofA warns",
+    "publisher": "Yahoo Finance",
+    "type": "STORY",
+    "related_tickers": "SPCX, AAPL, TSLA, T, VZ, TMUS",
+    "link": "https://finance.yahoo.com/technology/article/spacexs-starlink-could-pose-3-big-risks-to-apple-bofa-warns-175500290.html",
+    "summary": null,
+    "id": "ac422392-8849-4c56-9987-715f0a4314a2"
+  }
+]

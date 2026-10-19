@@ -1,0 +1,34 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "BTC-USD",
+    "short_name": "Bitcoin USD",
+    "quote_type": "cryptocurrency",
+    "exchange": "CCC",
+    "price": 82405.2890625,
+    "change": -1170.03125,
+    "change_pct": -0.013999722003936768,
+    "rank": 203929
+  },
+  {
+    "symbol": "BTC-EUR",
+    "short_name": "Bitcoin EUR",
+    "quote_type": "cryptocurrency",
+    "exchange": "CCC",
+    "price": 73880.3203125,
+    "change": -744.6484375,
+    "change_pct": -0.009978542923927307,
+    "rank": 21225
+  },
+  {
+    "symbol": "BTC-CAD",
+    "short_name": "Bitcoin CAD",
+    "quote_type": "cryptocurrency",
+    "exchange": "CCC",
+    "price": 117722.28125,
+    "change": -1747.828125,
+    "change_pct": -0.014629855155944824,
+    "rank": 20419
+  }
+]

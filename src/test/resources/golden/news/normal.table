@@ -1,0 +1,5 @@
+exit: 0
+--- stdout
+symbol  time              title                    publisher            type   related_tickers  link                                                                   summary                                             id
+AAPL    2026-10-12 14:30  Apple unveils new chips  Reuters              STORY  AAPL, NVDA       https://finance.yahoo.com/news/apple-unveils-new-chips-143000123.html  Apple announced new in-house processors on Monday.  9f1c2a7e-0b4d-3c55-a1e2-6d7f8a9b0c11
+AAPL    2026-10-12 12:00  Market wrap              Yahoo Finance Video  VIDEO  —                https://finance.yahoo.com/video/market-wrap-120000456.html             —                                                   0a2b3c4d-5e6f-3a7b-8c9d-0e1f2a3b4c5d

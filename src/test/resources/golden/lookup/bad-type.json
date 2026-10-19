@@ -1,0 +1,4 @@
+exit: 7
+--- stdout
+--- stderr
+yfin: Yahoo finance error Bad Request: Valid types: [equity, mutualfund, etf, index, currency, future, cryptocurrency] [payload: {"finance":{"result":null,"error":{"code":"Bad Request","description":"Valid types: [equity, mutualfund, etf, index, currency, future, cryptocurrency]"}}}]

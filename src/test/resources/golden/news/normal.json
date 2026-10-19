@@ -1,0 +1,26 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "AAPL",
+    "time": "2026-10-12T14:30:00Z",
+    "title": "Apple unveils new chips",
+    "publisher": "Reuters",
+    "type": "STORY",
+    "related_tickers": "AAPL, NVDA",
+    "link": "https://finance.yahoo.com/news/apple-unveils-new-chips-143000123.html",
+    "summary": "Apple announced new in-house processors on Monday.",
+    "id": "9f1c2a7e-0b4d-3c55-a1e2-6d7f8a9b0c11"
+  },
+  {
+    "symbol": "AAPL",
+    "time": "2026-10-12T12:00:00Z",
+    "title": "Market wrap",
+    "publisher": "Yahoo Finance Video",
+    "type": "VIDEO",
+    "related_tickers": null,
+    "link": "https://finance.yahoo.com/video/market-wrap-120000456.html",
+    "summary": null,
+    "id": "0a2b3c4d-5e6f-3a7b-8c9d-0e1f2a3b4c5d"
+  }
+]

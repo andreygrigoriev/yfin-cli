@@ -1,0 +1,64 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "AAPL",
+    "short_name": "Apple Inc.",
+    "long_name": "Apple Inc.",
+    "type": "Equity",
+    "quote_type": "EQUITY",
+    "exchange": "NMS",
+    "exchange_name": "NASDAQ",
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "score": 176832
+  },
+  {
+    "symbol": "SAAPL=F",
+    "short_name": "Apple Inc Stock Futures,Dec-202",
+    "long_name": "Apple Inc Single Stock futures",
+    "type": "Futures",
+    "quote_type": "FUTURE",
+    "exchange": "CME",
+    "exchange_name": "Chicago Mercantile Exchange",
+    "sector": null,
+    "industry": null,
+    "score": 30054
+  },
+  {
+    "symbol": "XAAPL=F",
+    "short_name": "Micro Apple Inc Stock Futures,D",
+    "long_name": null,
+    "type": "Futures",
+    "quote_type": "FUTURE",
+    "exchange": "CME",
+    "exchange_name": "Chicago Mercantile Exchange",
+    "sector": null,
+    "industry": null,
+    "score": 30006
+  },
+  {
+    "symbol": "APLE",
+    "short_name": "Apple Hospitality REIT, Inc.",
+    "long_name": "Apple Hospitality REIT, Inc.",
+    "type": "Equity",
+    "quote_type": "EQUITY",
+    "exchange": "NYQ",
+    "exchange_name": "NYSE",
+    "sector": "Real Estate",
+    "industry": "REIT—Hotel & Motel",
+    "score": 20468
+  },
+  {
+    "symbol": "AAPL.TO",
+    "short_name": "APPLE CDR (CAD HEDGED)",
+    "long_name": "Apple Inc.",
+    "type": "Equity",
+    "quote_type": "EQUITY",
+    "exchange": "TOR",
+    "exchange_name": "Toronto",
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "score": 20049
+  }
+]

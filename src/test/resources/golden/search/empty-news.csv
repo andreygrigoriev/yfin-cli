@@ -1,0 +1,5 @@
+exit: 0
+--- stdout
+symbol,short_name,long_name,type,quote_type,exchange,exchange_name,sector,industry,score
+
+time,title,publisher,type,related_tickers,link,summary,id

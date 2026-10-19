@@ -1,0 +1,8 @@
+exit: 0
+--- stdout
+symbol,short_name,long_name,type,quote_type,exchange,exchange_name,sector,industry,score
+AAPL,Apple Inc.,Apple Inc.,Equity,EQUITY,NMS,NASDAQ,Technology,Consumer Electronics,176832
+SAAPL=F,"Apple Inc Stock Futures,Dec-202",Apple Inc Single Stock futures,Futures,FUTURE,CME,Chicago Mercantile Exchange,,,30054
+XAAPL=F,"Micro Apple Inc Stock Futures,D",,Futures,FUTURE,CME,Chicago Mercantile Exchange,,,30006
+APLE,"Apple Hospitality REIT, Inc.","Apple Hospitality REIT, Inc.",Equity,EQUITY,NYQ,NYSE,Real Estate,REIT—Hotel & Motel,20468
+AAPL.TO,APPLE CDR (CAD HEDGED),Apple Inc.,Equity,EQUITY,TOR,Toronto,Technology,Consumer Electronics,20049
