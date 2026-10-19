@@ -57,8 +57,15 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
 - Typical setup: `fake.onGet("").respond(404, "not found")` (cookie bootstrap),
   `fake.onGet("/v1/test/getcrumb").respond(200, "crumb1")`, then
   `YFinance.builder().transport(fake).cache(...).maxRetries(0).build()`.
-- Command tests run `YfinCommand.commandLine(new YfinCommand(factory, Terminal.piped(120))).setOut(...).setErr(...).execute(args)`
-  and assert on stdout, stderr and the exit code.
+- Command tests use `testing.CliRunner`: it registers that bootstrap on a `FakeTransport`, runs
+  `yfin` in-process (piped terminal, width 120, no cache, no retries) and returns a `CliResult`
+  (exit code, stdout, stderr). Register responses with `cli.fixture(path, "quote/aapl.json")` or
+  `cli.onGet(path)...`; `Fixtures.load` reads library fixtures from the class path.
+- Compare results with `Golden.assertMatches(result, "<command path>/<case>.<format>")`, files under
+  `src/test/resources/golden/`. `./mvnw test -Dgolden.update=true` rewrites them; review the diff.
+- `GoldenCoverageTest` fails if a leaf command (except `help`, `completion`) lacks a golden
+  directory with a `normal.*` case exiting 0 and a case exiting non-zero.
+- `docs/fixtures.md` maps commands to library fixtures and lists fixtures still to record in yfin.
 
 ## Housekeeping
 
