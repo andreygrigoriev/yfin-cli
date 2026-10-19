@@ -1,0 +1,84 @@
+exit: 0
+--- stdout
+[
+  {
+    "date_reported": "2026-06-30",
+    "holder": "VANGUARD INDEX FUNDS-Vanguard Total Stock Market Index Fund",
+    "shares": 466272244,
+    "value": 158381303378,
+    "pct_held": 0.0319,
+    "pct_change": 0.0001
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "VANGUARD INDEX FUNDS-Vanguard 500 Index Fund",
+    "shares": 380610709,
+    "value": 129284170239,
+    "pct_held": 0.026099999,
+    "pct_change": 0.0202
+  },
+  {
+    "date_reported": "2026-08-31",
+    "holder": "iShares Trust-iShares Core S&P 500 ETF",
+    "shares": 195583632,
+    "value": 66434987186,
+    "pct_held": 0.0134000005,
+    "pct_change": -0.013099999
+  },
+  {
+    "date_reported": "2026-08-31",
+    "holder": "Fidelity Concord Street Trust-Fidelity 500 Index Fund",
+    "shares": 190655125,
+    "value": 64760893623,
+    "pct_held": 0.013099999,
+    "pct_change": 0.0039
+  },
+  {
+    "date_reported": "2026-08-31",
+    "holder": "SPDR S&P 500 ETF TRUST-State Street SPDR S&P 500 ETF Trust",
+    "shares": 179710413,
+    "value": 61043242028,
+    "pct_held": 0.0123000005,
+    "pct_change": -0.0047
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "VANGUARD INDEX FUNDS-Vanguard Growth Index Fund",
+    "shares": 152961842,
+    "value": 51957405174,
+    "pct_held": 0.0105,
+    "pct_change": -0.0092
+  },
+  {
+    "date_reported": "2026-08-31",
+    "holder": "Invesco QQQ Trust, Series 1",
+    "shares": 114447943,
+    "value": 38875173494,
+    "pct_held": 0.0078,
+    "pct_change": 0.0388
+  },
+  {
+    "date_reported": "2026-05-31",
+    "holder": "VANGUARD WORLD FUND-Vanguard Information Technology Index Fund",
+    "shares": 80206224,
+    "value": 27244097112,
+    "pct_held": 0.0055,
+    "pct_change": 0.0925
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "VANGUARD INSTITUTIONAL INDEX FUNDS-Vanguard Institutional Index Fund",
+    "shares": 79732730,
+    "value": 27083262754,
+    "pct_held": 0.0055,
+    "pct_change": -0.0368
+  },
+  {
+    "date_reported": "2026-08-31",
+    "holder": "SELECT SECTOR SPDR TRT-State Street Technology Select Sector SPDR ETF",
+    "shares": 47949135,
+    "value": 16287151111,
+    "pct_held": 0.0033000002,
+    "pct_change": -0.0108
+  }
+]

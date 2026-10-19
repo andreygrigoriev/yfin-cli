@@ -1,0 +1,85 @@
+exit: 0
+--- stdout
+date        insider             position                 text                                       shares    value  ownership  transaction  url
+2026-10-06  NEWSTEAD JENNIFER   General Counsel          Sale at price 332.01 per share.              2399  796.49K  D                       
+2026-10-02  COOK TIMOTHY D      Officer and Director     Stock Gift at price 0.00 per share.        26.33K        0  D                       
+2026-10-02  O'BRIEN DEIRDRE     Officer                  Sale at price 333.35 - 333.91 per share.   46.39K   15.47M  D                       
+2026-10-02  TERNUS JOHN         Chief Executive Officer  Sale at price 331.38 - 334.05 per share.   25.41K    8.46M  D                       
+2026-10-02  COOK TIMOTHY D      Officer and Director     Sale at price 331.44 - 333.94 per share.  191.75K   63.85M  D                       
+2026-10-01  O'BRIEN DEIRDRE     Officer                                                             99.88K        —  D                       
+2026-10-01  KHAN SABIH          Chief Operating Officer                                             99.88K        —  D                       
+2026-10-01  TERNUS JOHN         Chief Executive Officer                                             99.88K        —  D                       
+2026-10-01  COOK TIMOTHY D      Officer and Director                                               374.54K        —  D                       
+2026-09-29  NEWSTEAD JENNIFER   General Counsel          Sale at price 336.18 per share.              2399  806.50K  D                       
+2026-09-22  NEWSTEAD JENNIFER   General Counsel          Sale at price 340.06 per share.              2399  815.80K  D                       
+2026-09-15  NEWSTEAD JENNIFER   Officer                  Sale at price 330.19 per share.              1438  474.81K  D                       
+2026-09-15  NEWSTEAD JENNIFER   Officer                                                             30.10K        —  D                       
+2026-09-08  NEWSTEAD JENNIFER   General Counsel          Sale at price 317.23 per share.              1438  456.18K  D                       
+2026-09-01  NEWSTEAD JENNIFER   General Counsel          Sale at price 317.01 per share.              1439  456.18K  D                       
+2026-08-25  NEWSTEAD JENNIFER   General Counsel          Sale at price 310.95 per share.              1439  447.46K  D                       
+2026-08-18  NEWSTEAD JENNIFER   General Counsel          Sale at price 307.49 per share.              1439  442.48K  D                       
+2026-08-11  NEWSTEAD JENNIFER   General Counsel          Sale at price 307.75 per share.              1439  442.85K  D                       
+2026-06-16  BORDERS BEN         Officer                  Sale at price 295.14 per share.               116   34.24K  D                       
+2026-06-15  NEWSTEAD JENNIFER   General Counsel                                                     30.10K        —  D                       
+2026-06-15  BORDERS BEN         Officer                                                                240        —  D                       
+2026-05-27  LEVINSON ARTHUR D   Director                 Stock Gift at price 0.00 per share.        65.00K        0  D                       
+2026-05-27  LEVINSON ARTHUR D   Director                 Sale at price 311.02 per share.            50.00K   15.55M  D                       
+2026-05-08  BORDERS BEN         Officer                  Sale at price 290.00 per share.              1274  369.46K  D                       
+2026-05-06  LEVINSON ARTHUR D   Director                 Stock Gift at price 0.00 per share.          5000        0  D                       
+2026-05-06  LEVINSON ARTHUR D   Director                 Sale at price 284.57 - 285.04 per share.  250.00K   71.19M  D                       
+2026-04-23  PAREKH KEVAN        Chief Financial Officer  Sale at price 275.00 per share.              1534  421.85K  D                       
+2026-04-15  PAREKH KEVAN        Chief Financial Officer                                             10.93K        —  D                       
+2026-04-15  BORDERS BEN         Officer                                                               1717        —  D                       
+2026-04-02  O'BRIEN DEIRDRE     Officer                  Sale at price 255.12 - 255.82 per share.   30.00K    7.66M  D                       
+2026-04-02  COOK TIMOTHY D      Chief Executive Officer  Sale at price 251.25 - 256.00 per share.   64.95K   16.51M  D                       
+2026-04-01  O'BRIEN DEIRDRE     Officer                                                             64.32K        —  D                       
+2026-04-01  KHAN SABIH          Chief Operating Officer                                             64.32K        —  D                       
+2026-04-01  COOK TIMOTHY D      Chief Executive Officer                                            131.58K        —  D                       
+2026-03-13  NEWSTEAD JENNIFER   General Counsel                                                     60.21K        —  D                       
+2026-02-26  LEVINSON ARTHUR D   Director                 Stock Gift at price 0.00 per share.          1113        0  D                       
+2026-01-30  WAGNER SUSAN L      Director                                                              1255        —  D                       
+2026-01-30  JUNG ANDREA         Director                                                              1255        —  D                       
+2026-01-30  SUGAR RONALD D      Director                                                              1255        —  D                       
+2026-01-30  LEVINSON ARTHUR D   Director                                                              1113        —  D                       
+2026-01-30  AUSTIN WANDA M      Director                                                              1255        —  D                       
+2026-01-30  GORSKY ALEX         Director                                                              1255        —  D                       
+2026-01-30  LOZANO MONICA C.    Director                                                              1255        —  D                       
+2025-11-12  ADAMS KATHERINE L   General Counsel          Stock Gift at price 0.00 per share.          3750        0  D                       
+2025-11-07  KONDO CHRISTOPHER   Officer                  Sale at price 271.23 per share.              3752    1.02M  D                       
+2025-10-16  PAREKH KEVAN        Chief Financial Officer  Sale at price 245.89 - 248.73 per share.     4199    1.04M  D                       
+2025-10-15  PAREKH KEVAN        Chief Financial Officer                                             16.46K        —  D                       
+2025-10-15  KONDO CHRISTOPHER   Officer                                                               7371        —  D                       
+2025-10-02  ADAMS KATHERINE L   General Counsel          Sale at price 254.83 - 257.54 per share.   47.13K   12.10M  D                       
+2025-10-02  O'BRIEN DEIRDRE     Officer                  Sale at price 257.36 - 258.08 per share.   43.01K   11.07M  D                       
+2025-10-02  COOK TIMOTHY D      Chief Executive Officer  Sale at price 254.83 - 257.57 per share.  129.96K   33.38M  D                       
+2025-10-01  O'BRIEN DEIRDRE     Officer                                                             92.40K        —  D                       
+2025-10-01  KHAN SABIH          Chief Operating Officer                                             92.40K        —  D                       
+2025-10-01  ADAMS KATHERINE L   General Counsel                                                     92.40K        —  D                       
+2025-10-01  COOK TIMOTHY D      Chief Executive Officer                                            277.21K        —  D                       
+2025-08-28  LEVINSON ARTHUR D   Director                 Sale at price 232.07 per share.            90.00K   20.89M  D                       
+2025-08-25  KONDO CHRISTOPHER   Officer                  Stock Gift at price 0.00 per share.           435        0  D                       
+2025-08-08  O'BRIEN DEIRDRE     Officer                  Sale at price 223.20 per share.            34.82K    7.77M  D                       
+2025-05-12  KONDO CHRISTOPHER   Officer                  Sale at price 208.19 per share.              4486  933.96K  D                       
+2025-04-23  PAREKH KEVAN        Chief Financial Officer  Sale at price 206.00 per share.              4570  941.42K  D                       
+2025-04-15  PAREKH KEVAN        Chief Financial Officer                                             16.46K        —  D                       
+2025-04-15  KONDO CHRISTOPHER   Officer                                                               7373        —  D                       
+2025-04-02  ADAMS KATHERINE L   General Counsel          Sale at price 221.68 - 224.62 per share.   38.82K    8.68M  D                       
+2025-04-02  WILLIAMS JEFFREY E  Chief Operating Officer  Sale at price 223.48 - 225.03 per share.   35.49K    7.95M  D                       
+2025-04-02  COOK TIMOTHY D      Chief Executive Officer  Sale at price 221.77 - 224.76 per share.  108.14K   24.18M  D                       
+2025-04-01  O'BRIEN DEIRDRE     Officer                                                             74.54K        —  D                       
+2025-04-01  ADAMS KATHERINE L   General Counsel                                                     74.54K        —  D                       
+2025-04-01  WILLIAMS JEFFREY E  Chief Operating Officer                                             74.54K        —  D                       
+2025-04-01  COOK TIMOTHY D      Chief Executive Officer                                            218.57K        —  D                       
+2025-02-03  LEVINSON ARTHUR D   Director                 Sale at price 226.35 per share.              1516  343.15K  D                       
+2025-01-31  WAGNER SUSAN L      Director                                                              1516        —  D                       
+2025-01-31  JUNG ANDREA         Director                                                              1516        —  D                       
+2025-01-31  SUGAR RONALD D      Director                                                              1516        —  D                       
+2025-01-31  LEVINSON ARTHUR D   Director                                                              1516        —  D                       
+2025-01-31  AUSTIN WANDA M      Director                                                              1516        —  D                       
+2025-01-31  GORSKY ALEX         Director                                                              1516        —  D                       
+2025-01-31  LOZANO MONICA C.    Director                                                              1516        —  D                       
+2024-12-16  WILLIAMS JEFFREY E  Chief Operating Officer  Sale at price 248.61 - 251.10 per share.  100.00K   25.00M  I                       
+2024-11-19  LEVINSON ARTHUR D   Director                 Sale at price 224.68 - 229.28 per share.  200.00K   45.46M  D                       
+2024-11-18  KONDO CHRISTOPHER   Officer                  Sale at price 228.87 per share.              4130  945.23K  D                       
+2024-11-05  ADAMS KATHERINE L   General Counsel          Stock Gift at price 0.00 per share.          8000        0  D                       
+2024-10-15  KONDO CHRISTOPHER   Officer                                                               8115        —  D                       

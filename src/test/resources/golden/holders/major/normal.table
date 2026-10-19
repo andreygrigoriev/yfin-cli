@@ -1,0 +1,6 @@
+exit: 0
+--- stdout
+insiders_pct_held            1.65%
+institutions_pct_held        66.32%
+institutions_float_pct_held  67.44%
+institutions_count           7689

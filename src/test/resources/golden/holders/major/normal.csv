@@ -1,0 +1,7 @@
+exit: 0
+--- stdout
+field,value
+insiders_pct_held,0.01648
+institutions_pct_held,0.66324997
+institutions_float_pct_held,0.67437
+institutions_count,7689

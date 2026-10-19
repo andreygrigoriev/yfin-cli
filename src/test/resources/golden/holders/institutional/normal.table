@@ -1,0 +1,13 @@
+exit: 0
+--- stdout
+date_reported  holder                              shares    value  pct_held  pct_change
+2026-06-30     Blackrock Inc.                       1.16B  395.04B     7.97%       1.60%
+2026-06-30     Vanguard Capital Management LLC    959.11M  325.79B     6.57%       0.55%
+2026-06-30     State Street Corporation           615.13M  208.94B     4.21%       2.12%
+2026-06-30     Geode Capital Management, LLC      371.34M  126.13B     2.54%       0.74%
+2026-06-30     Vanguard Portfolio Management LLC  334.12M  113.49B     2.29%       0.81%
+2026-06-30     FMR, LLC                           325.35M  110.51B     2.23%       5.82%
+2026-06-30     Morgan Stanley                     242.61M   82.41B     1.66%      -0.76%
+2026-06-30     JPMORGAN CHASE & CO                228.76M   77.70B     1.57%      -1.23%
+2026-06-30     Berkshire Hathaway, Inc            227.92M   77.42B     1.56%       0.00%
+2026-06-30     NORGES BANK                        190.73M   64.79B     1.31%      -0.79%

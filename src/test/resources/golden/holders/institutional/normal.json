@@ -1,0 +1,84 @@
+exit: 0
+--- stdout
+[
+  {
+    "date_reported": "2026-06-30",
+    "holder": "Blackrock Inc.",
+    "shares": 1162996939,
+    "value": 395041680895,
+    "pct_held": 0.0797,
+    "pct_change": 0.016
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "Vanguard Capital Management LLC",
+    "shares": 959107911,
+    "value": 325785553354,
+    "pct_held": 0.0657,
+    "pct_change": 0.0055
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "State Street Corporation",
+    "shares": 615129929,
+    "value": 208944626569,
+    "pct_held": 0.0421,
+    "pct_change": 0.0212
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "Geode Capital Management, LLC",
+    "shares": 371336543,
+    "value": 126133962356,
+    "pct_held": 0.0254,
+    "pct_change": 0.0074
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "Vanguard Portfolio Management LLC",
+    "shares": 334119156,
+    "value": 113492124165,
+    "pct_held": 0.0229,
+    "pct_change": 0.0081
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "FMR, LLC",
+    "shares": 325348754,
+    "value": 110513032620,
+    "pct_held": 0.0223,
+    "pct_change": 0.0582
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "Morgan Stanley",
+    "shares": 242614238,
+    "value": 82410136411,
+    "pct_held": 0.0166,
+    "pct_change": -0.0076
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "JPMORGAN CHASE & CO",
+    "shares": 228762008,
+    "value": 77704871900,
+    "pct_held": 0.015700001,
+    "pct_change": -0.0123000005
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "Berkshire Hathaway, Inc",
+    "shares": 227917808,
+    "value": 77418117760,
+    "pct_held": 0.0156,
+    "pct_change": 0
+  },
+  {
+    "date_reported": "2026-06-30",
+    "holder": "NORGES BANK",
+    "shares": 190726866,
+    "value": 64785262290,
+    "pct_held": 0.013099999,
+    "pct_change": -0.007900001
+  }
+]

@@ -10,6 +10,10 @@ import io.github.andreygrigoriev.yfin.model.CapitalGain;
 import io.github.andreygrigoriev.yfin.model.Dividend;
 import io.github.andreygrigoriev.yfin.model.FundHolding;
 import io.github.andreygrigoriev.yfin.model.FundsData;
+import io.github.andreygrigoriev.yfin.model.Holder;
+import io.github.andreygrigoriev.yfin.model.InsiderRosterEntry;
+import io.github.andreygrigoriev.yfin.model.InsiderTransaction;
+import io.github.andreygrigoriev.yfin.model.MajorHolders;
 import io.github.andreygrigoriev.yfin.model.SecFiling;
 import io.github.andreygrigoriev.yfin.model.SharesCount;
 import io.github.andreygrigoriev.yfin.model.Split;
@@ -248,6 +252,56 @@ public final class Specs {
             .col("title", SecFiling::title, Kind.TEXT)
             .col("edgar_url", SecFiling::edgarUrl, Kind.TEXT)
             .col("exhibits", f -> joined(List.copyOf(f.exhibits().keySet())), Kind.TEXT)
+            .build();
+
+    /** The ownership breakdown, as {@code holders major} prints it; fractions of shares or float. */
+    public static final Spec<MajorHolders> MAJOR_HOLDERS = Spec.<MajorHolders>builder()
+            .col("insiders_pct_held", MajorHolders::insidersPercentHeld, Kind.PERCENT)
+            .col("institutions_pct_held", MajorHolders::institutionsPercentHeld, Kind.PERCENT)
+            .col("institutions_float_pct_held", MajorHolders::institutionsFloatPercentHeld, Kind.PERCENT)
+            .col("institutions_count", MajorHolders::institutionsCount, Kind.INTEGER)
+            .build();
+
+    /**
+     * Institutional and mutual fund holders, as {@code holders institutional|funds} print them.
+     * {@code pct_change} is the change of the position since the previous filing.
+     */
+    public static final Spec<Holder> HOLDER = Spec.<Holder>builder()
+            .col("date_reported", Holder::dateReported, Kind.DATE)
+            .col("holder", Holder::holder, Kind.TEXT)
+            .col("shares", Holder::shares, Kind.INTEGER)
+            .col("value", Holder::value, Kind.INTEGER)
+            .col("pct_held", Holder::pctHeld, Kind.PERCENT)
+            .col("pct_change", Holder::pctChange, Kind.PERCENT)
+            .build();
+
+    /** Insiders and their positions, as {@code holders insiders} prints them. */
+    public static final Spec<InsiderRosterEntry> INSIDER = Spec.<InsiderRosterEntry>builder()
+            .col("name", InsiderRosterEntry::name, Kind.TEXT)
+            .col("position", InsiderRosterEntry::position, Kind.TEXT)
+            .col("most_recent_transaction", InsiderRosterEntry::mostRecentTransaction, Kind.TEXT)
+            .col("latest_transaction_date", InsiderRosterEntry::latestTransactionDate, Kind.DATE)
+            .col("shares_owned_directly", InsiderRosterEntry::sharesOwnedDirectly, Kind.INTEGER)
+            .col("position_direct_date", InsiderRosterEntry::positionDirectDate, Kind.DATE)
+            .col("shares_owned_indirectly", InsiderRosterEntry::sharesOwnedIndirectly, Kind.INTEGER)
+            .col("position_indirect_date", InsiderRosterEntry::positionIndirectDate, Kind.DATE)
+            .col("url", InsiderRosterEntry::url, Kind.TEXT)
+            .build();
+
+    /**
+     * Insider transactions, as {@code holders insider-tx} prints them. {@code ownership} is {@code
+     * D} (direct) or {@code I} (indirect); {@code transaction} is Yahoo's often empty money text.
+     */
+    public static final Spec<InsiderTransaction> INSIDER_TRANSACTION = Spec.<InsiderTransaction>builder()
+            .col("date", InsiderTransaction::startDate, Kind.DATE)
+            .col("insider", InsiderTransaction::insider, Kind.TEXT)
+            .col("position", InsiderTransaction::position, Kind.TEXT)
+            .col("text", InsiderTransaction::text, Kind.TEXT)
+            .col("shares", InsiderTransaction::shares, Kind.INTEGER)
+            .col("value", InsiderTransaction::value, Kind.INTEGER)
+            .col("ownership", InsiderTransaction::ownership, Kind.TEXT)
+            .col("transaction", InsiderTransaction::transaction, Kind.TEXT)
+            .col("url", InsiderTransaction::url, Kind.TEXT)
             .build();
 
     private Specs() {}

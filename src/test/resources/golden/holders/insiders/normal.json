@@ -1,0 +1,114 @@
+exit: 0
+--- stdout
+[
+  {
+    "name": "ADAMS KATHERINE L",
+    "position": "General Counsel",
+    "most_recent_transaction": "Stock Gift",
+    "latest_transaction_date": "2025-11-12",
+    "shares_owned_directly": 175408,
+    "position_direct_date": "2025-11-12",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "COOK TIMOTHY D",
+    "position": "Officer and Director",
+    "most_recent_transaction": "Stock Gift",
+    "latest_transaction_date": "2026-10-02",
+    "shares_owned_directly": 3237840,
+    "position_direct_date": "2026-10-02",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "JUNG ANDREA",
+    "position": "Director",
+    "most_recent_transaction": "Conversion of Exercise of derivative security",
+    "latest_transaction_date": "2026-01-30",
+    "shares_owned_directly": 77664,
+    "position_direct_date": "2026-01-30",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "KHAN SABIH",
+    "position": "Chief Operating Officer",
+    "most_recent_transaction": "Conversion of Exercise of derivative security",
+    "latest_transaction_date": "2026-10-01",
+    "shares_owned_directly": 1152550,
+    "position_direct_date": "2026-10-01",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "LEVINSON ARTHUR D",
+    "position": "Director",
+    "most_recent_transaction": "Stock Gift",
+    "latest_transaction_date": "2026-05-27",
+    "shares_owned_directly": 3755580,
+    "position_direct_date": "2026-05-27",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "O'BRIEN DEIRDRE",
+    "position": "Officer",
+    "most_recent_transaction": "Sale",
+    "latest_transaction_date": "2026-10-02",
+    "shares_owned_directly": 136810,
+    "position_direct_date": "2026-10-02",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "SUGAR RONALD D",
+    "position": "Director",
+    "most_recent_transaction": "Conversion of Exercise of derivative security",
+    "latest_transaction_date": "2026-01-30",
+    "shares_owned_directly": 110566,
+    "position_direct_date": "2026-01-30",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "TERNUS JOHN",
+    "position": "Chief Executive Officer",
+    "most_recent_transaction": "Sale",
+    "latest_transaction_date": "2026-10-02",
+    "shares_owned_directly": 59567,
+    "position_direct_date": "2026-10-02",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "WAGNER SUSAN L",
+    "position": "Director",
+    "most_recent_transaction": "Conversion of Exercise of derivative security",
+    "latest_transaction_date": "2026-01-30",
+    "shares_owned_directly": 69788,
+    "position_direct_date": "2026-01-30",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  },
+  {
+    "name": "WILLIAMS JEFFREY E",
+    "position": "Chief Operating Officer",
+    "most_recent_transaction": "Sale",
+    "latest_transaction_date": "2025-04-02",
+    "shares_owned_directly": 390059,
+    "position_direct_date": "2025-04-02",
+    "shares_owned_indirectly": null,
+    "position_indirect_date": null,
+    "url": ""
+  }
+]

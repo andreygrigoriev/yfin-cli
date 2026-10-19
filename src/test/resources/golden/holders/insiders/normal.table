@@ -1,0 +1,13 @@
+exit: 0
+--- stdout
+name                position                 most_recent_transaction                        latest_transaction_date  shares_owned_directly  position_direct_date  shares_owned_indirectly  position_indirect_date  url
+ADAMS KATHERINE L   General Counsel          Stock Gift                                     2025-11-12                             175.41K  2025-11-12                                  —  —                       
+COOK TIMOTHY D      Officer and Director     Stock Gift                                     2026-10-02                               3.24M  2026-10-02                                  —  —                       
+JUNG ANDREA         Director                 Conversion of Exercise of derivative security  2026-01-30                              77.66K  2026-01-30                                  —  —                       
+KHAN SABIH          Chief Operating Officer  Conversion of Exercise of derivative security  2026-10-01                               1.15M  2026-10-01                                  —  —                       
+LEVINSON ARTHUR D   Director                 Stock Gift                                     2026-05-27                               3.76M  2026-05-27                                  —  —                       
+O'BRIEN DEIRDRE     Officer                  Sale                                           2026-10-02                             136.81K  2026-10-02                                  —  —                       
+SUGAR RONALD D      Director                 Conversion of Exercise of derivative security  2026-01-30                             110.57K  2026-01-30                                  —  —                       
+TERNUS JOHN         Chief Executive Officer  Sale                                           2026-10-02                              59.57K  2026-10-02                                  —  —                       
+WAGNER SUSAN L      Director                 Conversion of Exercise of derivative security  2026-01-30                              69.79K  2026-01-30                                  —  —                       
+WILLIAMS JEFFREY E  Chief Operating Officer  Sale                                           2025-04-02                             390.06K  2025-04-02                                  —  —                       
