@@ -1,0 +1,38 @@
+# Rendered by packaging/homebrew/render-formula.sh in andreygrigoriev/yfin-cli; do not edit by hand.
+class Yfin < Formula
+  desc "Yahoo Finance market data on the command line"
+  homepage "https://github.com/andreygrigoriev/yfin-cli"
+  version "@VERSION@"
+  license "Apache-2.0"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/andreygrigoriev/yfin-cli/releases/download/v@VERSION@/yfin-@VERSION@-darwin-arm64.tar.gz"
+      sha256 "@SHA256_DARWIN_ARM64@"
+    end
+    on_intel do
+      url "https://github.com/andreygrigoriev/yfin-cli/releases/download/v@VERSION@/yfin-@VERSION@-darwin-x64.tar.gz"
+      sha256 "@SHA256_DARWIN_X64@"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/andreygrigoriev/yfin-cli/releases/download/v@VERSION@/yfin-@VERSION@-linux-arm64.tar.gz"
+      sha256 "@SHA256_LINUX_ARM64@"
+    end
+    on_intel do
+      url "https://github.com/andreygrigoriev/yfin-cli/releases/download/v@VERSION@/yfin-@VERSION@-linux-x64.tar.gz"
+      sha256 "@SHA256_LINUX_X64@"
+    end
+  end
+
+  def install
+    bin.install "yfin"
+    generate_completions_from_executable(bin/"yfin", "completion", shells: [:bash, :zsh])
+  end
+
+  test do
+    assert_match "yfin #{version}", shell_output("#{bin}/yfin --version")
+  end
+end

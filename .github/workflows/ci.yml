@@ -31,6 +31,10 @@ jobs:
       - name: Build and verify
         run: ./mvnw --batch-mode --no-transfer-progress verify
 
+      # the release workflow renders the tap formula with this script
+      - name: Formula render test
+        run: packaging/homebrew/test-render.sh
+
       - name: Upload surefire reports
         if: failure()
         uses: actions/upload-artifact@v4

@@ -16,7 +16,13 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
   `./mvnw -Pnative test`: the test suite as a native image. Both need GraalVM 25; locally:
   `JAVA_HOME=~/.sdkman/candidates/java/25-graal ./mvnw -Pnative test`. Run it after changes to
   dependencies, resources or anything picocli reads reflectively.
-- CI: `ci.yml` runs `verify` and a GraalVM `-Pnative test` job on ubuntu-24.04.
+- CI: `ci.yml` runs `verify` and a GraalVM `-Pnative test` job on ubuntu-24.04, plus
+  `packaging/homebrew/test-render.sh` (formula render check).
+- Releases: push a `vX.Y.Z` tag. `release.yml` builds the native binary on 4 runners
+  (`-Drevision=X.Y.Z`), smoke-tests `--version`/`--help`, publishes the tarballs and `SHA256SUMS`
+  as a GitHub release, then renders `packaging/homebrew/yfin.rb.tmpl` into
+  `andreygrigoriev/homebrew-tap` (`TAP_TOKEN` secret, the only one). `workflow_dispatch` with
+  `dry_run` builds and smoke-tests only.
 
 ## Layout
 
