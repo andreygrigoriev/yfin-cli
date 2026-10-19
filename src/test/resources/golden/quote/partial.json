@@ -1,0 +1,22 @@
+exit: 3
+--- stdout
+[
+  {
+    "symbol": "AAPL",
+    "last_price": 340.5008850097656,
+    "change": 3.860870361328125,
+    "change_pct": 0.011468839690255299,
+    "previous_close": 336.6400146484375,
+    "open": 338.1600036621094,
+    "day_high": 342.6300048828125,
+    "day_low": 337.6000061035156,
+    "volume": 9001077,
+    "market_cap": 4969331205992,
+    "year_high": 345.3399963378906,
+    "year_low": 243.4199981689453,
+    "currency": "USD",
+    "exchange": "NMS"
+  }
+]
+--- stderr
+yfin: NOPE: Yahoo chart error Not Found: No data found, symbol may be delisted (NOPE)

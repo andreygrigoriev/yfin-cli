@@ -1,0 +1,5 @@
+exit: 0
+--- stdout
+symbol   last_price    change  change_pct  previous_close      open  day_high   day_low  volume  market_cap  year_high  year_low  currency  exchange
+AAPL         340.50      3.86       1.15%          336.64    338.16    342.63    337.60   9.00M       4.97T     345.34    243.42  USD       NMS
+BTC-USD    82550.40  -1129.07      -1.35%        83679.47  83673.01  84230.83  82467.39  22.26B       1.66T  116273.31  57747.77  USD       CCC

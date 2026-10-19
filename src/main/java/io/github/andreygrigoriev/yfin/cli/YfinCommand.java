@@ -1,6 +1,8 @@
 package io.github.andreygrigoriev.yfin.cli;
 
 import io.github.andreygrigoriev.yfin.YFinance;
+import io.github.andreygrigoriev.yfin.cli.cmd.HistoryCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.QuoteCommand;
 import io.github.andreygrigoriev.yfin.cli.output.Output;
 import io.github.andreygrigoriev.yfin.cli.output.Terminal;
 import java.util.Objects;
@@ -9,6 +11,7 @@ import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Mixin;
 import picocli.CommandLine.Model.CommandSpec;
+import picocli.CommandLine.ScopeType;
 import picocli.CommandLine.Spec;
 
 /**
@@ -20,6 +23,8 @@ import picocli.CommandLine.Spec;
 @Command(
         name = "yfin",
         mixinStandardHelpOptions = true,
+        scope = ScopeType.INHERIT,
+        subcommands = {QuoteCommand.class, HistoryCommand.class},
         versionProvider = YfinCommand.VersionProvider.class,
         description = "Yahoo Finance market data from the command line.")
 public final class YfinCommand implements Runnable, AutoCloseable {

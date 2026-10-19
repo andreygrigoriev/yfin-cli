@@ -8,4 +8,6 @@ module io.github.andreygrigoriev.yfin.cli {
     // picocli reads and writes the annotated command fields reflectively
     opens io.github.andreygrigoriev.yfin.cli to
             info.picocli;
+    opens io.github.andreygrigoriev.yfin.cli.cmd to
+            info.picocli;
 }

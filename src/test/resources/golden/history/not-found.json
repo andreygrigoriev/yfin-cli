@@ -1,0 +1,5 @@
+exit: 3
+--- stdout
+[]
+--- stderr
+yfin: NOPE: Yahoo chart error Not Found: No data found, symbol may be delisted (NOPE)

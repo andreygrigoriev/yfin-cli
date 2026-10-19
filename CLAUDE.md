@@ -47,6 +47,9 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
   (0 success, 1 unexpected, 2 usage, 3-7 library errors, 130 interrupted). Commands let library
   exceptions propagate: `ErrorHandler` (registered by `YfinCommand.commandLine`) prints
   `yfin: [<symbol>: ]<reason>` and maps the exit code.
+- Commands live in `cli.cmd` and are listed in `YfinCommand`'s `subcommands`; column specs of
+  library models are constants in `cli.spec.Specs`. The root's `@Command(scope = INHERIT)` gives
+  every subcommand `--help`/`--version`.
 - Commands over several symbols use `MultiSymbol.fetch(symbols, fn)` (virtual threads, input
   order kept), print the successes, then `return result.reportFailures(err, verbose)`.
 
@@ -63,6 +66,9 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
   `cli.onGet(path)...`; `Fixtures.load` reads library fixtures from the class path.
 - Compare results with `Golden.assertMatches(result, "<command path>/<case>.<format>")`, files under
   `src/test/resources/golden/`. `./mvnw test -Dgolden.update=true` rewrites them; review the diff.
+- Library code that looks back from "now" (e.g. `FastInfo`'s one-year window) can't take a test
+  clock through the exported API: serve such charts with `Fixtures.chartEndingDaysAgo(path, zone,
+  days)`, which shifts the bars so the goldens don't drift with the date.
 - `GoldenCoverageTest` fails if a leaf command (except `help`, `completion`) lacks a golden
   directory with a `normal.*` case exiting 0 and a case exiting non-zero.
 - `docs/fixtures.md` maps commands to library fixtures and lists fixtures still to record in yfin.

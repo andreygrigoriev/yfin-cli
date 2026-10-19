@@ -1,0 +1,4 @@
+exit: 0
+--- stdout
+symbol  last_price  change  change_pct  previous_close    open  day_high  day_low  volume  market_cap  year_high  year_low  currency  exchange
+AAPL        340.50    3.86       1.15%          336.64  338.16    342.63   337.60   9.00M       4.97T     345.34    243.42  USD       NMS
