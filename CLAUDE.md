@@ -19,7 +19,12 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
 - JPMS module `io.github.andreygrigoriev.yfin.cli`. It `requires io.github.andreygrigoriev.yfin`,
   `info.picocli`, `com.fasterxml.jackson.core` and `static org.jspecify`. Packages with picocli
   command classes are `opens ... to info.picocli`.
-- `Main` runs `YfinCommand` (the root command) and exits with its code.
+- `Main` runs `YfinCommand` (the root command) and exits with its code. `YfinCommand` owns the
+  invocation state: `GlobalOptions` (a mixin of `ScopeType.INHERIT` options, bound to the root's
+  one instance), a lazily built `YFinance` from its `ClientFactory` (closed by `close()`), and
+  `output()`. Subcommands reach it with `YfinCommand.root(spec)`.
+- Build command lines with `YfinCommand.commandLine(root)`: it registers `Converters` after the
+  subcommands exist (picocli doesn't apply converters to subcommands added later).
 - `src/main/java-templates/.../BuildInfo.java` is filtered by `templating-maven-plugin`
   (`VERSION`, `YFIN_CORE_VERSION`). Edit the template, never `target/generated-sources`.
 
@@ -48,7 +53,7 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
 - Typical setup: `fake.onGet("").respond(404, "not found")` (cookie bootstrap),
   `fake.onGet("/v1/test/getcrumb").respond(200, "crumb1")`, then
   `YFinance.builder().transport(fake).cache(...).maxRetries(0).build()`.
-- Command tests run `new CommandLine(new YfinCommand()).setOut(...).setErr(...).execute(args)`
+- Command tests run `YfinCommand.commandLine(new YfinCommand(factory, Terminal.piped(120))).setOut(...).setErr(...).execute(args)`
   and assert on stdout, stderr and the exit code.
 
 ## Housekeeping

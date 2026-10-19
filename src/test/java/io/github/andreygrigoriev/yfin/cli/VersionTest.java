@@ -5,14 +5,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import org.junit.jupiter.api.Test;
-import picocli.CommandLine;
 
 class VersionTest {
     private final StringWriter out = new StringWriter();
     private final StringWriter err = new StringWriter();
 
     private int run(String... args) {
-        return new CommandLine(new YfinCommand())
+        return YfinCommand.commandLine(new YfinCommand())
                 .setOut(new PrintWriter(out, true))
                 .setErr(new PrintWriter(err, true))
                 .execute(args);
