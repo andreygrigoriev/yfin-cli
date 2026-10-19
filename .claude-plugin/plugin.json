@@ -1,0 +1,8 @@
+{
+  "name": "yfin",
+  "description": "Skill that lets Claude fetch Yahoo Finance market data with the yfin CLI.",
+  "author": { "name": "Andrey Grigoriev" },
+  "homepage": "https://github.com/andreygrigoriev/yfin-cli",
+  "repository": "https://github.com/andreygrigoriev/yfin-cli",
+  "license": "Apache-2.0"
+}

@@ -115,6 +115,13 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
   ~14 ms startup; re-measure (README "Size and startup") if a change grows it.
 - `docs/fixtures.md` maps commands to library fixtures and lists fixtures still to record in yfin.
 
+## Claude skill
+
+- `skills/yfin/SKILL.md` is a user-facing Claude Code skill for the CLI, shipped as a plugin
+  through `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` (validate with
+  `claude plugin validate .`). It names commands, options, JSON keys and exit codes, so update it
+  when any of those change, and run its examples against the binary.
+
 ## Housekeeping
 
 - Never commit `.idea/` (it is git-ignored).

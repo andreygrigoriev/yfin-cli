@@ -75,6 +75,26 @@ yfin screen day_gainers --size 10 --format csv > gainers.csv
 yfin info AAPL --format json | jq '.market_cap'
 ```
 
+## Claude Code skill
+
+The repo ships a [Claude Code](https://claude.com/claude-code) skill, `skills/yfin/SKILL.md`. It
+teaches Claude when to reach for `yfin`, which command answers which question, and how to read the
+output (JSON, fractions for percentages, exit codes). With it, prompts like "compare the margins of
+MSFT and GOOGL" or "when does NVDA report earnings?" get answered from live data. Install `yfin`
+first, then add the skill as a plugin:
+
+```
+/plugin marketplace add andreygrigoriev/yfin-cli
+/plugin install yfin@yfin-cli
+```
+
+Or copy the skill directory by hand:
+
+```sh
+git clone https://github.com/andreygrigoriev/yfin-cli
+cp -r yfin-cli/skills/yfin ~/.claude/skills/
+```
+
 ## Global options
 
 Every command accepts these:

@@ -1,0 +1,11 @@
+{
+  "name": "yfin-cli",
+  "owner": { "name": "Andrey Grigoriev" },
+  "plugins": [
+    {
+      "name": "yfin",
+      "source": "./",
+      "description": "Skill that lets Claude fetch Yahoo Finance market data with the yfin CLI."
+    }
+  ]
+}
