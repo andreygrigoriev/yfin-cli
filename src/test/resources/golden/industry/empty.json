@@ -1,0 +1,14 @@
+exit: 0
+--- stdout
+{
+  "key": "solar",
+  "name": "Solar",
+  "symbol": null,
+  "sector_key": null,
+  "sector_name": null,
+  "companies_count": null,
+  "market_cap": null,
+  "market_weight": null,
+  "employee_count": null,
+  "description": "Solar"
+}

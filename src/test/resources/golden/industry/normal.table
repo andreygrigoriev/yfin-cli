@@ -1,0 +1,12 @@
+exit: 0
+--- stdout
+key              semiconductors
+name             Semiconductors
+symbol           ^YH31130020
+sector_key       technology
+sector_name      Technology
+companies_count  61
+market_cap       11.22T
+market_weight    37.28%
+employee_count   1.30M
+description      Semiconductor companies that design, manufacture, and market integrated circuits, microprocessors, logic devices, chipsets, and memory chips for a wide variety of users. Includes companies that design, manufacture, and market general-application integrated circuits and memory and memory-intensive products.

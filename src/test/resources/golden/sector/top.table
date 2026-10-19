@@ -1,0 +1,53 @@
+exit: 0
+--- stdout
+symbol  name                                         rating      market_weight
+NVDA    NVIDIA Corporation                           Strong Buy         17.62%
+AAPL    Apple Inc.                                   Buy                16.02%
+MSFT    Microsoft Corporation                        Strong Buy         12.91%
+AVGO    Broadcom Inc.                                Strong Buy          5.46%
+SKHY    SK hynix Inc.                                —                   3.72%
+MU      Micron Technology, Inc.                      Strong Buy          3.60%
+AMD     Advanced Micro Devices, Inc.                 Strong Buy          3.12%
+INTC    Intel Corporation                            Buy                 1.72%
+PLTR    Palantir Technologies Inc.                   Buy                 1.61%
+CSCO    Cisco Systems, Inc.                          Buy                 1.47%
+ORCL    Oracle Corporation                           Buy                 1.34%
+AMAT    Applied Materials, Inc.                      Strong Buy          1.27%
+LRCX    Lam Research Corporation                     Strong Buy          1.25%
+DELL    Dell Technologies Inc.                       Buy                 1.17%
+PANW    Palo Alto Networks, Inc.                     Buy                 1.06%
+CRWD    CrowdStrike Holdings, Inc.                   Buy                 0.87%
+ANET    Arista Networks, Inc.                        Strong Buy          0.86%
+TXN     Texas Instruments Incorporated               Buy                 0.83%
+KLAC    KLA Corporation                              Buy                 0.80%
+MRVL    Marvell Technology, Inc.                     Strong Buy          0.77%
+SHOP    Shopify Inc.                                 Buy                 0.75%
+SNDK    Sandisk Corporation                          Buy                 0.69%
+IBM     International Business Machines Corporation  Buy                 0.69%
+APH     Amphenol Corporation                         Strong Buy          0.68%
+ADI     Analog Devices, Inc.                         Strong Buy          0.63%
+CRM     Salesforce, Inc.                             Buy                 0.62%
+QCOM    QUALCOMM Incorporated                        Hold                0.60%
+STX     Seagate Technology Holdings plc              Strong Buy          0.55%
+UBER    Uber Technologies, Inc.                      Buy                 0.47%
+WDC     Western Digital Corporation                  Buy                 0.47%
+NOW     ServiceNow, Inc.                             Strong Buy          0.47%
+FTNT    Fortinet, Inc.                               Hold                0.46%
+ACN     Accenture plc                                Buy                 0.42%
+SNOW    Snowflake Inc.                               Strong Buy          0.41%
+GLW     Corning Incorporated                         Buy                 0.41%
+NET     Cloudflare, Inc.                             Buy                 0.40%
+ADP     Automatic Data Processing, Inc.              Hold                0.35%
+DDOG    Datadog, Inc.                                Strong Buy          0.33%
+SNPS    Synopsys, Inc.                               Strong Buy          0.31%
+CDNS    Cadence Design Systems, Inc.                 Strong Buy          0.31%
+HPE     Hewlett Packard Enterprise Company           Buy                 0.30%
+ADBE    Adobe Inc.                                   Hold                0.30%
+LITE    Lumentum Holdings Inc.                       Strong Buy          0.29%
+INTU    Intuit Inc.                                  Buy                 0.26%
+MSI     Motorola Solutions, Inc.                     Buy                 0.24%
+MPWR    Monolithic Power Systems, Inc.               Strong Buy          0.21%
+KEYS    Keysight Technologies, Inc.                  Buy                 0.21%
+TEL     TE Connectivity plc                          Buy                 0.20%
+MSTR    Strategy Inc                                 Strong Buy          0.19%
+TER     Teradyne, Inc.                               Buy                 0.19%

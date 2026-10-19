@@ -1,0 +1,4 @@
+exit: 7
+--- stdout
+--- stderr
+yfin: Yahoo finance error Bad Request: invalid broad market region [payload: {"finance":{"result":null,"error":{"code":"Bad Request","description":"invalid broad market region"}}}]

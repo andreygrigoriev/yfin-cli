@@ -1,0 +1,53 @@
+exit: 0
+--- stdout
+symbol,name,rating,market_weight
+NVDA,NVIDIA Corporation,Strong Buy,0.17620951
+AAPL,Apple Inc.,Buy,0.16021143
+MSFT,Microsoft Corporation,Strong Buy,0.12907347
+AVGO,Broadcom Inc.,Strong Buy,0.054625332
+SKHY,SK hynix Inc.,,0.03720607
+MU,"Micron Technology, Inc.",Strong Buy,0.035963066
+AMD,"Advanced Micro Devices, Inc.",Strong Buy,0.03118694
+INTC,Intel Corporation,Buy,0.017243374
+PLTR,Palantir Technologies Inc.,Buy,0.01612057
+CSCO,"Cisco Systems, Inc.",Buy,0.014654347
+ORCL,Oracle Corporation,Buy,0.013411191
+AMAT,"Applied Materials, Inc.",Strong Buy,0.012732094
+LRCX,Lam Research Corporation,Strong Buy,0.01250235
+DELL,Dell Technologies Inc.,Buy,0.011734807
+PANW,"Palo Alto Networks, Inc.",Buy,0.010585233
+CRWD,"CrowdStrike Holdings, Inc.",Buy,0.008697089
+ANET,"Arista Networks, Inc.",Strong Buy,0.008584386
+TXN,Texas Instruments Incorporated,Buy,0.0082851
+KLAC,KLA Corporation,Buy,0.007987044
+MRVL,"Marvell Technology, Inc.",Strong Buy,0.0077308714
+SHOP,Shopify Inc.,Buy,0.00748562
+SNDK,Sandisk Corporation,Buy,0.006913895
+IBM,International Business Machines Corporation,Buy,0.006885352
+APH,Amphenol Corporation,Strong Buy,0.006842427
+ADI,"Analog Devices, Inc.",Strong Buy,0.006335439
+CRM,"Salesforce, Inc.",Buy,0.0061564986
+QCOM,QUALCOMM Incorporated,Hold,0.005981829
+STX,Seagate Technology Holdings plc,Strong Buy,0.0055336985
+UBER,"Uber Technologies, Inc.",Buy,0.0046999073
+WDC,Western Digital Corporation,Buy,0.0046858317
+NOW,"ServiceNow, Inc.",Strong Buy,0.004660955
+FTNT,"Fortinet, Inc.",Hold,0.0045582317
+ACN,Accenture plc,Buy,0.0042217583
+SNOW,Snowflake Inc.,Strong Buy,0.004075419
+GLW,Corning Incorporated,Buy,0.004068369
+NET,"Cloudflare, Inc.",Buy,0.004023083
+ADP,"Automatic Data Processing, Inc.",Hold,0.0034915095
+DDOG,"Datadog, Inc.",Strong Buy,0.0033275732
+SNPS,"Synopsys, Inc.",Strong Buy,0.003100994
+CDNS,"Cadence Design Systems, Inc.",Strong Buy,0.0030947058
+HPE,Hewlett Packard Enterprise Company,Buy,0.003000208
+ADBE,Adobe Inc.,Hold,0.0029734583
+LITE,Lumentum Holdings Inc.,Strong Buy,0.0029050186
+INTU,Intuit Inc.,Buy,0.0026325781
+MSI,"Motorola Solutions, Inc.",Buy,0.0023710344
+MPWR,"Monolithic Power Systems, Inc.",Strong Buy,0.0020956544
+KEYS,"Keysight Technologies, Inc.",Buy,0.0020736514
+TEL,TE Connectivity plc,Buy,0.0020191951
+MSTR,Strategy Inc,Strong Buy,0.0019453219
+TER,"Teradyne, Inc.",Buy,0.0019344201

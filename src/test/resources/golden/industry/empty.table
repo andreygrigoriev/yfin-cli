@@ -1,0 +1,12 @@
+exit: 0
+--- stdout
+key              solar
+name             Solar
+symbol           —
+sector_key       —
+sector_name      —
+companies_count  —
+market_cap       —
+market_weight    —
+employee_count   —
+description      Solar

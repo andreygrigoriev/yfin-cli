@@ -1,0 +1,5 @@
+exit: 7
+--- stdout
+--- stderr
+yfin: Yahoo finance error Internal Server Error: backend failure [payload: {"finance":{"result":null,"error":{"code":"Internal Server Error","description":"backend failure"}}}
+]

@@ -1,0 +1,8 @@
+exit: 0
+--- stdout
+symbol  name                                ytd_return  growth_estimate
+MU      Micron Technology, Inc.                245.54%          584.62%
+SMTC    Semtech Corporation                    130.28%          385.71%
+SITM    SiTime Corporation                      62.11%          383.33%
+CRDO    Credo Technology Group Holding Ltd      40.06%          300.00%
+CEVA    CEVA, Inc.                              47.52%          260.00%

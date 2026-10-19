@@ -11,16 +11,20 @@ import io.github.andreygrigoriev.yfin.cli.cmd.FinancialsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.FundCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.HistoryCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.HoldersCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.IndustryCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.InfoCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.IsinCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.LookupCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.MarketCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.NewsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.OptionsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.PriceTargetCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.QuoteCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.RecommendationsCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.ScreenCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SearchCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SecFilingsCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.SectorCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SharesCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SplitsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SustainabilityCommand;
@@ -72,7 +76,11 @@ import picocli.CommandLine.Spec;
             OptionsCommand.class,
             NewsCommand.class,
             SearchCommand.class,
-            LookupCommand.class
+            LookupCommand.class,
+            ScreenCommand.class,
+            SectorCommand.class,
+            IndustryCommand.class,
+            MarketCommand.class
         },
         versionProvider = YfinCommand.VersionProvider.class,
         description = "Yahoo Finance market data from the command line.")

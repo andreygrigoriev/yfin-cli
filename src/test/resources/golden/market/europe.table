@@ -1,0 +1,9 @@
+exit: 0
+--- stdout
+symbol    short_name                       quote_type  exchange     price  change  change_pct  previous_close  time              market_state
+^FTSE     FTSE 100                         INDEX       FGI       10656.28  104.23       0.99%        10552.05  2026-10-12 15:35  POSTPOST
+^FCHI     CAC 40                           INDEX       PAR        7832.88   29.55       0.38%         7803.33  2026-10-12 16:05  POSTPOST
+^GDAXI    DAX                           P  INDEX       GER       25277.68  190.41       0.76%        25087.27  2026-10-12 16:00  POSTPOST
+^N100     Euronext 100 Index               INDEX       PAR        1866.11    6.30       0.34%         1859.81  2026-10-12 16:05  POSTPOST
+EURUSD=X  EUR/USD                          CURRENCY    CCY           1.12    0.00      -0.42%            1.12  2026-10-12 19:43  REGULAR
+GBP=X     USD/GBP                          CURRENCY    CCY           0.76    0.00       0.19%            0.76  2026-10-12 19:43  REGULAR

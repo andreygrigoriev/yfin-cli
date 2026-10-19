@@ -1,0 +1,8 @@
+exit: 0
+--- stdout
+symbol  name                          ytd_return  last_price  target_price
+MXL     MaxLinear, Inc.                  410.10%       88.91         94.55
+MU      Micron Technology, Inc.          245.54%      986.21       1555.13
+MRVL    Marvell Technology, Inc.         214.42%      267.19        337.99
+AMD     Advanced Micro Devices, Inc.     177.07%      593.38        636.21
+INTC    Intel Corporation                174.58%      101.32        118.05

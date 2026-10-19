@@ -1,0 +1,43 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "SNAP",
+    "short_name": "Snap Inc.",
+    "price": 6.6282,
+    "change": 0.39820004,
+    "change_pct": 0.06391654,
+    "volume": 33124870,
+    "avg_volume_3m": 36536717,
+    "market_cap": 11209596928,
+    "trailing_pe": null,
+    "currency": "USD",
+    "exchange": "NYQ"
+  },
+  {
+    "symbol": "ECO",
+    "short_name": "Okeanis Eco Tankers Corp.",
+    "price": 98.9399,
+    "change": 5.8299026,
+    "change_pct": 0.062613063,
+    "volume": 727728,
+    "avg_volume_3m": 628253,
+    "market_cap": 3863074560,
+    "trailing_pe": 9.161102,
+    "currency": "USD",
+    "exchange": "NYQ"
+  },
+  {
+    "symbol": "CHA",
+    "short_name": "Chagee Holdings Limited",
+    "price": 11.92,
+    "change": 0.6700001,
+    "change_pct": 0.059555564,
+    "volume": 1212106,
+    "avg_volume_3m": 810621,
+    "market_cap": 2273899008,
+    "trailing_pe": 12.040404,
+    "currency": "USD",
+    "exchange": "NMS"
+  }
+]

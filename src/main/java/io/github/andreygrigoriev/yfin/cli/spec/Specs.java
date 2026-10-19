@@ -15,22 +15,30 @@ import io.github.andreygrigoriev.yfin.model.EpsRevisions;
 import io.github.andreygrigoriev.yfin.model.EpsTrend;
 import io.github.andreygrigoriev.yfin.model.FundHolding;
 import io.github.andreygrigoriev.yfin.model.FundsData;
+import io.github.andreygrigoriev.yfin.model.GrowthCompany;
 import io.github.andreygrigoriev.yfin.model.GrowthEstimate;
 import io.github.andreygrigoriev.yfin.model.Holder;
+import io.github.andreygrigoriev.yfin.model.IndustryData;
 import io.github.andreygrigoriev.yfin.model.InsiderRosterEntry;
 import io.github.andreygrigoriev.yfin.model.InsiderTransaction;
 import io.github.andreygrigoriev.yfin.model.LookupResult;
 import io.github.andreygrigoriev.yfin.model.MajorHolders;
+import io.github.andreygrigoriev.yfin.model.MarketStatus;
+import io.github.andreygrigoriev.yfin.model.MarketSummaryItem;
 import io.github.andreygrigoriev.yfin.model.NewsItem;
+import io.github.andreygrigoriev.yfin.model.PerformingCompany;
 import io.github.andreygrigoriev.yfin.model.PriceTargets;
 import io.github.andreygrigoriev.yfin.model.Recommendation;
 import io.github.andreygrigoriev.yfin.model.RevenueEstimate;
 import io.github.andreygrigoriev.yfin.model.SearchQuote;
 import io.github.andreygrigoriev.yfin.model.SecFiling;
+import io.github.andreygrigoriev.yfin.model.SectorData;
+import io.github.andreygrigoriev.yfin.model.SectorIndustry;
 import io.github.andreygrigoriev.yfin.model.SharesCount;
 import io.github.andreygrigoriev.yfin.model.Split;
 import io.github.andreygrigoriev.yfin.model.Sustainability;
 import io.github.andreygrigoriev.yfin.model.TickerInfo;
+import io.github.andreygrigoriev.yfin.model.TopCompany;
 import io.github.andreygrigoriev.yfin.model.UpgradeDowngrade;
 import io.github.andreygrigoriev.yfin.request.Interval;
 import java.math.BigDecimal;
@@ -510,6 +518,118 @@ public final class Specs {
             .col("rank", LookupResult::rank, SCORE)
             .build();
 
+    /** Names of Yahoo's predefined screens, as {@code screen --list} prints them. */
+    public static final Spec<String> SCREEN_NAME =
+            Spec.<String>builder().col("name", n -> n, Kind.TEXT).build();
+
+    /**
+     * Screener matches, as {@code screen} prints them, in the screen's order. Yahoo gives the
+     * fields as a loose map; {@code change_pct} is a fraction like the other percentages (Yahoo
+     * gives percent).
+     */
+    public static final Spec<Map<String, Object>> SCREEN_QUOTE = Spec.<Map<String, Object>>builder()
+            .col("symbol", q -> q.get("symbol"), Kind.TEXT)
+            .col("short_name", q -> q.get("shortName"), Kind.TEXT)
+            .col("price", q -> number(q, "regularMarketPrice"), PRICE)
+            .col("change", q -> number(q, "regularMarketChange"), PRICE)
+            .col("change_pct", q -> fraction(number(q, "regularMarketChangePercent")), Kind.PERCENT)
+            .col("volume", q -> number(q, "regularMarketVolume"), Kind.INTEGER)
+            .col("avg_volume_3m", q -> number(q, "averageDailyVolume3Month"), Kind.INTEGER)
+            .col("market_cap", q -> number(q, "marketCap"), Kind.INTEGER)
+            .col("trailing_pe", q -> number(q, "trailingPE"), RATIO)
+            .col("currency", q -> q.get("currency"), Kind.TEXT)
+            .col("exchange", q -> q.get("exchange"), Kind.TEXT)
+            .build();
+
+    /** A sector's overview, as {@code sector} prints it. */
+    public static final Spec<SectorData> SECTOR = Spec.<SectorData>builder()
+            .col("key", SectorData::key, Kind.TEXT)
+            .col("name", SectorData::name, Kind.TEXT)
+            .col("symbol", SectorData::symbol, Kind.TEXT)
+            .col("companies_count", s -> s.overview().companiesCount(), Kind.INTEGER)
+            .col("industries_count", s -> s.overview().industriesCount(), Kind.INTEGER)
+            .col("market_cap", s -> s.overview().marketCap(), Kind.INTEGER)
+            .col("market_weight", s -> s.overview().marketWeight(), Kind.PERCENT)
+            .col("employee_count", s -> s.overview().employeeCount(), Kind.INTEGER)
+            .col("description", s -> s.overview().description(), Kind.TEXT)
+            .build();
+
+    /** A sector's industries, as {@code sector --industries} prints them, with their weight in the sector. */
+    public static final Spec<SectorIndustry> SECTOR_INDUSTRY = Spec.<SectorIndustry>builder()
+            .col("key", SectorIndustry::key, Kind.TEXT)
+            .col("name", SectorIndustry::name, Kind.TEXT)
+            .col("symbol", SectorIndustry::symbol, Kind.TEXT)
+            .col("market_weight", SectorIndustry::marketWeight, Kind.PERCENT)
+            .build();
+
+    /** The largest companies of a sector or industry, as {@code sector --top} and {@code industry --top} print them. */
+    public static final Spec<TopCompany> TOP_COMPANY = Spec.<TopCompany>builder()
+            .col("symbol", TopCompany::symbol, Kind.TEXT)
+            .col("name", TopCompany::name, Kind.TEXT)
+            .col("rating", TopCompany::rating, Kind.TEXT)
+            .col("market_weight", TopCompany::marketWeight, Kind.PERCENT)
+            .build();
+
+    /** An industry's overview, as {@code industry} prints it. */
+    public static final Spec<IndustryData> INDUSTRY = Spec.<IndustryData>builder()
+            .col("key", IndustryData::key, Kind.TEXT)
+            .col("name", IndustryData::name, Kind.TEXT)
+            .col("symbol", IndustryData::symbol, Kind.TEXT)
+            .col("sector_key", IndustryData::sectorKey, Kind.TEXT)
+            .col("sector_name", IndustryData::sectorName, Kind.TEXT)
+            .col("companies_count", i -> i.overview().companiesCount(), Kind.INTEGER)
+            .col("market_cap", i -> i.overview().marketCap(), Kind.INTEGER)
+            .col("market_weight", i -> i.overview().marketWeight(), Kind.PERCENT)
+            .col("employee_count", i -> i.overview().employeeCount(), Kind.INTEGER)
+            .col("description", i -> i.overview().description(), Kind.TEXT)
+            .build();
+
+    /** An industry's best performers this year, as {@code industry --performing} prints them. */
+    public static final Spec<PerformingCompany> PERFORMING_COMPANY = Spec.<PerformingCompany>builder()
+            .col("symbol", PerformingCompany::symbol, Kind.TEXT)
+            .col("name", PerformingCompany::name, Kind.TEXT)
+            .col("ytd_return", PerformingCompany::ytdReturn, Kind.PERCENT)
+            .col("last_price", PerformingCompany::lastPrice, PRICE)
+            .col("target_price", PerformingCompany::targetPrice, PRICE)
+            .build();
+
+    /** An industry's fastest expected growers, as {@code industry --growth} prints them. */
+    public static final Spec<GrowthCompany> GROWTH_COMPANY = Spec.<GrowthCompany>builder()
+            .col("symbol", GrowthCompany::symbol, Kind.TEXT)
+            .col("name", GrowthCompany::name, Kind.TEXT)
+            .col("ytd_return", GrowthCompany::ytdReturn, Kind.PERCENT)
+            .col("growth_estimate", GrowthCompany::growthEstimate, Kind.PERCENT)
+            .build();
+
+    /**
+     * A region's headline instruments, as {@code market} prints them. {@code change_pct} is a
+     * fraction like the other percentages (Yahoo gives percent); the time is printed in UTC.
+     */
+    public static final Spec<MarketSummaryItem> MARKET_SUMMARY = Spec.<MarketSummaryItem>builder()
+            .col("symbol", MarketSummaryItem::symbol, Kind.TEXT)
+            .col("short_name", MarketSummaryItem::shortName, Kind.TEXT)
+            .col("quote_type", MarketSummaryItem::quoteType, Kind.TEXT)
+            .col("exchange", MarketSummaryItem::exchange, Kind.TEXT)
+            .col("price", MarketSummaryItem::price, PRICE)
+            .col("change", MarketSummaryItem::change, PRICE)
+            .col("change_pct", m -> fraction(m.changePercent()), Kind.PERCENT)
+            .col("previous_close", MarketSummaryItem::previousClose, PRICE)
+            .col("time", MarketSummaryItem::time, Kind.TIMESTAMP)
+            .col("market_state", MarketSummaryItem::marketState, Kind.TEXT)
+            .build();
+
+    /** Today's trading hours of a market, as {@code market --status} prints them, in the market's zone. */
+    public static final Spec<MarketStatus> MARKET_STATUS = Spec.<MarketStatus>builder()
+            .col("id", MarketStatus::id, Kind.TEXT)
+            .col("name", MarketStatus::name, Kind.TEXT)
+            .col("status", MarketStatus::status, Kind.TEXT)
+            .col("message", MarketStatus::message, Kind.TEXT)
+            .col("open", MarketStatus::open, Kind.TIMESTAMP)
+            .col("close", MarketStatus::close, Kind.TIMESTAMP)
+            .col("zone", s -> s.zone().getId(), Kind.TEXT)
+            .col("zone_short_name", MarketStatus::zoneShortName, Kind.TEXT)
+            .build();
+
     private Specs() {}
 
     /**
@@ -569,6 +689,11 @@ public final class Specs {
     /** {@link #fraction(double)} of a value Yahoo may not have; {@code null} when missing. */
     private static @Nullable BigDecimal fraction(@Nullable Double percent) {
         return percent == null ? null : fraction(percent.doubleValue());
+    }
+
+    /** A numeric field of a loose Yahoo map; {@code null} when missing or not a number. */
+    private static @Nullable Double number(Map<String, Object> map, String key) {
+        return map.get(key) instanceof Number n ? n.doubleValue() : null;
     }
 
     private static @Nullable String joined(List<String> values) {

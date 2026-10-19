@@ -1,0 +1,8 @@
+exit: 0
+--- stdout
+symbol  short_name                        price  change  change_pct  volume  avg_volume_3m  market_cap  trailing_pe  currency  exchange
+ONDS    Ondas Inc                          6.74    0.01       0.07%  64.22M         78.48M       3.92B            —  USD       NCM
+SPCX    Space Exploration Technologies   163.89    1.32       0.81%  56.54M         93.70M       2.16T            —  USD       NMS
+NOK     Nokia Corporation Sponsored        9.93   -0.43      -4.12%  55.34M         83.82M      55.61B        70.95  USD       NYQ
+INTC    Intel Corporation                100.92   -3.78      -3.61%  54.43M        107.14M     533.47B            —  USD       NMS
+NVDA    NVIDIA Corporation               226.49   -2.79      -1.22%  49.66M        120.32M       5.47T        28.63  USD       NMS

@@ -1,0 +1,13 @@
+exit: 0
+--- stdout
+{
+  "key": "utilities",
+  "name": "Utilities",
+  "symbol": null,
+  "companies_count": null,
+  "industries_count": null,
+  "market_cap": null,
+  "market_weight": null,
+  "employee_count": null,
+  "description": null
+}

@@ -1,0 +1,15 @@
+exit: 0
+--- stdout
+key                                name                                 symbol       market_weight
+semiconductors                     Semiconductors                       ^YH31130020         37.28%
+software-infrastructure            Software - Infrastructure            ^YH31110030         22.15%
+consumer-electronics               Consumer Electronics                 ^YH31120030         16.55%
+software-application               Software - Application               ^YH31110020          7.14%
+computer-hardware                  Computer Hardware                    ^YH31120020          4.38%
+semiconductor-equipment-materials  Semiconductor Equipment & Materials  ^YH31130010          4.10%
+communication-equipment            Communication Equipment              ^YH31120010          2.98%
+electronic-components              Electronic Components                ^YH31120040          2.08%
+information-technology-services    Information Technology Services      ^YH31110010          2.04%
+scientific-technical-instruments   Scientific & Technical Instruments   ^YH31120060          0.97%
+electronics-computer-distribution  Electronics & Computer Distribution  ^YH31120050          0.17%
+solar                              Solar                                ^YH31130030          0.15%

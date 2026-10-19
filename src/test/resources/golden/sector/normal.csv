@@ -1,0 +1,12 @@
+exit: 0
+--- stdout
+field,value
+key,technology
+name,Technology
+symbol,^YH311
+companies_count,870
+industries_count,12
+market_cap,30091056775168
+market_weight,0.33607838
+employee_count,7963655
+description,"Companies engaged in the design, development, and support of computer operating systems and applications. This sector also includes companies that make computer equipment, data storage products, networking products, semiconductors, and components. Companies in this sector include Apple, Microsoft, and IBM."

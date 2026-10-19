@@ -1,0 +1,39 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "MXL",
+    "name": "MaxLinear, Inc.",
+    "ytd_return": 4.101,
+    "last_price": 88.91,
+    "target_price": 94.5454
+  },
+  {
+    "symbol": "MU",
+    "name": "Micron Technology, Inc.",
+    "ytd_return": 2.4554,
+    "last_price": 986.2059,
+    "target_price": 1555.13
+  },
+  {
+    "symbol": "MRVL",
+    "name": "Marvell Technology, Inc.",
+    "ytd_return": 2.1442,
+    "last_price": 267.19,
+    "target_price": 337.994
+  },
+  {
+    "symbol": "AMD",
+    "name": "Advanced Micro Devices, Inc.",
+    "ytd_return": 1.7707,
+    "last_price": 593.3828,
+    "target_price": 636.208
+  },
+  {
+    "symbol": "INTC",
+    "name": "Intel Corporation",
+    "ytd_return": 1.7458,
+    "last_price": 101.32,
+    "target_price": 118.047
+  }
+]

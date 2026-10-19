@@ -1,0 +1,76 @@
+exit: 0
+--- stdout
+[
+  {
+    "key": "semiconductors",
+    "name": "Semiconductors",
+    "symbol": "^YH31130020",
+    "market_weight": 0.37281495
+  },
+  {
+    "key": "software-infrastructure",
+    "name": "Software - Infrastructure",
+    "symbol": "^YH31110030",
+    "market_weight": 0.2214734
+  },
+  {
+    "key": "consumer-electronics",
+    "name": "Consumer Electronics",
+    "symbol": "^YH31120030",
+    "market_weight": 0.1655214
+  },
+  {
+    "key": "software-application",
+    "name": "Software - Application",
+    "symbol": "^YH31110020",
+    "market_weight": 0.07141521
+  },
+  {
+    "key": "computer-hardware",
+    "name": "Computer Hardware",
+    "symbol": "^YH31120020",
+    "market_weight": 0.043838333
+  },
+  {
+    "key": "semiconductor-equipment-materials",
+    "name": "Semiconductor Equipment & Materials",
+    "symbol": "^YH31130010",
+    "market_weight": 0.041026533
+  },
+  {
+    "key": "communication-equipment",
+    "name": "Communication Equipment",
+    "symbol": "^YH31120010",
+    "market_weight": 0.02980305
+  },
+  {
+    "key": "electronic-components",
+    "name": "Electronic Components",
+    "symbol": "^YH31120040",
+    "market_weight": 0.02084493
+  },
+  {
+    "key": "information-technology-services",
+    "name": "Information Technology Services",
+    "symbol": "^YH31110010",
+    "market_weight": 0.020406691
+  },
+  {
+    "key": "scientific-technical-instruments",
+    "name": "Scientific & Technical Instruments",
+    "symbol": "^YH31120060",
+    "market_weight": 0.009723318
+  },
+  {
+    "key": "electronics-computer-distribution",
+    "name": "Electronics & Computer Distribution",
+    "symbol": "^YH31120050",
+    "market_weight": 0.001667132
+  },
+  {
+    "key": "solar",
+    "name": "Solar",
+    "symbol": "^YH31130030",
+    "market_weight": 0.001465087
+  }
+]

@@ -1,0 +1,27 @@
+exit: 2
+--- stdout
+--- stderr
+'no_such_screen' is not a predefined screen; valid names: aggressive_small_caps, day_gainers, day_losers, growth_technology_stocks, most_actives, most_shorted_stocks, small_cap_gainers, undervalued_growth_stocks, undervalued_large_caps, conservative_foreign_funds, high_yield_bond, portfolio_anchors, solid_large_growth_funds, solid_midcap_growth_funds, top_mutual_funds, top_etfs_us, top_performing_etfs, technology_etfs, bond_etfs
+Usage: yfin screen [-hV] [--asc] [--list] [--no-cache] [--no-color] [--verbose]
+                   [--format=FORMAT] [--offset=N] [--retries=N] [--size=N]
+                   [--sort=FIELD] [--timeout=DURATION] [NAME]
+Run one of Yahoo's predefined stock and fund screens.
+      [NAME]               Predefined screen, e.g. day_gainers; see --list.
+      --asc                Sort ascending instead of descending (with --sort).
+      --format=FORMAT      Output format: table, csv or json (default: table).
+  -h, --help               Show this help message and exit.
+      --list               Print the names of the predefined screens instead.
+      --no-cache           Don't read or write the on-disk cache (cookie,
+                             crumb, timezones).
+      --no-color           Never colour table output.
+      --offset=N           Index of the first match (default: 0). Runs the
+                             screen as its equivalent custom query.
+      --retries=N          Retries on rate limits and server errors; 0 disables
+                             (default: 2).
+      --size=N             Number of matches, 1 to 250 (default: 25).
+      --sort=FIELD         Yahoo screener field to sort by, e.g. percentchange
+                             or dayvolume (default: the screen's own order).
+      --timeout=DURATION   Timeout per request, e.g. 30s or 2m (default: 30s).
+  -V, --version            Print version information and exit.
+      --verbose            Print the cause chain of errors and stack traces of
+                             unexpected ones.

@@ -1,0 +1,21 @@
+exit: 2
+--- stdout
+--- stderr
+Invalid value for positional parameter at index 0 (REGION): 'mars' is not a valid market; valid values: us, gb, asia, europe, rates, commodities, currencies, cryptocurrencies
+Usage: yfin market [-hV] [--no-cache] [--no-color] [--status] [--verbose]
+                   [--format=FORMAT] [--retries=N] [--timeout=DURATION] REGION
+Headline instruments or trading hours of a market region.
+      REGION               Market region: us, gb, asia, europe, rates,
+                             commodities, currencies or cryptocurrencies.
+      --format=FORMAT      Output format: table, csv or json (default: table).
+  -h, --help               Show this help message and exit.
+      --no-cache           Don't read or write the on-disk cache (cookie,
+                             crumb, timezones).
+      --no-color           Never colour table output.
+      --retries=N          Retries on rate limits and server errors; 0 disables
+                             (default: 2).
+      --status             Print today's trading hours instead (us only).
+      --timeout=DURATION   Timeout per request, e.g. 30s or 2m (default: 30s).
+  -V, --version            Print version information and exit.
+      --verbose            Print the cause chain of errors and stack traces of
+                             unexpected ones.

@@ -1,0 +1,8 @@
+exit: 0
+--- stdout
+symbol,name,ytd_return,growth_estimate
+MU,"Micron Technology, Inc.",2.4554,5.846153846153847
+SMTC,Semtech Corporation,1.3028,3.857142857142857
+SITM,SiTime Corporation,0.6211,3.833333333333333
+CRDO,Credo Technology Group Holding Ltd,0.4006,3.0000000000000004
+CEVA,"CEVA, Inc.",0.4752,2.6

@@ -1,0 +1,51 @@
+exit: 0
+--- stdout
+symbol  name                                       rating      market_weight
+NVDA    NVIDIA Corporation                         Strong Buy         44.32%
+AVGO    Broadcom Inc.                              Strong Buy         13.74%
+SKHY    SK hynix Inc.                              —                   9.36%
+MU      Micron Technology, Inc.                    Strong Buy          9.03%
+AMD     Advanced Micro Devices, Inc.               Strong Buy          7.84%
+INTC    Intel Corporation                          Buy                 4.34%
+TXN     Texas Instruments Incorporated             Buy                 2.08%
+MRVL    Marvell Technology, Inc.                   Strong Buy          1.94%
+ADI     Analog Devices, Inc.                       Strong Buy          1.59%
+QCOM    QUALCOMM Incorporated                      Hold                1.50%
+MPWR    Monolithic Power Systems, Inc.             Strong Buy          0.53%
+NXPI    NXP Semiconductors N.V.                    Buy                 0.46%
+ALAB    Astera Labs, Inc.                          Buy                 0.46%
+MCHP    Microchip Technology Incorporated          Buy                 0.32%
+CRDO    Credo Technology Group Holding Ltd         Strong Buy          0.31%
+CBRS    Cerebras Systems Inc.                      —                   0.28%
+ON      ON Semiconductor Corporation               Buy                 0.24%
+GFS     GLOBALFOUNDRIES Inc.                       Buy                 0.22%
+MTSI    MACOM Technology Solutions Holdings, Inc.  Buy                 0.19%
+SWKS    Skyworks Solutions, Inc.                   Hold                0.14%
+LSCC    Lattice Semiconductor Corporation          Strong Buy          0.14%
+SITM    SiTime Corporation                         Buy                 0.14%
+SMTC    Semtech Corporation                        Strong Buy          0.13%
+RMBS    Rambus Inc.                                Strong Buy          0.09%
+QRVO    Qorvo, Inc.                                Hold                0.08%
+MXL     MaxLinear, Inc.                            Buy                 0.07%
+SLAB    Silicon Laboratories Inc.                  Hold                0.06%
+ALGM    Allegro MicroSystems, Inc.                 Strong Buy          0.05%
+PI      Impinj, Inc.                               Buy                 0.05%
+CRUS    Cirrus Logic, Inc.                         Buy                 0.04%
+VSH     Vishay Intertechnology, Inc.               Buy                 0.04%
+SYNA    Synaptics Incorporated                     Hold                0.04%
+DIOD    Diodes Incorporated                        Strong Buy          0.03%
+POWI    Power Integrations, Inc.                   Buy                 0.02%
+NVTS    Navitas Semiconductor Corporation          Hold                0.02%
+LASR    nLIGHT, Inc.                               Strong Buy          0.02%
+SKYT    SkyWater Technology Inc                    Hold                0.01%
+WOLF    Wolfspeed, Inc.                            Hold                0.01%
+AMBQ    —                                          Buy                 0.01%
+POET    POET Technologies Inc.                     Strong Buy          0.01%
+AIP     Arteris, Inc.                              Strong Buy          0.01%
+CEVA    CEVA, Inc.                                 Strong Buy          0.01%
+AOSL    Alpha and Omega Semiconductor Limited      Buy                 0.01%
+NVEC    NVE Corporation                            Hold                0.00%
+MRAM    Everspin Technologies, Inc.                Strong Buy          0.00%
+ALMU    Aeluma, Inc.                               Strong Buy          0.00%
+QUIK    QuickLogic Corporation                     Buy                 0.00%
+PXLW    Pixelworks, Inc.                           Strong Buy          0.00%

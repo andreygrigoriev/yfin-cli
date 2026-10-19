@@ -1,0 +1,88 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "^GSPC",
+    "short_name": "S&P 500",
+    "quote_type": "INDEX",
+    "exchange": "SNP",
+    "price": 7804.33,
+    "change": -7.209961,
+    "change_pct": -0.00092298366,
+    "previous_close": 7811.54,
+    "time": "2026-10-12T19:43:36Z",
+    "market_state": "REGULAR"
+  },
+  {
+    "symbol": "^DJI",
+    "short_name": "Dow 30",
+    "quote_type": "INDEX",
+    "exchange": "DJI",
+    "price": 51831.64,
+    "change": 176.6914,
+    "change_pct": 0.003420589,
+    "previous_close": 51654.95,
+    "time": "2026-10-12T19:43:36Z",
+    "market_state": "REGULAR"
+  },
+  {
+    "symbol": "^IXIC",
+    "short_name": "Nasdaq",
+    "quote_type": "INDEX",
+    "exchange": "NIM",
+    "price": 27246.902,
+    "change": -119.26758,
+    "change_pct": -0.0043580613,
+    "previous_close": 27366.17,
+    "time": "2026-10-12T19:43:33Z",
+    "market_state": "REGULAR"
+  },
+  {
+    "symbol": "^RUT",
+    "short_name": "Russell 2000",
+    "quote_type": "INDEX",
+    "exchange": "WCB",
+    "price": 2795.6575,
+    "change": -11.323975,
+    "change_pct": -0.0040341654,
+    "previous_close": 2806.9814,
+    "time": "2026-10-12T19:28:35Z",
+    "market_state": "REGULAR"
+  },
+  {
+    "symbol": "^TNX",
+    "short_name": "10-Yr Bond",
+    "quote_type": "INDEX",
+    "exchange": "CGI",
+    "price": 5.2400002,
+    "change": -0.00399971,
+    "change_pct": -0.0007627212,
+    "previous_close": 5.244,
+    "time": "2026-10-12T18:59:53Z",
+    "market_state": "POSTPOST"
+  },
+  {
+    "symbol": "^VIX",
+    "short_name": "VIX",
+    "quote_type": "INDEX",
+    "exchange": "CXI",
+    "price": 15.32,
+    "change": 0.47999954,
+    "change_pct": 0.032344983,
+    "previous_close": 14.84,
+    "time": "2026-10-12T19:28:31Z",
+    "market_state": "REGULAR"
+  },
+  {
+    "symbol": "GC=F",
+    "short_name": "Gold",
+    "quote_type": "FUTURE",
+    "exchange": "CMX",
+    "price": 4190.6,
+    "change": -25.699707,
+    "change_pct": -0.0060953224,
+    "previous_close": 4216.3,
+    "time": "2026-10-12T19:33:22Z",
+    "market_state": "REGULAR"
+  }
+]

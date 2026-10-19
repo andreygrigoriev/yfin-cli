@@ -1,0 +1,61 @@
+exit: 0
+--- stdout
+[
+  {
+    "name": "aggressive_small_caps"
+  },
+  {
+    "name": "day_gainers"
+  },
+  {
+    "name": "day_losers"
+  },
+  {
+    "name": "growth_technology_stocks"
+  },
+  {
+    "name": "most_actives"
+  },
+  {
+    "name": "most_shorted_stocks"
+  },
+  {
+    "name": "small_cap_gainers"
+  },
+  {
+    "name": "undervalued_growth_stocks"
+  },
+  {
+    "name": "undervalued_large_caps"
+  },
+  {
+    "name": "conservative_foreign_funds"
+  },
+  {
+    "name": "high_yield_bond"
+  },
+  {
+    "name": "portfolio_anchors"
+  },
+  {
+    "name": "solid_large_growth_funds"
+  },
+  {
+    "name": "solid_midcap_growth_funds"
+  },
+  {
+    "name": "top_mutual_funds"
+  },
+  {
+    "name": "top_etfs_us"
+  },
+  {
+    "name": "top_performing_etfs"
+  },
+  {
+    "name": "technology_etfs"
+  },
+  {
+    "name": "bond_etfs"
+  }
+]

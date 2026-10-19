@@ -1,0 +1,10 @@
+exit: 0
+--- stdout
+id               us
+name             U.S. markets
+status           open
+message          U.S. markets close in 17 minutes
+open             2026-10-12 09:30
+close            2026-10-12 16:00
+zone             America/New_York
+zone_short_name  EDT

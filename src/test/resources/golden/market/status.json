@@ -1,0 +1,12 @@
+exit: 0
+--- stdout
+{
+  "id": "us",
+  "name": "U.S. markets",
+  "status": "open",
+  "message": "U.S. markets close in 17 minutes",
+  "open": "2026-10-12T09:30:00-04:00",
+  "close": "2026-10-12T16:00:00-04:00",
+  "zone": "America/New_York",
+  "zone_short_name": "EDT"
+}

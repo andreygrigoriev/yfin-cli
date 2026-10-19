@@ -1,0 +1,28 @@
+exit: 0
+--- stdout
+symbol  short_name                        price  change  change_pct   volume  avg_volume_3m  market_cap  trailing_pe  currency  exchange
+FIGS    FIGS, Inc.                        17.66    1.88      11.91%    7.24M          3.00M       2.93B        53.52  USD       NYQ
+FICO    Fair Isaac Corporation           737.10   69.52      10.41%    1.36M        602.04K      15.92B        21.34  USD       NYQ
+CCC     CCC Intelligent Solutions Holdi    7.65    0.63       8.90%   25.57M         10.67M       4.50B       109.21  USD       NMS
+VSXY    Victorias Secret & Co.            88.52    5.65       6.82%  965.52K          1.78M       7.06B        19.76  USD       NYQ
+MANH    Manhattan Associates, Inc.       218.88   13.99       6.83%  815.72K        762.06K      12.76B        62.90  USD       NMS
+SNAP    Snap Inc.                          6.63    0.39       6.34%   33.02M         36.54M      11.20B            —  USD       NYQ
+ECO     Okeanis Eco Tankers Corp.         98.94    5.83       6.26%  726.74K        628.25K       3.86B         9.16  USD       NYQ
+CHA     Chagee Holdings Limited           11.92    0.67       5.96%    1.21M        810.62K       2.27B        12.04  USD       NMS
+FIZZ    National Beverage Corp.           32.29    1.77       5.80%  329.58K        404.98K       3.02B        17.36  USD       NMS
+DHT     DHT Holdings, Inc.                26.04    1.40       5.68%    6.08M          3.54M       4.20B         8.86  USD       NYQ
+LW      Lamb Weston Holdings, Inc.        50.45    2.58       5.38%    2.24M          1.94M       6.95B        27.57  USD       NYQ
+VFC     V.F. Corporation                  15.75    0.74       4.97%   12.48M          7.77M       6.19B        23.15  USD       NYQ
+FRO     Frontline Plc                     58.81    2.71       4.83%    4.34M          2.87M      13.09B         8.82  USD       NYQ
+VIST    Vista Energy S.A.B. de C.V.       69.44    3.18       4.80%  760.87K          1.04M       7.68B         9.19  USD       NYQ
+MOH     Molina Healthcare Inc            205.89    8.96       4.55%  325.71K        911.74K      10.75B      2287.67  USD       NYQ
+VEON    VEON Ltd.                         80.25    3.44       4.48%  191.03K        127.96K       5.53B       101.58  USD       NMS
+PBLS    Parabilis Medicines, Inc.         28.71    1.23       4.48%  930.30K        697.10K       3.55B            —  USD       NMS
+KSPI    Joint Stock Company Kaspi.kz -    97.10    4.11       4.42%  353.95K        550.76K      18.45B         8.90  USD       NMS
+SHOP    Shopify Inc.                     178.26    7.41       4.34%    9.01M          9.48M     229.36B       120.45  USD       NMS
+TDS     Telephone and Data Systems, Inc   34.91    1.38       4.10%    1.14M          1.36M       4.02B         8.73  USD       NYQ
+CNR     Core Natural Resources, Inc.      92.04    3.58       4.05%  285.94K        522.18K       4.57B        46.48  USD       NYQ
+HRI     Herc Holdings Inc.               128.03    4.57       3.70%  216.21K        615.83K       4.28B        83.68  USD       NYQ
+WLY     John Wiley & Sons, Inc.           51.54    1.90       3.82%  170.24K        483.91K       2.61B        13.89  USD       NYQ
+YPF     YPF Sociedad Anonima              51.92    1.88       3.76%  489.73K          1.19M      20.36B        27.33  USD       NYQ
+KSS     Kohl's Corporation                21.12    0.77       3.78%    3.49M          3.95M       2.39B         9.06  USD       NYQ
