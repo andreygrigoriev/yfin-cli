@@ -22,8 +22,8 @@ AAPL        340.50    3.86       1.15%          336.64  338.16    342.63   337.6
 brew install andreygrigoriev/tap/yfin
 ```
 
-The formula ships native binaries for macOS and Linux (glibc), arm64 and x64, and installs bash
-and zsh completions. Without Homebrew, download `yfin-X.Y.Z-<os>-<arch>.tar.gz` from the GitHub
+The formula ships native binaries for macOS and Linux (glibc), arm64 and x64, and installs the bash
+completion. Without Homebrew, download `yfin-X.Y.Z-<os>-<arch>.tar.gz` from the GitHub
 release, check it against `SHA256SUMS`, and put `yfin` on your `PATH`.
 
 `yfin --version` prints the CLI version and the `yfin-core` version it was built with.
@@ -144,7 +144,7 @@ $ echo $?
 
 ## Shell completion
 
-Homebrew installs the completions for you. Otherwise:
+Homebrew installs the bash completion for you. For zsh, or without Homebrew:
 
 ```sh
 # bash

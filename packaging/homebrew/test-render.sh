@@ -31,6 +31,8 @@ for target in "${targets[@]}"; do
   grep -qF "url \"${url}\"" "$work/yfin.rb" || fail "url missing for ${target}"
   grep -qF "sha256 \"${sha}\"" "$work/yfin.rb" || fail "sha256 missing for ${target}"
 done
+# `yfin completion` takes no arguments: Homebrew must not append the shell name
+grep -qF 'shell_parameter_format: :none' "$work/yfin.rb" || fail "completion would get a shell argument"
 [[ $(grep -c '^ *url "' "$work/yfin.rb") -eq 4 ]] || fail "expected 4 urls"
 [[ $(grep -c '^ *sha256 "' "$work/yfin.rb") -eq 4 ]] || fail "expected 4 sha256s"
 

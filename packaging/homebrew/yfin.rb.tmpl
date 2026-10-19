@@ -29,7 +29,9 @@ class Yfin < Formula
 
   def install
     bin.install "yfin"
-    generate_completions_from_executable(bin/"yfin", "completion", shells: [:bash, :zsh])
+    # `yfin completion` takes no shell argument and prints a bash script (picocli), which zsh can
+    # only source through bashcompinit, so Homebrew installs it for bash alone.
+    generate_completions_from_executable(bin/"yfin", "completion", shells: [:bash], shell_parameter_format: :none)
   end
 
   test do
