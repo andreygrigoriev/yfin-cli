@@ -2,8 +2,9 @@
 
 `yfin`, a command-line tool over the published `io.github.andreygrigoriev:yfin-core` library
 (repo `andreygrigoriev/yfin`). Java 25, one Maven module, compiled to a GraalVM native image and
-shipped through the Homebrew tap `andreygrigoriev/homebrew-tap`. The implementation plan lives in
-`docs/plans/`.
+shipped through the Homebrew tap `andreygrigoriev/homebrew-tap`. Completed plans live in
+`docs/plans/completed/`; the README documents the user-facing behaviour (commands, formats, exit
+codes).
 
 ## Build commands
 
@@ -67,6 +68,18 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
 - Commands live in `cli.cmd` and are listed in `YfinCommand`'s `subcommands`; column specs of
   library models are constants in `cli.spec.Specs`. The root's `@Command(scope = INHERIT)` gives
   every subcommand `--help`/`--version`.
+- Spec style: one `Spec<T>` constant per model in `Specs`, built with
+  `Spec.<T>builder().col(name, fn, kind)...build()`, with a javadoc saying which command prints it.
+  Column names are snake_case and become the table header, CSV header and JSON key, so treat them
+  as a public contract and change goldens deliberately. Use the shared kinds (`PRICE`, `RATIO`,
+  `AMOUNT`, `SCORE`) rather than ad-hoc `Kind.decimal(n)`. `PERCENT` columns hold fractions: shift
+  Yahoo values that come in percent (e.g. `change_pct` from lookup, screener, options) by 100 in the
+  spec, and leave a comment where Yahoo is inconsistent (`dividendYield`). Period-column data
+  (statements, valuation) builds a `Spec.dynamic(...)` at runtime in `StatementSpecs`; derived row
+  types (`ActionRow`, `OptionRow`) are records in `cli.spec`.
+- Output shapes: `Output.list`, `Output.record`, and `Output.lists` with `Section`s for commands that
+  print several lists (`search --news`). Validate option values in the command and throw a
+  picocli `ParameterException` (exit 2) before any request.
 - Commands over several symbols use `MultiSymbol.fetch(symbols, fn)` (virtual threads, input
   order kept), print the successes, then `return result.reportFailures(err, verbose)`.
 
@@ -90,6 +103,16 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
   days)`, which shifts the bars so the goldens don't drift with the date.
 - `GoldenCoverageTest` fails if a leaf command (except `help`, `completion`) lacks a golden
   directory with a `normal.*` case exiting 0 and a case exiting non-zero.
+- Golden workflow: add the case to the command's test, run it once with `-Dgolden.update=true`,
+  read the new file (exit code, stdout, stderr sections) as the spec of the behaviour, then run
+  without the flag. Every leaf command has `normal`, `empty` and an error case in `table` and
+  `json`, plus `csv` for one case per output shape. Never edit a golden by hand to make a test pass.
+- Native gotchas: run `./mvnw -Pnative test` after adding a command, a dependency or a resource.
+  The main image needs no hand-written metadata; if native fails, the fix is almost always in our
+  code (reflection, a resource) or the test-scoped metadata, not a new main metadata file.
+  Anything that prints on stderr in native but not on the JVM (e.g. the slf4j "no providers"
+  warning) breaks the stderr goldens, so check both. `-Os` keeps the binary at ~27 MiB with
+  ~14 ms startup; re-measure (README "Size and startup") if a change grows it.
 - `docs/fixtures.md` maps commands to library fixtures and lists fixtures still to record in yfin.
 
 ## Housekeeping
