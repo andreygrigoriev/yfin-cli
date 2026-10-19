@@ -24,8 +24,8 @@ Every request first hits the cookie and crumb bootstrap, which `CliRunner` regis
 | `fund SYM` | quoteSummary `fundProfile`, `topHoldings` | `quoteSummary/funds/spy`, `funds/agthx` | `quoteSummary/funds/aapl` | `quoteSummary/not-found` |
 | `events SYM` | quoteSummary `calendarEvents` | `quoteSummary/analysis/aapl` | `quoteSummary/analysis/spy` | `quoteSummary/not-found` |
 | `financials income SYM` | timeseries | `timeseries/aapl-annual-financials-*`, `aapl-quarterly-financials-*`, `aapl-trailing-financials-*`, `jpm-*`, `spy-*` | `timeseries/spy-annual-financials-*` | `timeseries/error-bad-request` |
-| `financials balance SYM` | timeseries | `timeseries/aapl-annual-balance-sheet-*`, `jpm-annual-balance-sheet-*` | ⚠️ gap | `timeseries/error-bad-request` |
-| `financials cashflow SYM` | timeseries | `timeseries/aapl-trailing-cash-flow-*` | ⚠️ gap | `timeseries/error-bad-request` |
+| `financials balance SYM` | timeseries | `timeseries/aapl-annual-balance-sheet-*`, `jpm-annual-balance-sheet-*` | ⚠️ gap (synthetic `result: []`) | `timeseries/error-bad-request` |
+| `financials cashflow SYM` | timeseries | `timeseries/aapl-trailing-cash-flow-*` (the normal case is `--ttm`) | ⚠️ gap (synthetic `result: []`) | `timeseries/error-bad-request` |
 | `valuation SYM` | timeseries (valuation) | `timeseries/valuation/aapl-annual`, `aapl-quarterly`, `aapl-trailing` | `timeseries/valuation/spy-quarterly` | `timeseries/error-bad-request` |
 | `holders major\|institutional\|funds\|insiders\|insider-tx SYM` | quoteSummary holder modules | `quoteSummary/holders/aapl` (`sap-de` has no insider transactions) | `quoteSummary/holders/spy`, `btc-usd` | `quoteSummary/not-found` |
 | `estimates earnings\|revenue\|history\|eps-trend\|eps-revisions SYM` | quoteSummary `earningsTrend`, `earningsHistory` | `quoteSummary/analysis/aapl`, `sap-de` | `quoteSummary/analysis/spy`, `btc-usd` | `quoteSummary/not-found` |
@@ -57,7 +57,9 @@ which reads the quote endpoint and the 1y daily / 5d hourly charts.
   case uses a synthetic suggest-service failure (`respond(403, "forbidden")`), named in the test.
 - `timeseries/aapl-annual-balance-sheet` / `cash-flow` for a symbol with no statements (e.g. an
   ETF such as SPY), for the `financials balance|cashflow` empty cases. `spy-annual-financials-*`
-  covers only the income statement.
+  covers only the income statement. Until then those cases answer with a synthetic
+  `{"timeseries":{"result":[],"error":null}}`. Annual and quarterly cash flow and a quarterly
+  balance sheet are not recorded either.
 - `screener/predefined-empty`: a predefined screener with no quotes. Until then the empty case
   uses an offset past the end, recorded as a new case.
 - `quote` multi-symbol needs the 1y daily and 5d hourly charts per extra symbol (`btc-usd`,

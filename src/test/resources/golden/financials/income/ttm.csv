@@ -1,0 +1,36 @@
+exit: 0
+--- stdout
+line_item,2026_06_30
+TaxEffectOfUnusualItems,0
+TaxRateForCalcs,0.173027
+NormalizedEBITDA,167959000000
+NetIncomeFromContinuingOperationNetMinorityInterest,128930000000
+ReconciledDepreciation,13100000000
+ReconciledCostOfRevenue,239700000000
+EBITDA,167959000000
+EBIT,154859000000
+NormalizedIncome,128930000000
+NetIncomeFromContinuingAndDiscontinuedOperation,128930000000
+TotalExpenses,311964000000
+TotalOperatingIncomeAsReported,154859000000
+DilutedAverageShares,14778629000
+BasicAverageShares,14723212750
+DilutedEPS,8.72
+BasicEPS,8.76
+DilutedNIAvailtoComStockholders,128930000000
+NetIncomeCommonStockholders,128930000000
+NetIncome,128930000000
+NetIncomeIncludingNoncontrollingInterests,128930000000
+NetIncomeContinuousOperations,128930000000
+TaxProvision,26976000000
+PretaxIncome,155906000000
+OtherIncomeExpense,1047000000
+OtherNonOperatingIncomeExpenses,1047000000
+OperatingIncome,154859000000
+OperatingExpense,72264000000
+ResearchAndDevelopment,42901000000
+SellingGeneralAndAdministration,29363000000
+GrossProfit,227123000000
+CostOfRevenue,239700000000
+TotalRevenue,466823000000
+OperatingRevenue,466823000000

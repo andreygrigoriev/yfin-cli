@@ -1,0 +1,184 @@
+exit: 0
+--- stdout
+[
+  {
+    "line_item": "FreeCashFlow",
+    "2026_06_30": 136683000000
+  },
+  {
+    "line_item": "RepurchaseOfCapitalStock",
+    "2026_06_30": -82226000000
+  },
+  {
+    "line_item": "RepaymentOfDebt",
+    "2026_06_30": -15242000000
+  },
+  {
+    "line_item": "IssuanceOfDebt",
+    "2026_06_30": 0
+  },
+  {
+    "line_item": "CapitalExpenditure",
+    "2026_06_30": -10041000000
+  },
+  {
+    "line_item": "IncomeTaxPaidSupplementalData",
+    "2026_06_30": 32592000000
+  },
+  {
+    "line_item": "EndCashPosition",
+    "2026_06_30": 39544000000
+  },
+  {
+    "line_item": "BeginningCashPosition",
+    "2026_06_30": 36269000000
+  },
+  {
+    "line_item": "ChangesInCash",
+    "2026_06_30": 3275000000
+  },
+  {
+    "line_item": "FinancingCashFlow",
+    "2026_06_30": -122051000000
+  },
+  {
+    "line_item": "CashFlowFromContinuingFinancingActivities",
+    "2026_06_30": -122051000000
+  },
+  {
+    "line_item": "NetOtherFinancingCharges",
+    "2026_06_30": -6911000000
+  },
+  {
+    "line_item": "CashDividendsPaid",
+    "2026_06_30": -15640000000
+  },
+  {
+    "line_item": "CommonStockDividendPaid",
+    "2026_06_30": -15640000000
+  },
+  {
+    "line_item": "NetCommonStockIssuance",
+    "2026_06_30": -82226000000
+  },
+  {
+    "line_item": "CommonStockPayments",
+    "2026_06_30": -82226000000
+  },
+  {
+    "line_item": "NetIssuancePaymentsOfDebt",
+    "2026_06_30": -17274000000
+  },
+  {
+    "line_item": "NetShortTermDebtIssuance",
+    "2026_06_30": -7878000000
+  },
+  {
+    "line_item": "NetLongTermDebtIssuance",
+    "2026_06_30": -9396000000
+  },
+  {
+    "line_item": "LongTermDebtPayments",
+    "2026_06_30": -9396000000
+  },
+  {
+    "line_item": "LongTermDebtIssuance",
+    "2026_06_30": 0
+  },
+  {
+    "line_item": "InvestingCashFlow",
+    "2026_06_30": -21398000000
+  },
+  {
+    "line_item": "CashFlowFromContinuingInvestingActivities",
+    "2026_06_30": -21398000000
+  },
+  {
+    "line_item": "NetOtherInvestingChanges",
+    "2026_06_30": -2285000000
+  },
+  {
+    "line_item": "NetInvestmentPurchaseAndSale",
+    "2026_06_30": -9072000000
+  },
+  {
+    "line_item": "SaleOfInvestment",
+    "2026_06_30": 46496000000
+  },
+  {
+    "line_item": "PurchaseOfInvestment",
+    "2026_06_30": -55568000000
+  },
+  {
+    "line_item": "NetPPEPurchaseAndSale",
+    "2026_06_30": -10041000000
+  },
+  {
+    "line_item": "PurchaseOfPPE",
+    "2026_06_30": -10041000000
+  },
+  {
+    "line_item": "OperatingCashFlow",
+    "2026_06_30": 146724000000
+  },
+  {
+    "line_item": "CashFlowFromContinuingOperatingActivities",
+    "2026_06_30": 146724000000
+  },
+  {
+    "line_item": "ChangeInWorkingCapital",
+    "2026_06_30": -8634000000
+  },
+  {
+    "line_item": "ChangeInOtherCurrentLiabilities",
+    "2026_06_30": 14101000000
+  },
+  {
+    "line_item": "ChangeInOtherCurrentAssets",
+    "2026_06_30": -19347000000
+  },
+  {
+    "line_item": "ChangeInPayablesAndAccruedExpense",
+    "2026_06_30": 14178000000
+  },
+  {
+    "line_item": "ChangeInPayable",
+    "2026_06_30": 14178000000
+  },
+  {
+    "line_item": "ChangeInAccountPayable",
+    "2026_06_30": 14178000000
+  },
+  {
+    "line_item": "ChangeInInventory",
+    "2026_06_30": -5284000000
+  },
+  {
+    "line_item": "ChangeInReceivables",
+    "2026_06_30": -12282000000
+  },
+  {
+    "line_item": "ChangesInAccountReceivables",
+    "2026_06_30": -4051000000
+  },
+  {
+    "line_item": "OtherNonCashItems",
+    "2026_06_30": -378000000
+  },
+  {
+    "line_item": "StockBasedCompensation",
+    "2026_06_30": 13706000000
+  },
+  {
+    "line_item": "DepreciationAmortizationDepletion",
+    "2026_06_30": 13100000000
+  },
+  {
+    "line_item": "DepreciationAndAmortization",
+    "2026_06_30": 13100000000
+  },
+  {
+    "line_item": "NetIncomeFromContinuingOperations",
+    "2026_06_30": 128930000000
+  }
+]

@@ -1,0 +1,12 @@
+exit: 0
+--- stdout
+measure                       current  2026_06_30  2026_03_31  2025_12_31  2025_09_30  2025_06_30
+MarketCap                       4.92T       4.25T       3.72T       4.00T       3.76T       3.05T
+EnterpriseValue                 4.94T       4.27T       3.75T       4.04T       3.81T       3.10T
+PeRatio                         38.65       35.03       32.13       36.44       38.64       31.96
+ForwardPeRatio                  35.21       30.40       29.50       32.79       31.65       25.71
+PegRatio                         2.71        2.34        2.25        2.75        2.44        1.87
+PsRatio                         10.67        9.51        8.69        9.80        9.41        7.79
+PbRatio                         45.74       39.91       42.21       54.21       57.14       45.63
+EnterprisesValueRevenueRatio    10.58        9.45        8.60        9.71        9.32        7.74
+EnterprisesValueEBITDARatio     29.41       26.67       24.50       27.92       26.87       22.31

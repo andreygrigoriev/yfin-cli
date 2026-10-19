@@ -1,0 +1,4 @@
+exit: 7
+--- stdout
+--- stderr
+yfin: Yahoo finance error Bad Request: Parameter=period1 has an invalid type [payload: {"finance":{"result":null,"error":{"code":"Bad Request","description":"Parameter=period1 has an invalid type"}}}]

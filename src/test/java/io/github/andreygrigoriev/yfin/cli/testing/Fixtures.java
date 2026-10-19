@@ -8,6 +8,8 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,6 +17,7 @@ import java.util.regex.Pattern;
 public final class Fixtures {
     private static final Pattern TIMESTAMPS = Pattern.compile("\"timestamp\":\\s*\\[([\\d,\\s]*)]");
     private static final Pattern TIME_FIELDS = Pattern.compile("\"(regularMarketTime|start|end)\":\\s*(\\d+)");
+    private static final Pattern META_TYPES = Pattern.compile("\"type\":\\s*\\[\"(\\w+)\"]");
 
     private Fixtures() {}
 
@@ -35,6 +38,31 @@ public final class Fixtures {
         } catch (IOException e) {
             throw new UncheckedIOException("cannot read fixture " + resource, e);
         }
+    }
+
+    /**
+     * Tells whether a library fixture is on the class path.
+     *
+     * @param path path below {@code fixtures/}
+     * @return whether it exists
+     */
+    public static boolean exists(String path) {
+        return ClassLoader.getSystemResource("fixtures/" + path) != null;
+    }
+
+    /**
+     * The series types a timeseries response holds, read from each result's {@code meta.type}.
+     *
+     * @param body a timeseries response body
+     * @return the type names, e.g. {@code annualTotalRevenue}
+     */
+    public static Set<String> timeseriesTypes(String body) {
+        Set<String> types = new HashSet<>();
+        Matcher m = META_TYPES.matcher(body);
+        while (m.find()) {
+            types.add(m.group(1));
+        }
+        return types;
     }
 
     /**

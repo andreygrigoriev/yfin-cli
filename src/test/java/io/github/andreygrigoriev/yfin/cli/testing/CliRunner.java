@@ -8,6 +8,7 @@ import io.github.andreygrigoriev.yfin.spi.Cache;
 import io.github.andreygrigoriev.yfin.testing.FakeTransport;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.Set;
 
 /**
  * Runs {@code yfin} in-process over a {@link FakeTransport}, with fixed settings: a piped terminal
@@ -25,6 +26,9 @@ import java.io.StringWriter;
 public final class CliRunner {
     /** Terminal width of every run. */
     public static final int WIDTH = 120;
+
+    /** URI path of the fundamentals timeseries endpoint, without the symbol. */
+    public static final String TIMESERIES = "/ws/fundamentals-timeseries/v1/finance/timeseries/";
 
     private final FakeTransport transport = FakeTransport.create();
 
@@ -63,6 +67,31 @@ public final class CliRunner {
      */
     public CliRunner fixture(String path, String fixture) {
         transport.onGet(path).respond(200, Fixtures.load(fixture));
+        return this;
+    }
+
+    /**
+     * Answers the chunked timeseries requests of {@code symbol} with the library fixtures {@code
+     * <prefix>-1.json}, {@code <prefix>-2.json}, ... The library asks for a statement's types in
+     * chunks and Yahoo echoes every requested type in its {@code meta}, so a chunk request is
+     * matched to the fixture whose types include the first type it asks for.
+     *
+     * @param symbol the symbol in the URI path
+     * @param prefix fixture path below {@code fixtures/} without the {@code -<n>.json} suffix, e.g.
+     *     {@code timeseries/aapl-annual-financials}
+     * @return this runner
+     * @throws AssertionError if there is no {@code <prefix>-1.json}
+     */
+    public CliRunner timeseries(String symbol, String prefix) {
+        for (int n = 1; n == 1 || Fixtures.exists(prefix + "-" + n + ".json"); n++) {
+            String body = Fixtures.load(prefix + "-" + n + ".json");
+            Set<String> types = Fixtures.timeseriesTypes(body);
+            transport
+                    .onGet(TIMESERIES + symbol)
+                    .queryMatching(q -> q.containsKey("type")
+                            && types.contains(q.get("type").getFirst().split(",")[0]))
+                    .respond(200, body);
+        }
         return this;
     }
 

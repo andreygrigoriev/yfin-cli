@@ -63,7 +63,9 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
 - Command tests use `testing.CliRunner`: it registers that bootstrap on a `FakeTransport`, runs
   `yfin` in-process (piped terminal, width 120, no cache, no retries) and returns a `CliResult`
   (exit code, stdout, stderr). Register responses with `cli.fixture(path, "quote/aapl.json")` or
-  `cli.onGet(path)...`; `Fixtures.load` reads library fixtures from the class path.
+  `cli.onGet(path)...`; `Fixtures.load` reads library fixtures from the class path. Statements are
+  fetched in chunks: `cli.timeseries(symbol, "timeseries/aapl-annual-financials")` serves each
+  `-<n>.json` chunk to the request whose first type it holds.
 - Compare results with `Golden.assertMatches(result, "<command path>/<case>.<format>")`, files under
   `src/test/resources/golden/`. `./mvnw test -Dgolden.update=true` rewrites them; review the diff.
 - Library code that looks back from "now" (e.g. `FastInfo`'s one-year window) can't take a test
