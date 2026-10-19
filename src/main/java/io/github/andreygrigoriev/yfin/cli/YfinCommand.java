@@ -51,13 +51,13 @@ public final class YfinCommand implements Runnable, AutoCloseable {
     }
 
     /**
-     * The command line for {@code root}, with its converters registered.
+     * The command line for {@code root}, with its converters and {@link ErrorHandler} registered.
      *
      * @param root the root command
      * @return the command line
      */
     public static CommandLine commandLine(YfinCommand root) {
-        return Converters.register(new CommandLine(root));
+        return Converters.register(new CommandLine(root)).setExecutionExceptionHandler(new ErrorHandler());
     }
 
     /**

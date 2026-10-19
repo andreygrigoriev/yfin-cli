@@ -43,8 +43,12 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
 - Every package that contains classes has a `package-info.java` with `@NullMarked` (JSpecify).
 - Javadoc lint is `all,-missing`, and its warnings fail the build. Watch for broken `{@link}`
   references and bad HTML.
-- Data goes to stdout, diagnostics to stderr. Exit codes are fixed (see the plan): 0 success,
-  1 unexpected, 2 usage.
+- Data goes to stdout, diagnostics to stderr. Exit codes are fixed constants in `ExitCodes`
+  (0 success, 1 unexpected, 2 usage, 3-7 library errors, 130 interrupted). Commands let library
+  exceptions propagate: `ErrorHandler` (registered by `YfinCommand.commandLine`) prints
+  `yfin: [<symbol>: ]<reason>` and maps the exit code.
+- Commands over several symbols use `MultiSymbol.fetch(symbols, fn)` (virtual threads, input
+  order kept), print the successes, then `return result.reportFailures(err, verbose)`.
 
 ## Tests
 
