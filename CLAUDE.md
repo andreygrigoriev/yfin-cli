@@ -23,6 +23,9 @@ Always use the wrapper (`./mvnw`), never a bare `mvn`.
   as a GitHub release, then renders `packaging/homebrew/yfin.rb.tmpl` into
   `andreygrigoriev/homebrew-tap` (`TAP_TOKEN` secret, the only one). `workflow_dispatch` with
   `dry_run` builds and smoke-tests only.
+- Live check: `scripts/live-smoke.sh BINARY` runs a few commands against Yahoo with `--format json`
+  and checks the shape with `jq` (keys and types, never values). `nightly-live.yml` runs it on the
+  Linux native binary. Locally: `./mvnw -Pnative package -DskipTests && scripts/live-smoke.sh target/yfin`.
 
 ## Layout
 
