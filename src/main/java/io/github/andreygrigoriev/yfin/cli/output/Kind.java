@@ -29,6 +29,15 @@ public sealed interface Kind permits Kind.Text, Kind.Integer, Kind.Decimal, Kind
         return new Decimal(scale);
     }
 
+    /**
+     * Tells whether values of this kind are numbers: right-aligned in tables, JSON numbers.
+     *
+     * @return {@code true} for {@link #INTEGER}, decimals and {@link #PERCENT}
+     */
+    default boolean numeric() {
+        return this instanceof Integer || this instanceof Decimal || this instanceof Percent;
+    }
+
     /** See {@link #TEXT}. */
     record Text() implements Kind {}
 
