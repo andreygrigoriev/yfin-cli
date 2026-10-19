@@ -1,0 +1,82 @@
+exit: 0
+--- stdout
+symbol         company                                                               date        optionable  old_shares  new_shares  ratio
+117670.KQ      Alphachips Inc                                                        2026-10-21  false             1.00        2.00   2.00
+254120.KQ      Xavis Co Ltd                                                          2026-10-21  false             5.00        1.00   0.20
+254120.KS      Xavis Co Ltd                                                          2026-10-21  false             5.00        1.00   0.20
+HWM.BA         Howmet Aerospace Inc                                                  2026-10-21  false             1.00       52.00  52.00
+009140.KS      KIE                                                                   2026-10-20  false             1.00        2.00   2.00
+057540.KQ      Omnisystem Co Ltd                                                     2026-10-20  false             5.00        1.00   0.20
+093240.KQ      Hyungji Elite Inc                                                     2026-10-20  false             5.00        1.00   0.20
+093240.KS      Hyungji Elite Inc                                                     2026-10-20  false             5.00        1.00   0.20
+CLOV.KA        Clover Pakistan Ltd                                                   2026-10-20  false           100.00      115.00   1.15
+023150.KS      Mhethanol Co Ltd                                                      2026-10-19  false             1.00        2.00   2.00
+205100.KQ      Exem Co Ltd                                                           2026-10-19  false             5.00        1.00   0.20
+688610.SS      Hefei I-TEK OptoElectronics Co Ltd                                    2026-10-19  false             1.00        1.00   1.00
+9AM0.DU        AMTD IDEA Group                                                       2026-10-19  false            60.00        1.00   0.02
+9AM0.F         AMTD IDEA Group                                                       2026-10-19  false            60.00        1.00   0.02
+9AM0.MU        AMTD IDEA Group                                                       2026-10-19  false            60.00        1.00   0.02
+9AM0.SG        AMTD IDEA Group                                                       2026-10-19  false            60.00        1.00   0.02
+AMTD           AMTD IDEA Group                                                       2026-10-19  false            60.00        1.00   0.02
+COL.XPHS       COL Financial Group Inc                                               2026-10-19  false             1.00        1.00   1.00
+JATTAINDUS.BO  Jattashankar Industries Ltd                                           2026-10-19  false             1.00       10.00  10.00
+TLD.VN         Thang Long Urban Development and Construction Investment JSC          2026-10-19  false           100.00      105.00   1.05
+001285.SZ      Guangzhou Ruili Kormee Automotive Electronic Co Ltd                   2026-10-16  false             1.00        1.00   1.00
+2723.HK        Beijing DeepZero Technology Co Ltd                                    2026-10-16  false             1.00       10.00  10.00
+45C0.F         CrowdStrike Holdings Inc                                              2026-10-16  false             1.00        5.00   5.00
+688300.SS      Novoray Corp                                                          2026-10-16  false             1.00        1.00   1.00
+7944.TWO       GreenHarvest Co Ltd                                                   2026-10-16  false          1000.00     1026.00   1.03
+AMD.TO         Advanced Micro Devices Inc                                            2026-10-16  false             1.00        7.00   7.00
+AMD0.DU        Advanced Micro Devices Inc                                            2026-10-16  false             1.00        7.00   7.00
+AMD0.F         Advanced Micro Devices Inc                                            2026-10-16  false             1.00        7.00   7.00
+AMD0.HM        Advanced Micro Devices Inc                                            2026-10-16  false             1.00        7.00   7.00
+AMD0.MU        Advanced Micro Devices Inc                                            2026-10-16  false             1.00        7.00   7.00
+AMSLF          Australian Mines Ltd                                                  2026-10-16  false             5.00        1.00   0.20
+AUZ.AX         Australian Mines Ltd                                                  2026-10-16  false             5.00        1.00   0.20
+BANSALWIRE.BO  Bansal Wire Industries Ltd                                            2026-10-16  false             1.00        5.00   5.00
+BANSALWIRE.NS  Bansal Wire Industries Ltd                                            2026-10-16  false             1.00        5.00   5.00
+CRWD.TO        CrowdStrike Holdings Inc                                              2026-10-16  false             1.00        5.00   5.00
+MJH.DU         Australian Mines Ltd                                                  2026-10-16  false             5.00        1.00   0.20
+MJH.F          Australian Mines Ltd                                                  2026-10-16  false             5.00        1.00   0.20
+MJH.HA         Australian Mines Ltd                                                  2026-10-16  false             5.00        1.00   0.20
+MJH.HM         Australian Mines Ltd                                                  2026-10-16  false             5.00        1.00   0.20
+MJH.MU         Australian Mines Ltd                                                  2026-10-16  false             5.00        1.00   0.20
+NOBPOL.BO      Noble Polymers Ltd                                                    2026-10-16  false             2.00        1.00   0.50
+SBA.VN         Song BA JSC                                                           2026-10-16  false            20.00       21.00   1.05
+0FPJ.IL        Prologue SA                                                           2026-10-15  false           100.00        1.00   0.01
+1516.TW        Falcon Power Co Ltd                                                   2026-10-15  false          1000.00      750.00   0.75
+3636.HK        Yunnan Jinxun Resources Co Ltd                                        2026-10-15  false            10.00       25.00   2.50
+6142.TW        Cameo Communications Inc                                              2026-10-15  false          1000.00      919.00   0.92
+69P.DU         Prologue SA                                                           2026-10-15  false           100.00        1.00   0.01
+69P.F          Prologue SA                                                           2026-10-15  false           100.00        1.00   0.01
+69P.MU         Prologue SA                                                           2026-10-15  false           100.00        1.00   0.01
+8047.TWO       Great Computer Corp                                                   2026-10-15  false          1000.00      830.00   0.83
+8159.HK        China United Venture Investment Ltd                                   2026-10-15  false            20.00        1.00   0.05
+ALPRG.PA       Prologue SA                                                           2026-10-15  false           100.00        1.00   0.01
+INB.AB         Invest Bank PSC                                                       2026-10-15  false            82.00        1.00   0.01
+LUR.F          Luxbright AB                                                          2026-10-15  false           100.00        1.00   0.01
+LXB.ST         Luxbright AB                                                          2026-10-15  false           100.00        1.00   0.01
+OLIL.NS        Oneclick Logistics India Ltd                                          2026-10-15  false             2.00        3.00   1.50
+SAMOR.BO       Samor Reality Ltd                                                     2026-10-15  false             1.00        5.00   5.00
+033340.KQ      Good People Co Ltd                                                    2026-10-14  false             1.00        0.00   0.00
+0URE.IL        Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+1560.HK        Star Group Asia Ltd                                                   2026-10-14  false            10.00        1.00   0.10
+215790.KQ      Inno Instrument Inc                                                   2026-10-14  false             5.00        1.00   0.20
+2299.HK        Billion Industrial Holdings Ltd                                       2026-10-14  false             2.00        1.00   0.50
+9637.SR        Axelerated Solutions For Information And Communication Technology Co  2026-10-14  false             1.00        2.00   2.00
+BKTPF          Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+BR01.DU        Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+BR01.F         Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+BR01.HA        Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+BR01.HM        Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+BR01.MU        Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+BR01.SG        Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+CRUZ.CN        Cruz Battery Metals Corp                                              2026-10-14  false            10.00        1.00   0.10
+IDX1R.RG       IPAS Indexo                                                           2026-10-14  false             1.00        4.00   4.00
+PBSA.JK        PT Paramita Bangun Sarana Tbk                                         2026-10-14  false             1.00        2.00   2.00
+S9S.F          IPAS Indexo                                                           2026-10-14  false             1.00        4.00   4.00
+SKIN           SkinHealth Systems Inc                                                2026-10-14  false            20.00        1.00   0.05
+V7A0.DU        SkinHealth Systems Inc                                                2026-10-14  false            20.00        1.00   0.05
+V7A0.F         SkinHealth Systems Inc                                                2026-10-14  false            20.00        1.00   0.05
+V7A0.MU        SkinHealth Systems Inc                                                2026-10-14  false            20.00        1.00   0.05
+V7A0.SG        SkinHealth Systems Inc                                                2026-10-14  false            20.00        1.00   0.05

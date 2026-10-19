@@ -1,0 +1,82 @@
+exit: 0
+--- stdout
+symbol,company,date,optionable,old_shares,new_shares,ratio
+117670.KQ,Alphachips Inc,2026-10-21,false,1,2,2
+254120.KQ,Xavis Co Ltd,2026-10-21,false,5,1,0.2
+254120.KS,Xavis Co Ltd,2026-10-21,false,5,1,0.2
+HWM.BA,Howmet Aerospace Inc,2026-10-21,false,1,52,52
+009140.KS,KIE,2026-10-20,false,1,2,2
+057540.KQ,Omnisystem Co Ltd,2026-10-20,false,5,1,0.2
+093240.KQ,Hyungji Elite Inc,2026-10-20,false,5,1,0.2
+093240.KS,Hyungji Elite Inc,2026-10-20,false,5,1,0.2
+CLOV.KA,Clover Pakistan Ltd,2026-10-20,false,100,115,1.15
+023150.KS,Mhethanol Co Ltd,2026-10-19,false,1,2,2
+205100.KQ,Exem Co Ltd,2026-10-19,false,5,1,0.2
+688610.SS,Hefei I-TEK OptoElectronics Co Ltd,2026-10-19,false,1,1,1
+9AM0.DU,AMTD IDEA Group,2026-10-19,false,60,1,0.016666666666666666
+9AM0.F,AMTD IDEA Group,2026-10-19,false,60,1,0.016666666666666666
+9AM0.MU,AMTD IDEA Group,2026-10-19,false,60,1,0.016666666666666666
+9AM0.SG,AMTD IDEA Group,2026-10-19,false,60,1,0.016666666666666666
+AMTD,AMTD IDEA Group,2026-10-19,false,60,1,0.016666666666666666
+COL.XPHS,COL Financial Group Inc,2026-10-19,false,1,1,1
+JATTAINDUS.BO,Jattashankar Industries Ltd,2026-10-19,false,1,10,10
+TLD.VN,Thang Long Urban Development and Construction Investment JSC,2026-10-19,false,100,105,1.05
+001285.SZ,Guangzhou Ruili Kormee Automotive Electronic Co Ltd,2026-10-16,false,1,1,1
+2723.HK,Beijing DeepZero Technology Co Ltd,2026-10-16,false,1,10,10
+45C0.F,CrowdStrike Holdings Inc,2026-10-16,false,1,5,5
+688300.SS,Novoray Corp,2026-10-16,false,1,1,1
+7944.TWO,GreenHarvest Co Ltd,2026-10-16,false,1000,1026,1.026
+AMD.TO,Advanced Micro Devices Inc,2026-10-16,false,1,7,7
+AMD0.DU,Advanced Micro Devices Inc,2026-10-16,false,1,7,7
+AMD0.F,Advanced Micro Devices Inc,2026-10-16,false,1,7,7
+AMD0.HM,Advanced Micro Devices Inc,2026-10-16,false,1,7,7
+AMD0.MU,Advanced Micro Devices Inc,2026-10-16,false,1,7,7
+AMSLF,Australian Mines Ltd,2026-10-16,false,5,1,0.2
+AUZ.AX,Australian Mines Ltd,2026-10-16,false,5,1,0.2
+BANSALWIRE.BO,Bansal Wire Industries Ltd,2026-10-16,false,1,5,5
+BANSALWIRE.NS,Bansal Wire Industries Ltd,2026-10-16,false,1,5,5
+CRWD.TO,CrowdStrike Holdings Inc,2026-10-16,false,1,5,5
+MJH.DU,Australian Mines Ltd,2026-10-16,false,5,1,0.2
+MJH.F,Australian Mines Ltd,2026-10-16,false,5,1,0.2
+MJH.HA,Australian Mines Ltd,2026-10-16,false,5,1,0.2
+MJH.HM,Australian Mines Ltd,2026-10-16,false,5,1,0.2
+MJH.MU,Australian Mines Ltd,2026-10-16,false,5,1,0.2
+NOBPOL.BO,Noble Polymers Ltd,2026-10-16,false,2,1,0.5
+SBA.VN,Song BA JSC,2026-10-16,false,20,21,1.05
+0FPJ.IL,Prologue SA,2026-10-15,false,100,1,0.01
+1516.TW,Falcon Power Co Ltd,2026-10-15,false,1000,750,0.75
+3636.HK,Yunnan Jinxun Resources Co Ltd,2026-10-15,false,10,25,2.5
+6142.TW,Cameo Communications Inc,2026-10-15,false,1000,919,0.919
+69P.DU,Prologue SA,2026-10-15,false,100,1,0.01
+69P.F,Prologue SA,2026-10-15,false,100,1,0.01
+69P.MU,Prologue SA,2026-10-15,false,100,1,0.01
+8047.TWO,Great Computer Corp,2026-10-15,false,1000,830,0.83
+8159.HK,China United Venture Investment Ltd,2026-10-15,false,20,1,0.05
+ALPRG.PA,Prologue SA,2026-10-15,false,100,1,0.01
+INB.AB,Invest Bank PSC,2026-10-15,false,82,1,0.012195121951219513
+LUR.F,Luxbright AB,2026-10-15,false,100,1,0.01
+LXB.ST,Luxbright AB,2026-10-15,false,100,1,0.01
+OLIL.NS,Oneclick Logistics India Ltd,2026-10-15,false,2,3,1.5
+SAMOR.BO,Samor Reality Ltd,2026-10-15,false,1,5,5
+033340.KQ,Good People Co Ltd,2026-10-14,false,1,0,0
+0URE.IL,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+1560.HK,Star Group Asia Ltd,2026-10-14,false,10,1,0.1
+215790.KQ,Inno Instrument Inc,2026-10-14,false,5,1,0.2
+2299.HK,Billion Industrial Holdings Ltd,2026-10-14,false,2,1,0.5
+9637.SR,Axelerated Solutions For Information And Communication Technology Co,2026-10-14,false,1,2,2
+BKTPF,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+BR01.DU,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+BR01.F,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+BR01.HA,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+BR01.HM,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+BR01.MU,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+BR01.SG,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+CRUZ.CN,Cruz Battery Metals Corp,2026-10-14,false,10,1,0.1
+IDX1R.RG,IPAS Indexo,2026-10-14,false,1,4,4
+PBSA.JK,PT Paramita Bangun Sarana Tbk,2026-10-14,false,1,2,2
+S9S.F,IPAS Indexo,2026-10-14,false,1,4,4
+SKIN,SkinHealth Systems Inc,2026-10-14,false,20,1,0.05
+V7A0.DU,SkinHealth Systems Inc,2026-10-14,false,20,1,0.05
+V7A0.F,SkinHealth Systems Inc,2026-10-14,false,20,1,0.05
+V7A0.MU,SkinHealth Systems Inc,2026-10-14,false,20,1,0.05
+V7A0.SG,SkinHealth Systems Inc,2026-10-14,false,20,1,0.05

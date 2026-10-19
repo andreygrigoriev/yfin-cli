@@ -1,0 +1,715 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "117670.KQ",
+    "company": "Alphachips Inc",
+    "date": "2026-10-21",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 2,
+    "ratio": 2
+  },
+  {
+    "symbol": "254120.KQ",
+    "company": "Xavis Co Ltd",
+    "date": "2026-10-21",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "254120.KS",
+    "company": "Xavis Co Ltd",
+    "date": "2026-10-21",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "HWM.BA",
+    "company": "Howmet Aerospace Inc",
+    "date": "2026-10-21",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 52,
+    "ratio": 52
+  },
+  {
+    "symbol": "009140.KS",
+    "company": "KIE",
+    "date": "2026-10-20",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 2,
+    "ratio": 2
+  },
+  {
+    "symbol": "057540.KQ",
+    "company": "Omnisystem Co Ltd",
+    "date": "2026-10-20",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "093240.KQ",
+    "company": "Hyungji Elite Inc",
+    "date": "2026-10-20",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "093240.KS",
+    "company": "Hyungji Elite Inc",
+    "date": "2026-10-20",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "CLOV.KA",
+    "company": "Clover Pakistan Ltd",
+    "date": "2026-10-20",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 115,
+    "ratio": 1.15
+  },
+  {
+    "symbol": "023150.KS",
+    "company": "Mhethanol Co Ltd",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 2,
+    "ratio": 2
+  },
+  {
+    "symbol": "205100.KQ",
+    "company": "Exem Co Ltd",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "688610.SS",
+    "company": "Hefei I-TEK OptoElectronics Co Ltd",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 1,
+    "ratio": 1
+  },
+  {
+    "symbol": "9AM0.DU",
+    "company": "AMTD IDEA Group",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 60,
+    "new_shares": 1,
+    "ratio": 0.016666666666666666
+  },
+  {
+    "symbol": "9AM0.F",
+    "company": "AMTD IDEA Group",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 60,
+    "new_shares": 1,
+    "ratio": 0.016666666666666666
+  },
+  {
+    "symbol": "9AM0.MU",
+    "company": "AMTD IDEA Group",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 60,
+    "new_shares": 1,
+    "ratio": 0.016666666666666666
+  },
+  {
+    "symbol": "9AM0.SG",
+    "company": "AMTD IDEA Group",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 60,
+    "new_shares": 1,
+    "ratio": 0.016666666666666666
+  },
+  {
+    "symbol": "AMTD",
+    "company": "AMTD IDEA Group",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 60,
+    "new_shares": 1,
+    "ratio": 0.016666666666666666
+  },
+  {
+    "symbol": "COL.XPHS",
+    "company": "COL Financial Group Inc",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 1,
+    "ratio": 1
+  },
+  {
+    "symbol": "JATTAINDUS.BO",
+    "company": "Jattashankar Industries Ltd",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 10,
+    "ratio": 10
+  },
+  {
+    "symbol": "TLD.VN",
+    "company": "Thang Long Urban Development and Construction Investment JSC",
+    "date": "2026-10-19",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 105,
+    "ratio": 1.05
+  },
+  {
+    "symbol": "001285.SZ",
+    "company": "Guangzhou Ruili Kormee Automotive Electronic Co Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 1,
+    "ratio": 1
+  },
+  {
+    "symbol": "2723.HK",
+    "company": "Beijing DeepZero Technology Co Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 10,
+    "ratio": 10
+  },
+  {
+    "symbol": "45C0.F",
+    "company": "CrowdStrike Holdings Inc",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 5,
+    "ratio": 5
+  },
+  {
+    "symbol": "688300.SS",
+    "company": "Novoray Corp",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 1,
+    "ratio": 1
+  },
+  {
+    "symbol": "7944.TWO",
+    "company": "GreenHarvest Co Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1000,
+    "new_shares": 1026,
+    "ratio": 1.026
+  },
+  {
+    "symbol": "AMD.TO",
+    "company": "Advanced Micro Devices Inc",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 7,
+    "ratio": 7
+  },
+  {
+    "symbol": "AMD0.DU",
+    "company": "Advanced Micro Devices Inc",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 7,
+    "ratio": 7
+  },
+  {
+    "symbol": "AMD0.F",
+    "company": "Advanced Micro Devices Inc",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 7,
+    "ratio": 7
+  },
+  {
+    "symbol": "AMD0.HM",
+    "company": "Advanced Micro Devices Inc",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 7,
+    "ratio": 7
+  },
+  {
+    "symbol": "AMD0.MU",
+    "company": "Advanced Micro Devices Inc",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 7,
+    "ratio": 7
+  },
+  {
+    "symbol": "AMSLF",
+    "company": "Australian Mines Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "AUZ.AX",
+    "company": "Australian Mines Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "BANSALWIRE.BO",
+    "company": "Bansal Wire Industries Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 5,
+    "ratio": 5
+  },
+  {
+    "symbol": "BANSALWIRE.NS",
+    "company": "Bansal Wire Industries Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 5,
+    "ratio": 5
+  },
+  {
+    "symbol": "CRWD.TO",
+    "company": "CrowdStrike Holdings Inc",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 5,
+    "ratio": 5
+  },
+  {
+    "symbol": "MJH.DU",
+    "company": "Australian Mines Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "MJH.F",
+    "company": "Australian Mines Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "MJH.HA",
+    "company": "Australian Mines Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "MJH.HM",
+    "company": "Australian Mines Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "MJH.MU",
+    "company": "Australian Mines Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "NOBPOL.BO",
+    "company": "Noble Polymers Ltd",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 2,
+    "new_shares": 1,
+    "ratio": 0.5
+  },
+  {
+    "symbol": "SBA.VN",
+    "company": "Song BA JSC",
+    "date": "2026-10-16",
+    "optionable": false,
+    "old_shares": 20,
+    "new_shares": 21,
+    "ratio": 1.05
+  },
+  {
+    "symbol": "0FPJ.IL",
+    "company": "Prologue SA",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 1,
+    "ratio": 0.01
+  },
+  {
+    "symbol": "1516.TW",
+    "company": "Falcon Power Co Ltd",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 1000,
+    "new_shares": 750,
+    "ratio": 0.75
+  },
+  {
+    "symbol": "3636.HK",
+    "company": "Yunnan Jinxun Resources Co Ltd",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 25,
+    "ratio": 2.5
+  },
+  {
+    "symbol": "6142.TW",
+    "company": "Cameo Communications Inc",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 1000,
+    "new_shares": 919,
+    "ratio": 0.919
+  },
+  {
+    "symbol": "69P.DU",
+    "company": "Prologue SA",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 1,
+    "ratio": 0.01
+  },
+  {
+    "symbol": "69P.F",
+    "company": "Prologue SA",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 1,
+    "ratio": 0.01
+  },
+  {
+    "symbol": "69P.MU",
+    "company": "Prologue SA",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 1,
+    "ratio": 0.01
+  },
+  {
+    "symbol": "8047.TWO",
+    "company": "Great Computer Corp",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 1000,
+    "new_shares": 830,
+    "ratio": 0.83
+  },
+  {
+    "symbol": "8159.HK",
+    "company": "China United Venture Investment Ltd",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 20,
+    "new_shares": 1,
+    "ratio": 0.05
+  },
+  {
+    "symbol": "ALPRG.PA",
+    "company": "Prologue SA",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 1,
+    "ratio": 0.01
+  },
+  {
+    "symbol": "INB.AB",
+    "company": "Invest Bank PSC",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 82,
+    "new_shares": 1,
+    "ratio": 0.012195121951219513
+  },
+  {
+    "symbol": "LUR.F",
+    "company": "Luxbright AB",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 1,
+    "ratio": 0.01
+  },
+  {
+    "symbol": "LXB.ST",
+    "company": "Luxbright AB",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 100,
+    "new_shares": 1,
+    "ratio": 0.01
+  },
+  {
+    "symbol": "OLIL.NS",
+    "company": "Oneclick Logistics India Ltd",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 2,
+    "new_shares": 3,
+    "ratio": 1.5
+  },
+  {
+    "symbol": "SAMOR.BO",
+    "company": "Samor Reality Ltd",
+    "date": "2026-10-15",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 5,
+    "ratio": 5
+  },
+  {
+    "symbol": "033340.KQ",
+    "company": "Good People Co Ltd",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 0,
+    "ratio": 0
+  },
+  {
+    "symbol": "0URE.IL",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "1560.HK",
+    "company": "Star Group Asia Ltd",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "215790.KQ",
+    "company": "Inno Instrument Inc",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 5,
+    "new_shares": 1,
+    "ratio": 0.2
+  },
+  {
+    "symbol": "2299.HK",
+    "company": "Billion Industrial Holdings Ltd",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 2,
+    "new_shares": 1,
+    "ratio": 0.5
+  },
+  {
+    "symbol": "9637.SR",
+    "company": "Axelerated Solutions For Information And Communication Technology Co",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 2,
+    "ratio": 2
+  },
+  {
+    "symbol": "BKTPF",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "BR01.DU",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "BR01.F",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "BR01.HA",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "BR01.HM",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "BR01.MU",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "BR01.SG",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "CRUZ.CN",
+    "company": "Cruz Battery Metals Corp",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 10,
+    "new_shares": 1,
+    "ratio": 0.1
+  },
+  {
+    "symbol": "IDX1R.RG",
+    "company": "IPAS Indexo",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 4,
+    "ratio": 4
+  },
+  {
+    "symbol": "PBSA.JK",
+    "company": "PT Paramita Bangun Sarana Tbk",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 2,
+    "ratio": 2
+  },
+  {
+    "symbol": "S9S.F",
+    "company": "IPAS Indexo",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 1,
+    "new_shares": 4,
+    "ratio": 4
+  },
+  {
+    "symbol": "SKIN",
+    "company": "SkinHealth Systems Inc",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 20,
+    "new_shares": 1,
+    "ratio": 0.05
+  },
+  {
+    "symbol": "V7A0.DU",
+    "company": "SkinHealth Systems Inc",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 20,
+    "new_shares": 1,
+    "ratio": 0.05
+  },
+  {
+    "symbol": "V7A0.F",
+    "company": "SkinHealth Systems Inc",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 20,
+    "new_shares": 1,
+    "ratio": 0.05
+  },
+  {
+    "symbol": "V7A0.MU",
+    "company": "SkinHealth Systems Inc",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 20,
+    "new_shares": 1,
+    "ratio": 0.05
+  },
+  {
+    "symbol": "V7A0.SG",
+    "company": "SkinHealth Systems Inc",
+    "date": "2026-10-14",
+    "optionable": false,
+    "old_shares": 20,
+    "new_shares": 1,
+    "ratio": 0.05
+  }
+]

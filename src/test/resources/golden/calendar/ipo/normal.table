@@ -1,0 +1,19 @@
+exit: 0
+--- stdout
+symbol  company                                                               exchange  date        filing_date  amended_date  price_from  price_to  offer_price  currency  shares  deal_type
+AVUC    American Century ETF Trust                                            —         2026-10-15  —            —                      —         —            —  —              —  Expected
+WBEM    —                                                                     —         2026-10-15  —            —                      —         —            —  —              —  Expected
+WBIE    —                                                                     —         2026-10-15  —            —                      —         —            —  —              —  Expected
+ACHP    Global X Asia Semiconductor ETF                                       Nasdaq    2026-10-14  —            —                      —         —            —  USD            —  Expected
+BSRT    BSR Real Estate Investment Trust                                      NYSE      2026-10-14  —            —                      —         —            —  —              —  Expected
+DFGV    DFA Intermediate Government Fixed Income Portfolio: ETF Class Shares  Nasdaq    2026-10-14  —            —                      —         —            —  USD            —  Expected
+FLSC    Frazier Life Sciences Acquisition Corp. II Class A Ordinary Shares    Nasdaq    2026-10-14  —            —                      —         —            —  USD            —  Expected
+HRIAU   Harbour Island Acquisition Corp. I Units                              Nasdaq    2026-10-14  —            —                      —         —            —  USD            —  Expected
+MGOL    Leverage Shares MANGOS ETF                                            Nasdaq    2026-10-14  —            —                   5.00      5.00            —  USD            —  Expected
+NXDR    Nextdoor Holdings, Inc. Class A Common Stock                          Nasdaq    2026-10-14  —            —                      —         —            —  USD            —  Expected
+PEPT    REX Peptide ETF                                                       Nasdaq    2026-10-14  —            —                      —         —            —  USD            —  Expected
+RTHY    F/m Long-Term Treasury Inflation-Protected Security (TIPS) ETF        Nasdaq    2026-10-14  —            —                      —         —            —  USD            —  Expected
+XLEM    Select Sector SPDR Trust                                              NYSEArca  2026-10-14  —            —                      —         —            —  —              —  Expected
+XLKM    Select Sector SPDR Trust                                              NYSEArca  2026-10-14  —            —                      —         —            —  —              —  Expected
+XLPM    Select Sector SPDR Trust                                              NYSEArca  2026-10-14  —            —                      —         —            —  —              —  Expected
+XLYM    Select Sector SPDR Trust                                              NYSEArca  2026-10-14  —            —                      —         —            —  —              —  Expected

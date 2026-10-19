@@ -1,0 +1,4 @@
+exit: 7
+--- stdout
+--- stderr
+yfin: Yahoo finance error Bad Request: Unsupported operator: BOGUS; Supported operators are :[gtelt, or, btwn, lt, has_parent, match_any, eq, nested, gt, match_phrase, date_hist, and, must_not, match_all, gte, has_child, lte] [payload: {"finance":{"result":null,"error":{"code":"Bad Request","description":"Unsupported operator: BOGUS; Supported operators are :[gtelt, or, btwn, lt, has_parent, match_any, eq, nested, gt, match_phrase, date_hist, and, must_not, match_all, gte, has_child, lte]"}}}]

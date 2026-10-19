@@ -1,0 +1,11 @@
+exit: 0
+--- stdout
+symbol  company                                             market_cap  event                          time              timing  eps_estimate  reported_eps  surprise_pct
+NFLX    Netflix, Inc.                                          290.75B  Q3 2026 Earnings Announcement  2026-10-20 16:00  AMC             0.82             —             —
+KEY     KeyCorp                                                 20.99B  Q3 2026 Earnings Announcement  2026-10-20 08:30  BMO             0.46             —             —
+AMC     AMC Entertainment Holdings, Inc.                         2.70B  Q3 2026 Earnings Announcement  2026-10-20 08:30  BMO             0.10             —             —
+AGNC    AGNC Investment Corp.                                   10.17B  Q3 2026 Earnings Announcement  2026-10-19 16:00  AMC             0.38             —             —
+CLF     Cleveland-Cliffs Inc.                                    6.97B  Q3 2026 Earnings Announcement  2026-10-19 08:30  BMO             0.24             —             —
+TSM     Taiwan Semiconductor Manufacturing Company Limited       2.25T  Q3 2026 Earnings Announcement  2026-10-15 08:30  BMO             4.52             —             —
+ERIC    Telefonaktiebolaget LM Ericsson (publ)                  31.35B  Q3 2026 Earnings Announcement  2026-10-15 08:30  BMO             0.14             —             —
+BAC     Bank of America Corporation                            356.84B  —                              2026-10-14 06:44  TAS             1.11          0.91        -17.93

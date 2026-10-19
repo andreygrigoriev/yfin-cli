@@ -1,0 +1,92 @@
+exit: 0
+--- stdout
+[
+  {
+    "symbol": "NFLX",
+    "company": "Netflix, Inc.",
+    "market_cap": 290792885114,
+    "event": "Q3 2026 Earnings Announcement",
+    "time": "2026-10-20T16:00:00-04:00",
+    "timing": "AMC",
+    "eps_estimate": 0.82,
+    "reported_eps": null,
+    "surprise_pct": null
+  },
+  {
+    "symbol": "KEY",
+    "company": "KeyCorp",
+    "market_cap": 20990418739,
+    "event": "Q3 2026 Earnings Announcement",
+    "time": "2026-10-20T08:30:00-04:00",
+    "timing": "BMO",
+    "eps_estimate": 0.46,
+    "reported_eps": null,
+    "surprise_pct": null
+  },
+  {
+    "symbol": "AMC",
+    "company": "AMC Entertainment Holdings, Inc.",
+    "market_cap": 2695665990,
+    "event": "Q3 2026 Earnings Announcement",
+    "time": "2026-10-20T08:30:00-04:00",
+    "timing": "BMO",
+    "eps_estimate": 0.1,
+    "reported_eps": null,
+    "surprise_pct": null
+  },
+  {
+    "symbol": "AGNC",
+    "company": "AGNC Investment Corp.",
+    "market_cap": 10165503182,
+    "event": "Q3 2026 Earnings Announcement",
+    "time": "2026-10-19T16:00:00-04:00",
+    "timing": "AMC",
+    "eps_estimate": 0.38,
+    "reported_eps": null,
+    "surprise_pct": null
+  },
+  {
+    "symbol": "CLF",
+    "company": "Cleveland-Cliffs Inc.",
+    "market_cap": 6974852292,
+    "event": "Q3 2026 Earnings Announcement",
+    "time": "2026-10-19T08:30:00-04:00",
+    "timing": "BMO",
+    "eps_estimate": 0.24,
+    "reported_eps": null,
+    "surprise_pct": null
+  },
+  {
+    "symbol": "TSM",
+    "company": "Taiwan Semiconductor Manufacturing Company Limited",
+    "market_cap": 2245432071851,
+    "event": "Q3 2026 Earnings Announcement",
+    "time": "2026-10-15T08:30:00-04:00",
+    "timing": "BMO",
+    "eps_estimate": 4.52,
+    "reported_eps": null,
+    "surprise_pct": null
+  },
+  {
+    "symbol": "ERIC",
+    "company": "Telefonaktiebolaget LM Ericsson (publ)",
+    "market_cap": 31351971778,
+    "event": "Q3 2026 Earnings Announcement",
+    "time": "2026-10-15T08:30:00-04:00",
+    "timing": "BMO",
+    "eps_estimate": 0.14,
+    "reported_eps": null,
+    "surprise_pct": null
+  },
+  {
+    "symbol": "BAC",
+    "company": "Bank of America Corporation",
+    "market_cap": 356804995994,
+    "event": null,
+    "time": "2026-10-14T06:44:44-04:00",
+    "timing": "TAS",
+    "eps_estimate": 1.11,
+    "reported_eps": 0.91,
+    "surprise_pct": -17.93
+  }
+]

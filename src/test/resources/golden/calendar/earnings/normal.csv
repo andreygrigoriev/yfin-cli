@@ -1,0 +1,11 @@
+exit: 0
+--- stdout
+symbol,company,market_cap,event,time,timing,eps_estimate,reported_eps,surprise_pct
+NFLX,"Netflix, Inc.",290792885114,Q3 2026 Earnings Announcement,2026-10-20T16:00:00-04:00,AMC,0.82,,
+KEY,KeyCorp,20990418739,Q3 2026 Earnings Announcement,2026-10-20T08:30:00-04:00,BMO,0.46,,
+AMC,"AMC Entertainment Holdings, Inc.",2695665990,Q3 2026 Earnings Announcement,2026-10-20T08:30:00-04:00,BMO,0.1,,
+AGNC,AGNC Investment Corp.,10165503182,Q3 2026 Earnings Announcement,2026-10-19T16:00:00-04:00,AMC,0.38,,
+CLF,Cleveland-Cliffs Inc.,6974852292,Q3 2026 Earnings Announcement,2026-10-19T08:30:00-04:00,BMO,0.24,,
+TSM,Taiwan Semiconductor Manufacturing Company Limited,2245432071851,Q3 2026 Earnings Announcement,2026-10-15T08:30:00-04:00,BMO,4.52,,
+ERIC,Telefonaktiebolaget LM Ericsson (publ),31351971778,Q3 2026 Earnings Announcement,2026-10-15T08:30:00-04:00,BMO,0.14,,
+BAC,Bank of America Corporation,356804995994,,2026-10-14T06:44:44-04:00,TAS,1.11,0.91,-17.93

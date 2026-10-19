@@ -10,6 +10,7 @@ import io.github.andreygrigoriev.yfin.model.CapitalGain;
 import io.github.andreygrigoriev.yfin.model.Dividend;
 import io.github.andreygrigoriev.yfin.model.EarningsDate;
 import io.github.andreygrigoriev.yfin.model.EarningsEstimate;
+import io.github.andreygrigoriev.yfin.model.EarningsEvent;
 import io.github.andreygrigoriev.yfin.model.EarningsHistoryEntry;
 import io.github.andreygrigoriev.yfin.model.EpsRevisions;
 import io.github.andreygrigoriev.yfin.model.EpsTrend;
@@ -21,6 +22,7 @@ import io.github.andreygrigoriev.yfin.model.Holder;
 import io.github.andreygrigoriev.yfin.model.IndustryData;
 import io.github.andreygrigoriev.yfin.model.InsiderRosterEntry;
 import io.github.andreygrigoriev.yfin.model.InsiderTransaction;
+import io.github.andreygrigoriev.yfin.model.IpoEvent;
 import io.github.andreygrigoriev.yfin.model.LookupResult;
 import io.github.andreygrigoriev.yfin.model.MajorHolders;
 import io.github.andreygrigoriev.yfin.model.MarketStatus;
@@ -36,6 +38,7 @@ import io.github.andreygrigoriev.yfin.model.SectorData;
 import io.github.andreygrigoriev.yfin.model.SectorIndustry;
 import io.github.andreygrigoriev.yfin.model.SharesCount;
 import io.github.andreygrigoriev.yfin.model.Split;
+import io.github.andreygrigoriev.yfin.model.SplitEvent;
 import io.github.andreygrigoriev.yfin.model.Sustainability;
 import io.github.andreygrigoriev.yfin.model.TickerInfo;
 import io.github.andreygrigoriev.yfin.model.TopCompany;
@@ -628,6 +631,53 @@ public final class Specs {
             .col("close", MarketStatus::close, Kind.TIMESTAMP)
             .col("zone", s -> s.zone().getId(), Kind.TEXT)
             .col("zone_short_name", MarketStatus::zoneShortName, Kind.TEXT)
+            .build();
+
+    /**
+     * Market-wide earnings announcements, as {@code calendar earnings} prints them, in {@code
+     * America/New_York}. {@code timing} is Yahoo's code ({@code BMO}, {@code AMC}, {@code TAS},
+     * {@code TNS}); {@code surprise_pct} is in percent as Yahoo gives it, as in {@link #EARNINGS_DATE}.
+     */
+    public static final Spec<EarningsEvent> EARNINGS_EVENT = Spec.<EarningsEvent>builder()
+            .col("symbol", EarningsEvent::symbol, Kind.TEXT)
+            .col("company", EarningsEvent::companyName, Kind.TEXT)
+            .col("market_cap", EarningsEvent::marketCap, Kind.INTEGER)
+            .col("event", EarningsEvent::eventName, Kind.TEXT)
+            .col("time", EarningsEvent::startTime, Kind.TIMESTAMP)
+            .col("timing", EarningsEvent::timing, Kind.TEXT)
+            .col("eps_estimate", EarningsEvent::epsEstimate, PRICE)
+            .col("reported_eps", EarningsEvent::reportedEps, PRICE)
+            .col("surprise_pct", EarningsEvent::surprisePercent, RATIO)
+            .build();
+
+    /** IPOs, as {@code calendar ipo} prints them; dates are in {@code America/New_York}. */
+    public static final Spec<IpoEvent> IPO_EVENT = Spec.<IpoEvent>builder()
+            .col("symbol", IpoEvent::symbol, Kind.TEXT)
+            .col("company", IpoEvent::companyName, Kind.TEXT)
+            .col("exchange", IpoEvent::exchange, Kind.TEXT)
+            .col("date", IpoEvent::date, Kind.DATE)
+            .col("filing_date", IpoEvent::filingDate, Kind.DATE)
+            .col("amended_date", IpoEvent::amendedDate, Kind.DATE)
+            .col("price_from", IpoEvent::priceFrom, PRICE)
+            .col("price_to", IpoEvent::priceTo, PRICE)
+            .col("offer_price", IpoEvent::offerPrice, PRICE)
+            .col("currency", IpoEvent::currency, Kind.TEXT)
+            .col("shares", IpoEvent::shares, Kind.INTEGER)
+            .col("deal_type", IpoEvent::dealType, Kind.TEXT)
+            .build();
+
+    /**
+     * Market-wide splits, as {@code calendar splits} prints them: {@code old_shares} become {@code
+     * new_shares}, and {@code ratio} is their quotient as in {@link #SPLIT}.
+     */
+    public static final Spec<SplitEvent> SPLIT_EVENT = Spec.<SplitEvent>builder()
+            .col("symbol", SplitEvent::symbol, Kind.TEXT)
+            .col("company", SplitEvent::companyName, Kind.TEXT)
+            .col("date", SplitEvent::payableDate, Kind.DATE)
+            .col("optionable", SplitEvent::optionable, Kind.BOOLEAN)
+            .col("old_shares", SplitEvent::oldShareWorth, RATIO)
+            .col("new_shares", SplitEvent::newShareWorth, RATIO)
+            .col("ratio", SplitEvent::ratio, RATIO)
             .build();
 
     private Specs() {}
