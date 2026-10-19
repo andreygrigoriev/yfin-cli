@@ -1,0 +1,7 @@
+exit: 0
+--- stdout
+current  339.32
+low      215.00
+mean     328.09
+median   340.00
+high     405.00

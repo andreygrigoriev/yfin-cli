@@ -1,0 +1,7 @@
+exit: 0
+--- stdout
+period  end_date    analysts   avg   low   high  year_ago_eps  growth  currency
+0q      2026-09-30        27  1.98  1.93   2.07          1.85   6.95%  USD
++1q     2026-12-31        22  2.91  2.56   3.42          2.84   2.47%  USD
+0y      2026-09-30        39  8.82  8.28   8.94          7.46  18.23%  USD
++1y     2027-09-30        40  9.58  8.69  10.67          8.82   8.62%  USD

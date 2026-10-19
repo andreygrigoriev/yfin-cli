@@ -1,0 +1,36 @@
+exit: 0
+--- stdout
+[
+  {
+    "period": "0m",
+    "strong_buy": 6,
+    "buy": 19,
+    "hold": 13,
+    "sell": 3,
+    "strong_sell": 3
+  },
+  {
+    "period": "-1m",
+    "strong_buy": 6,
+    "buy": 19,
+    "hold": 13,
+    "sell": 3,
+    "strong_sell": 3
+  },
+  {
+    "period": "-2m",
+    "strong_buy": 6,
+    "buy": 19,
+    "hold": 14,
+    "sell": 3,
+    "strong_sell": 2
+  },
+  {
+    "period": "-3m",
+    "strong_buy": 6,
+    "buy": 22,
+    "hold": 14,
+    "sell": 2,
+    "strong_sell": 2
+  }
+]

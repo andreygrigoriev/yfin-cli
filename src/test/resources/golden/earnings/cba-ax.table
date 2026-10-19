@@ -1,0 +1,5 @@
+exit: 0
+--- stdout
+time              eps_estimate  reported_eps  surprise_pct
+2027-02-09 16:12             —             —             —
+2026-08-11 16:12             —             —             —

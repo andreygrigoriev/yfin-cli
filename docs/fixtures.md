@@ -29,11 +29,11 @@ Every request first hits the cookie and crumb bootstrap, which `CliRunner` regis
 | `valuation SYM` | timeseries (valuation) | `timeseries/valuation/aapl-annual`, `aapl-quarterly`, `aapl-trailing` | `timeseries/valuation/spy-quarterly` | `timeseries/error-bad-request` |
 | `holders major\|institutional\|funds\|insiders\|insider-tx SYM` | quoteSummary holder modules | `quoteSummary/holders/aapl` (`sap-de` has no insider transactions) | `quoteSummary/holders/spy`, `btc-usd` | `quoteSummary/not-found` |
 | `estimates earnings\|revenue\|history\|eps-trend\|eps-revisions SYM` | quoteSummary `earningsTrend`, `earningsHistory` | `quoteSummary/analysis/aapl`, `sap-de` | `quoteSummary/analysis/spy`, `btc-usd` | `quoteSummary/not-found` |
-| `estimates growth SYM` | quoteSummary trends + timeseries PEG | `quoteSummary/analysis/aapl` + `timeseries/peg/aapl` | `timeseries/peg/spy` | `quoteSummary/not-found` |
+| `estimates growth SYM` | quoteSummary `earningsTrend`, `industryTrend`, `sectorTrend`, `indexTrend` (one request; the PEG timeseries feeds `info`, not growth) | `quoteSummary/analysis/aapl` | `quoteSummary/analysis/spy` | `quoteSummary/not-found` |
 | `recommendations SYM [--summary]` | quoteSummary `recommendationTrend` | `quoteSummary/analysis/aapl` | `quoteSummary/analysis/spy` | `quoteSummary/not-found` |
 | `upgrades SYM` | quoteSummary `upgradeDowngradeHistory` | `quoteSummary/analysis/aapl` | `quoteSummary/analysis/sap-de` (module absent) | `quoteSummary/not-found` |
 | `price-target SYM` | quoteSummary `financialData` | `quoteSummary/analysis/aapl` | `quoteSummary/analysis/spy` | `quoteSummary/not-found` |
-| `earnings SYM [--limit]` | `/v1/finance/visualization`, chart (timezone) | `earnings/aapl`, `sap-de`, `cba-ax` | `earnings/spy` | `earnings/unknown`, `earnings/bad-entity` |
+| `earnings SYM [--limit]` | `/v1/finance/visualization` (POST), chart (timezone) | `earnings/aapl` + `chart/aapl-tz`; `sap-de`, `cba-ax` with `chart/aapl-tz` re-zoned (⚠️ gap) | `earnings/spy`, `earnings/unknown` (no rows) | `earnings/bad-entity` |
 | `options SYM [--expiry]` | `/v7/finance/options` | `options/aapl`, `options/aapl-2029-01-19` | `options/aapl-not-an-expiration` | `options/unknown`, `options/bad-date` |
 | `news SYM…` | `/xhr/ncp` (news tabs) | `news/aapl-ncp-synthetic` | `news/empty-ncp-synthetic` | `news/not-found` |
 | `search QUERY [--news]` | `/v1/finance/search` | `search/apple`, `search/tech`, `news/search-aapl` | `search/empty` | `search/bad-request` |
@@ -62,5 +62,7 @@ which reads the quote endpoint and the 1y daily / 5d hourly charts.
   balance sheet are not recorded either.
 - `screener/predefined-empty`: a predefined screener with no quotes. Until then the empty case
   uses an offset past the end, recorded as a new case.
+- `chart/sap-de-tz`, `chart/cba-ax-tz`: one-day charts for the zone lookup of non-US `earnings`
+  symbols. Until then the tests serve `chart/aapl-tz` with `exchangeTimezoneName` replaced.
 - `quote` multi-symbol needs the 1y daily and 5d hourly charts per extra symbol (`btc-usd`,
   `spy`); only AAPL has the full set (`chart/aapl-1d-1y`, `aapl-1h-5d-prepost`).

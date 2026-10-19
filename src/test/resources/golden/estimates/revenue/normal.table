@@ -1,0 +1,7 @@
+exit: 0
+--- stdout
+period  end_date    analysts      avg      low     high  year_ago_revenue  growth  currency
+0q      2026-09-30        27  113.62B  112.25B  117.22B           102.47B  10.88%  USD
++1q     2026-12-31        19  154.62B  131.50B  170.41B           143.76B   7.56%  USD
+0y      2026-09-30        40  477.85B  471.80B  484.00B           416.16B  14.82%  USD
++1y     2027-09-30        40  528.21B  497.90B  594.86B           477.85B  10.54%  USD

@@ -1,0 +1,8 @@
+exit: 0
+--- stdout
+period   stock  industry  sector   index
+0q       7.15%         —       —  24.35%
++1q      1.61%         —       —  26.19%
+0y      18.38%         —       —  32.32%
++1y      8.56%         —       —  16.46%
+LTG          —         —       —  12.20%

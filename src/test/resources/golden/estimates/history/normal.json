@@ -1,0 +1,40 @@
+exit: 0
+--- stdout
+[
+  {
+    "quarter": "2025-09-30",
+    "period": "-4q",
+    "eps_estimate": 1.76993,
+    "eps_actual": 1.85,
+    "eps_difference": 0.08,
+    "surprise": 0.0452,
+    "currency": "USD"
+  },
+  {
+    "quarter": "2025-12-31",
+    "period": "-3q",
+    "eps_estimate": 2.6708,
+    "eps_actual": 2.84,
+    "eps_difference": 0.17,
+    "surprise": 0.0634,
+    "currency": "USD"
+  },
+  {
+    "quarter": "2026-03-31",
+    "period": "-2q",
+    "eps_estimate": 1.94275,
+    "eps_actual": 2.01,
+    "eps_difference": 0.07,
+    "surprise": 0.0346,
+    "currency": "USD"
+  },
+  {
+    "quarter": "2026-06-30",
+    "period": "-1q",
+    "eps_estimate": 1.89243,
+    "eps_actual": 2.02,
+    "eps_difference": 0.13,
+    "surprise": 0.0674,
+    "currency": "USD"
+  }
+]

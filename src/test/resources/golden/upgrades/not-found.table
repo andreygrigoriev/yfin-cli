@@ -1,0 +1,4 @@
+exit: 3
+--- stdout
+--- stderr
+yfin: NOPE: Yahoo quoteSummary error Not Found: Quote not found for symbol: NOSUCHSYMBOLXYZ (NOPE)

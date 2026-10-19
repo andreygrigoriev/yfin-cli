@@ -1,0 +1,39 @@
+exit: 0
+--- stdout
+[
+  {
+    "period": "0q",
+    "stock": 0.0715,
+    "industry": null,
+    "sector": null,
+    "index": 0.24350001
+  },
+  {
+    "period": "+1q",
+    "stock": 0.0161,
+    "industry": null,
+    "sector": null,
+    "index": 0.2619
+  },
+  {
+    "period": "0y",
+    "stock": 0.1838,
+    "industry": null,
+    "sector": null,
+    "index": 0.3232
+  },
+  {
+    "period": "+1y",
+    "stock": 0.0856,
+    "industry": null,
+    "sector": null,
+    "index": 0.16459998
+  },
+  {
+    "period": "LTG",
+    "stock": null,
+    "industry": null,
+    "sector": null,
+    "index": 0.122
+  }
+]

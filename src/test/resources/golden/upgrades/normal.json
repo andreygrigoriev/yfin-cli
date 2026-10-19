@@ -1,0 +1,204 @@
+exit: 0
+--- stdout
+[
+  {
+    "time": "2026-10-01T15:55:51Z",
+    "firm": "Morgan Stanley",
+    "to_grade": "Overweight",
+    "from_grade": "Overweight",
+    "action": "main",
+    "price_target_action": "Lowers",
+    "current_price_target": 355,
+    "prior_price_target": 360
+  },
+  {
+    "time": "2026-10-01T11:00:30Z",
+    "firm": "Needham",
+    "to_grade": "Hold",
+    "from_grade": "Hold",
+    "action": "reit",
+    "price_target_action": "",
+    "current_price_target": 0,
+    "prior_price_target": 0
+  },
+  {
+    "time": "2026-09-29T17:40:43Z",
+    "firm": "Morgan Stanley",
+    "to_grade": "Overweight",
+    "from_grade": "Overweight",
+    "action": "reit",
+    "price_target_action": "Maintains",
+    "current_price_target": 360,
+    "prior_price_target": 360
+  },
+  {
+    "time": "2026-09-23T17:25:04Z",
+    "firm": "B of A Securities",
+    "to_grade": "Buy",
+    "from_grade": "Buy",
+    "action": "reit",
+    "price_target_action": "Maintains",
+    "current_price_target": 370,
+    "prior_price_target": 370
+  },
+  {
+    "time": "2026-09-18T11:45:30Z",
+    "firm": "Evercore ISI Group",
+    "to_grade": "Outperform",
+    "from_grade": "Outperform",
+    "action": "main",
+    "price_target_action": "Raises",
+    "current_price_target": 380,
+    "prior_price_target": 365
+  },
+  {
+    "time": "2026-09-17T18:02:51Z",
+    "firm": "B of A Securities",
+    "to_grade": "Buy",
+    "from_grade": "Buy",
+    "action": "reit",
+    "price_target_action": "Maintains",
+    "current_price_target": 370,
+    "prior_price_target": 370
+  },
+  {
+    "time": "2026-09-10T13:14:37Z",
+    "firm": "TD Cowen",
+    "to_grade": "Buy",
+    "from_grade": "Buy",
+    "action": "reit",
+    "price_target_action": "Maintains",
+    "current_price_target": 400,
+    "prior_price_target": 400
+  },
+  {
+    "time": "2026-09-10T11:52:11Z",
+    "firm": "Rosenblatt",
+    "to_grade": "Neutral",
+    "from_grade": "Neutral",
+    "action": "main",
+    "price_target_action": "Maintains",
+    "current_price_target": 303,
+    "prior_price_target": 303
+  },
+  {
+    "time": "2026-09-10T11:32:27Z",
+    "firm": "B of A Securities",
+    "to_grade": "Buy",
+    "from_grade": "Buy",
+    "action": "main",
+    "price_target_action": "Lowers",
+    "current_price_target": 370,
+    "prior_price_target": 380
+  },
+  {
+    "time": "2026-09-08T15:47:34Z",
+    "firm": "HSBC",
+    "to_grade": "Buy",
+    "from_grade": "Buy",
+    "action": "reit",
+    "price_target_action": "Maintains",
+    "current_price_target": 366,
+    "prior_price_target": 366
+  },
+  {
+    "time": "2026-09-08T11:12:31Z",
+    "firm": "Needham",
+    "to_grade": "Hold",
+    "from_grade": "Hold",
+    "action": "reit",
+    "price_target_action": "",
+    "current_price_target": 0,
+    "prior_price_target": 0
+  },
+  {
+    "time": "2026-09-02T17:34:35Z",
+    "firm": "Morgan Stanley",
+    "to_grade": "Overweight",
+    "from_grade": "Overweight",
+    "action": "reit",
+    "price_target_action": "Maintains",
+    "current_price_target": 360,
+    "prior_price_target": 360
+  },
+  {
+    "time": "2026-09-02T16:01:42Z",
+    "firm": "DA Davidson",
+    "to_grade": "Neutral",
+    "from_grade": "Neutral",
+    "action": "main",
+    "price_target_action": "Maintains",
+    "current_price_target": 270,
+    "prior_price_target": 270
+  },
+  {
+    "time": "2026-09-01T12:17:07Z",
+    "firm": "Rosenblatt",
+    "to_grade": "Neutral",
+    "from_grade": "Neutral",
+    "action": "main",
+    "price_target_action": "Raises",
+    "current_price_target": 303,
+    "prior_price_target": 300
+  },
+  {
+    "time": "2026-08-17T20:20:47Z",
+    "firm": "Rothschild & Co",
+    "to_grade": "Buy",
+    "from_grade": "Neutral",
+    "action": "up",
+    "price_target_action": "Raises",
+    "current_price_target": 400,
+    "prior_price_target": 260
+  },
+  {
+    "time": "2026-08-10T12:38:05Z",
+    "firm": "Jefferies",
+    "to_grade": "Underperform",
+    "from_grade": "Hold",
+    "action": "down",
+    "price_target_action": "Lowers",
+    "current_price_target": 263.66,
+    "prior_price_target": 285.56
+  },
+  {
+    "time": "2026-08-04T12:28:39Z",
+    "firm": "China Renaissance",
+    "to_grade": "Hold",
+    "from_grade": "Buy",
+    "action": "down",
+    "price_target_action": "Announces",
+    "current_price_target": 280,
+    "prior_price_target": 0
+  },
+  {
+    "time": "2026-07-31T18:07:40Z",
+    "firm": "JP Morgan",
+    "to_grade": "Overweight",
+    "from_grade": "Overweight",
+    "action": "main",
+    "price_target_action": "Lowers",
+    "current_price_target": 340,
+    "prior_price_target": 345
+  },
+  {
+    "time": "2026-07-31T16:03:50Z",
+    "firm": "TD Cowen",
+    "to_grade": "Buy",
+    "from_grade": "Buy",
+    "action": "main",
+    "price_target_action": "Raises",
+    "current_price_target": 400,
+    "prior_price_target": 350
+  },
+  {
+    "time": "2026-07-31T15:05:06Z",
+    "firm": "DA Davidson",
+    "to_grade": "Neutral",
+    "from_grade": "Neutral",
+    "action": "main",
+    "price_target_action": "Maintains",
+    "current_price_target": 270,
+    "prior_price_target": 270
+  }
+]

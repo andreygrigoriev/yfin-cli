@@ -1,0 +1,8 @@
+exit: 0
+--- stdout
+field,value
+current,339.32
+low,215
+mean,328.09384
+median,340
+high,405

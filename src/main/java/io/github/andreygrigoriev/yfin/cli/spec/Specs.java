@@ -8,17 +8,27 @@ import io.github.andreygrigoriev.yfin.model.Bar;
 import io.github.andreygrigoriev.yfin.model.Calendar;
 import io.github.andreygrigoriev.yfin.model.CapitalGain;
 import io.github.andreygrigoriev.yfin.model.Dividend;
+import io.github.andreygrigoriev.yfin.model.EarningsDate;
+import io.github.andreygrigoriev.yfin.model.EarningsEstimate;
+import io.github.andreygrigoriev.yfin.model.EarningsHistoryEntry;
+import io.github.andreygrigoriev.yfin.model.EpsRevisions;
+import io.github.andreygrigoriev.yfin.model.EpsTrend;
 import io.github.andreygrigoriev.yfin.model.FundHolding;
 import io.github.andreygrigoriev.yfin.model.FundsData;
+import io.github.andreygrigoriev.yfin.model.GrowthEstimate;
 import io.github.andreygrigoriev.yfin.model.Holder;
 import io.github.andreygrigoriev.yfin.model.InsiderRosterEntry;
 import io.github.andreygrigoriev.yfin.model.InsiderTransaction;
 import io.github.andreygrigoriev.yfin.model.MajorHolders;
+import io.github.andreygrigoriev.yfin.model.PriceTargets;
+import io.github.andreygrigoriev.yfin.model.Recommendation;
+import io.github.andreygrigoriev.yfin.model.RevenueEstimate;
 import io.github.andreygrigoriev.yfin.model.SecFiling;
 import io.github.andreygrigoriev.yfin.model.SharesCount;
 import io.github.andreygrigoriev.yfin.model.Split;
 import io.github.andreygrigoriev.yfin.model.Sustainability;
 import io.github.andreygrigoriev.yfin.model.TickerInfo;
+import io.github.andreygrigoriev.yfin.model.UpgradeDowngrade;
 import io.github.andreygrigoriev.yfin.request.Interval;
 import java.time.LocalDate;
 import java.util.List;
@@ -302,6 +312,125 @@ public final class Specs {
             .col("ownership", InsiderTransaction::ownership, Kind.TEXT)
             .col("transaction", InsiderTransaction::transaction, Kind.TEXT)
             .col("url", InsiderTransaction::url, Kind.TEXT)
+            .build();
+
+    /**
+     * EPS estimates per period, as {@code estimates earnings} prints them. {@code period} is {@code
+     * 0q}/{@code +1q} (current/next quarter) or {@code 0y}/{@code +1y} (fiscal year); {@code growth}
+     * is over {@code year_ago_eps}.
+     */
+    public static final Spec<EarningsEstimate> EARNINGS_ESTIMATE = Spec.<EarningsEstimate>builder()
+            .col("period", EarningsEstimate::period, Kind.TEXT)
+            .col("end_date", EarningsEstimate::endDate, Kind.DATE)
+            .col("analysts", EarningsEstimate::numberOfAnalysts, Kind.INTEGER)
+            .col("avg", EarningsEstimate::avg, PRICE)
+            .col("low", EarningsEstimate::low, PRICE)
+            .col("high", EarningsEstimate::high, PRICE)
+            .col("year_ago_eps", EarningsEstimate::yearAgoEps, PRICE)
+            .col("growth", EarningsEstimate::growth, Kind.PERCENT)
+            .col("currency", EarningsEstimate::currency, Kind.TEXT)
+            .build();
+
+    /** Revenue estimates per period, as {@code estimates revenue} prints them. */
+    public static final Spec<RevenueEstimate> REVENUE_ESTIMATE = Spec.<RevenueEstimate>builder()
+            .col("period", RevenueEstimate::period, Kind.TEXT)
+            .col("end_date", RevenueEstimate::endDate, Kind.DATE)
+            .col("analysts", RevenueEstimate::numberOfAnalysts, Kind.INTEGER)
+            .col("avg", RevenueEstimate::avg, Kind.INTEGER)
+            .col("low", RevenueEstimate::low, Kind.INTEGER)
+            .col("high", RevenueEstimate::high, Kind.INTEGER)
+            .col("year_ago_revenue", RevenueEstimate::yearAgoRevenue, Kind.INTEGER)
+            .col("growth", RevenueEstimate::growth, Kind.PERCENT)
+            .col("currency", RevenueEstimate::currency, Kind.TEXT)
+            .build();
+
+    /** Reported versus estimated EPS of past quarters, as {@code estimates history} prints them. */
+    public static final Spec<EarningsHistoryEntry> EARNINGS_HISTORY = Spec.<EarningsHistoryEntry>builder()
+            .col("quarter", EarningsHistoryEntry::quarter, Kind.DATE)
+            .col("period", EarningsHistoryEntry::period, Kind.TEXT)
+            .col("eps_estimate", EarningsHistoryEntry::epsEstimate, PRICE)
+            .col("eps_actual", EarningsHistoryEntry::epsActual, PRICE)
+            .col("eps_difference", EarningsHistoryEntry::epsDifference, PRICE)
+            .col("surprise", EarningsHistoryEntry::surprisePercent, Kind.PERCENT)
+            .col("currency", EarningsHistoryEntry::currency, Kind.TEXT)
+            .build();
+
+    /** How the mean EPS estimate moved, as {@code estimates eps-trend} prints it. */
+    public static final Spec<EpsTrend> EPS_TREND = Spec.<EpsTrend>builder()
+            .col("period", EpsTrend::period, Kind.TEXT)
+            .col("end_date", EpsTrend::endDate, Kind.DATE)
+            .col("current", EpsTrend::current, PRICE)
+            .col("7_days_ago", EpsTrend::sevenDaysAgo, PRICE)
+            .col("30_days_ago", EpsTrend::thirtyDaysAgo, PRICE)
+            .col("60_days_ago", EpsTrend::sixtyDaysAgo, PRICE)
+            .col("90_days_ago", EpsTrend::ninetyDaysAgo, PRICE)
+            .col("currency", EpsTrend::currency, Kind.TEXT)
+            .build();
+
+    /** Analysts revising their EPS estimate, as {@code estimates eps-revisions} prints them. */
+    public static final Spec<EpsRevisions> EPS_REVISIONS = Spec.<EpsRevisions>builder()
+            .col("period", EpsRevisions::period, Kind.TEXT)
+            .col("end_date", EpsRevisions::endDate, Kind.DATE)
+            .col("up_last_7_days", EpsRevisions::upLast7Days, Kind.INTEGER)
+            .col("up_last_30_days", EpsRevisions::upLast30Days, Kind.INTEGER)
+            .col("down_last_7_days", EpsRevisions::downLast7Days, Kind.INTEGER)
+            .col("down_last_30_days", EpsRevisions::downLast30Days, Kind.INTEGER)
+            .col("currency", EpsRevisions::currency, Kind.TEXT)
+            .build();
+
+    /** Expected growth of the symbol and its benchmarks, as {@code estimates growth} prints it. */
+    public static final Spec<GrowthEstimate> GROWTH_ESTIMATE = Spec.<GrowthEstimate>builder()
+            .col("period", GrowthEstimate::period, Kind.TEXT)
+            .col("stock", GrowthEstimate::stock, Kind.PERCENT)
+            .col("industry", GrowthEstimate::industry, Kind.PERCENT)
+            .col("sector", GrowthEstimate::sector, Kind.PERCENT)
+            .col("index", GrowthEstimate::index, Kind.PERCENT)
+            .build();
+
+    /** Rating counts per month ({@code 0m} is the current month), as {@code recommendations} prints them. */
+    public static final Spec<Recommendation> RECOMMENDATION = Spec.<Recommendation>builder()
+            .col("period", Recommendation::period, Kind.TEXT)
+            .col("strong_buy", Recommendation::strongBuy, Kind.INTEGER)
+            .col("buy", Recommendation::buy, Kind.INTEGER)
+            .col("hold", Recommendation::hold, Kind.INTEGER)
+            .col("sell", Recommendation::sell, Kind.INTEGER)
+            .col("strong_sell", Recommendation::strongSell, Kind.INTEGER)
+            .build();
+
+    /**
+     * Analyst rating changes, as {@code upgrades} prints them. Yahoo gives the publication time as
+     * an instant, printed in UTC; a price target of {@code 0} means the firm gave none.
+     */
+    public static final Spec<UpgradeDowngrade> UPGRADE_DOWNGRADE = Spec.<UpgradeDowngrade>builder()
+            .col("time", UpgradeDowngrade::gradeDate, Kind.TIMESTAMP)
+            .col("firm", UpgradeDowngrade::firm, Kind.TEXT)
+            .col("to_grade", UpgradeDowngrade::toGrade, Kind.TEXT)
+            .col("from_grade", UpgradeDowngrade::fromGrade, Kind.TEXT)
+            .col("action", UpgradeDowngrade::action, Kind.TEXT)
+            .col("price_target_action", UpgradeDowngrade::priceTargetAction, Kind.TEXT)
+            .col("current_price_target", UpgradeDowngrade::currentPriceTarget, PRICE)
+            .col("prior_price_target", UpgradeDowngrade::priorPriceTarget, PRICE)
+            .build();
+
+    /** Analyst price targets next to the current price, as {@code price-target} prints them. */
+    public static final Spec<PriceTargets> PRICE_TARGETS = Spec.<PriceTargets>builder()
+            .col("current", PriceTargets::current, PRICE)
+            .col("low", PriceTargets::low, PRICE)
+            .col("mean", PriceTargets::mean, PRICE)
+            .col("median", PriceTargets::median, PRICE)
+            .col("high", PriceTargets::high, PRICE)
+            .build();
+
+    /**
+     * Past and upcoming earnings announcements, as {@code earnings} prints them: the time in the
+     * exchange zone. {@code surprise_pct} is in percent as Yahoo reports it ({@code 6.74} = 6.74%
+     * beat), so it is a plain number rather than a fraction.
+     */
+    public static final Spec<EarningsDate> EARNINGS_DATE = Spec.<EarningsDate>builder()
+            .col("time", EarningsDate::date, Kind.TIMESTAMP)
+            .col("eps_estimate", EarningsDate::epsEstimate, PRICE)
+            .col("reported_eps", EarningsDate::reportedEps, PRICE)
+            .col("surprise_pct", EarningsDate::surprisePercent, RATIO)
             .build();
 
     private Specs() {}

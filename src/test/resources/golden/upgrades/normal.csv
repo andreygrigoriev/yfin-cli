@@ -1,0 +1,23 @@
+exit: 0
+--- stdout
+time,firm,to_grade,from_grade,action,price_target_action,current_price_target,prior_price_target
+2026-10-01T15:55:51Z,Morgan Stanley,Overweight,Overweight,main,Lowers,355,360
+2026-10-01T11:00:30Z,Needham,Hold,Hold,reit,,0,0
+2026-09-29T17:40:43Z,Morgan Stanley,Overweight,Overweight,reit,Maintains,360,360
+2026-09-23T17:25:04Z,B of A Securities,Buy,Buy,reit,Maintains,370,370
+2026-09-18T11:45:30Z,Evercore ISI Group,Outperform,Outperform,main,Raises,380,365
+2026-09-17T18:02:51Z,B of A Securities,Buy,Buy,reit,Maintains,370,370
+2026-09-10T13:14:37Z,TD Cowen,Buy,Buy,reit,Maintains,400,400
+2026-09-10T11:52:11Z,Rosenblatt,Neutral,Neutral,main,Maintains,303,303
+2026-09-10T11:32:27Z,B of A Securities,Buy,Buy,main,Lowers,370,380
+2026-09-08T15:47:34Z,HSBC,Buy,Buy,reit,Maintains,366,366
+2026-09-08T11:12:31Z,Needham,Hold,Hold,reit,,0,0
+2026-09-02T17:34:35Z,Morgan Stanley,Overweight,Overweight,reit,Maintains,360,360
+2026-09-02T16:01:42Z,DA Davidson,Neutral,Neutral,main,Maintains,270,270
+2026-09-01T12:17:07Z,Rosenblatt,Neutral,Neutral,main,Raises,303,300
+2026-08-17T20:20:47Z,Rothschild & Co,Buy,Neutral,up,Raises,400,260
+2026-08-10T12:38:05Z,Jefferies,Underperform,Hold,down,Lowers,263.66,285.56
+2026-08-04T12:28:39Z,China Renaissance,Hold,Buy,down,Announces,280,0
+2026-07-31T18:07:40Z,JP Morgan,Overweight,Overweight,main,Lowers,340,345
+2026-07-31T16:03:50Z,TD Cowen,Buy,Buy,main,Raises,400,350
+2026-07-31T15:05:06Z,DA Davidson,Neutral,Neutral,main,Maintains,270,270

@@ -1,0 +1,40 @@
+exit: 0
+--- stdout
+[
+  {
+    "period": "0q",
+    "end_date": "2026-09-30",
+    "up_last_7_days": 1,
+    "up_last_30_days": 7,
+    "down_last_7_days": 0,
+    "down_last_30_days": 14,
+    "currency": "USD"
+  },
+  {
+    "period": "+1q",
+    "end_date": "2026-12-31",
+    "up_last_7_days": 0,
+    "up_last_30_days": 1,
+    "down_last_7_days": 1,
+    "down_last_30_days": 2,
+    "currency": "USD"
+  },
+  {
+    "period": "0y",
+    "end_date": "2026-09-30",
+    "up_last_7_days": 1,
+    "up_last_30_days": 3,
+    "down_last_7_days": 2,
+    "down_last_30_days": 2,
+    "currency": "USD"
+  },
+  {
+    "period": "+1y",
+    "end_date": "2027-09-30",
+    "up_last_7_days": 0,
+    "up_last_30_days": 5,
+    "down_last_7_days": 1,
+    "down_last_30_days": 3,
+    "currency": "USD"
+  }
+]

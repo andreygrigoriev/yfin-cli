@@ -1,0 +1,48 @@
+exit: 0
+--- stdout
+[
+  {
+    "period": "0q",
+    "end_date": "2026-09-30",
+    "analysts": 27,
+    "avg": 113617923250,
+    "low": 112248100000,
+    "high": 117219700000,
+    "year_ago_revenue": 102466000000,
+    "growth": 0.1088,
+    "currency": "USD"
+  },
+  {
+    "period": "+1q",
+    "end_date": "2026-12-31",
+    "analysts": 19,
+    "avg": 154618048490,
+    "low": 131500061129,
+    "high": 170414000000,
+    "year_ago_revenue": 143756000000,
+    "growth": 0.0756,
+    "currency": "USD"
+  },
+  {
+    "period": "0y",
+    "end_date": "2026-09-30",
+    "analysts": 40,
+    "avg": 477849857950,
+    "low": 471800000000,
+    "high": 484000000000,
+    "year_ago_revenue": 416161000000,
+    "growth": 0.14819999,
+    "currency": "USD"
+  },
+  {
+    "period": "+1y",
+    "end_date": "2027-09-30",
+    "analysts": 40,
+    "avg": 528209118860,
+    "low": 497900000000,
+    "high": 594863000000,
+    "year_ago_revenue": 477849857950,
+    "growth": 0.105399996,
+    "currency": "USD"
+  }
+]

@@ -1,0 +1,7 @@
+exit: 0
+--- stdout
+period  strong_buy  buy  hold  sell  strong_sell
+0m               6   19    13     3            3
+-1m              6   19    13     3            3
+-2m              6   19    14     3            2
+-3m              6   22    14     2            2

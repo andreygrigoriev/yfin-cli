@@ -4,6 +4,8 @@ import io.github.andreygrigoriev.yfin.YFinance;
 import io.github.andreygrigoriev.yfin.cli.cmd.ActionsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.CapitalGainsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.DividendsCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.EarningsCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.EstimatesCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.EventsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.FinancialsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.FundCommand;
@@ -11,11 +13,14 @@ import io.github.andreygrigoriev.yfin.cli.cmd.HistoryCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.HoldersCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.InfoCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.IsinCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.PriceTargetCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.QuoteCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.RecommendationsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SecFilingsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SharesCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SplitsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SustainabilityCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.UpgradesCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.ValuationCommand;
 import io.github.andreygrigoriev.yfin.cli.output.Output;
 import io.github.andreygrigoriev.yfin.cli.output.Terminal;
@@ -54,7 +59,12 @@ import picocli.CommandLine.Spec;
             SecFilingsCommand.class,
             FinancialsCommand.class,
             ValuationCommand.class,
-            HoldersCommand.class
+            HoldersCommand.class,
+            EstimatesCommand.class,
+            RecommendationsCommand.class,
+            UpgradesCommand.class,
+            PriceTargetCommand.class,
+            EarningsCommand.class
         },
         versionProvider = YfinCommand.VersionProvider.class,
         description = "Yahoo Finance market data from the command line.")

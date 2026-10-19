@@ -1,0 +1,44 @@
+exit: 0
+--- stdout
+[
+  {
+    "period": "0q",
+    "end_date": "2026-09-30",
+    "current": 1.9785,
+    "7_days_ago": 1.97865,
+    "30_days_ago": 1.97754,
+    "60_days_ago": 1.97656,
+    "90_days_ago": 2.01204,
+    "currency": "USD"
+  },
+  {
+    "period": "+1q",
+    "end_date": "2026-12-31",
+    "current": 2.91006,
+    "7_days_ago": 2.90586,
+    "30_days_ago": 2.9109,
+    "60_days_ago": 2.90495,
+    "90_days_ago": 2.9496,
+    "currency": "USD"
+  },
+  {
+    "period": "0y",
+    "end_date": "2026-09-30",
+    "current": 8.82011,
+    "7_days_ago": 8.82022,
+    "30_days_ago": 8.818,
+    "60_days_ago": 8.80708,
+    "90_days_ago": 8.76215,
+    "currency": "USD"
+  },
+  {
+    "period": "+1y",
+    "end_date": "2027-09-30",
+    "current": 9.58043,
+    "7_days_ago": 9.57579,
+    "30_days_ago": 9.56757,
+    "60_days_ago": 9.53948,
+    "90_days_ago": 9.6864,
+    "currency": "USD"
+  }
+]
