@@ -1,0 +1,564 @@
+exit: 0
+--- stdout
+[
+  {
+    "date": "2026-09-01",
+    "type": "8-K/A",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-26-035325_320193",
+    "exhibits": "8-K/A"
+  },
+  {
+    "date": "2026-07-31",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-26-000020_320193",
+    "exhibits": "EX-31.1, EX-31.2, EX-32.1, 10-Q"
+  },
+  {
+    "date": "2026-07-30",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-26-000018_320193",
+    "exhibits": "8-K, EX-99.1"
+  },
+  {
+    "date": "2026-05-28",
+    "type": "SD",
+    "title": "Specialized Disclosure Report filed pursuant to Section 1502 of the Dodd-Frank Wall Street Reform and Consumer Protection Act relating to the use of conflict minerals (Rule 13p-1)",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-26-023149_320193",
+    "exhibits": "SD"
+  },
+  {
+    "date": "2026-05-01",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-26-000013_320193",
+    "exhibits": "10-Q, EX-31.1, EX-31.2, EX-32.1"
+  },
+  {
+    "date": "2026-04-30",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-26-000011_320193",
+    "exhibits": "EX-99.1, 8-K"
+  },
+  {
+    "date": "2026-04-20",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-26-015711_320193",
+    "exhibits": "8-K"
+  },
+  {
+    "date": "2026-02-24",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-26-006577_320193",
+    "exhibits": "EX-10.1, EX-10.2, 8-K"
+  },
+  {
+    "date": "2026-01-30",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-26-000006_320193",
+    "exhibits": "10-Q, EX-31.1, EX-31.2, EX-32.1"
+  },
+  {
+    "date": "2026-01-29",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-26-000005_320193",
+    "exhibits": "EX-99.1, 8-K"
+  },
+  {
+    "date": "2026-01-08",
+    "type": "DEF 14A",
+    "title": "Proxy Statements",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001308179-26-000008_320193",
+    "exhibits": "DEF 14A"
+  },
+  {
+    "date": "2026-01-02",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-26-000199_320193",
+    "exhibits": "8-K"
+  },
+  {
+    "date": "2025-12-05",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-25-044561_320193",
+    "exhibits": "8-K"
+  },
+  {
+    "date": "2025-10-31",
+    "type": "10-K",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-25-000079_320193",
+    "exhibits": "EX-21.1, EX-23.1, EX-31.1, EX-31.2, EX-32.1, EX-4.1, 10-K"
+  },
+  {
+    "date": "2025-10-30",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-25-000077_320193",
+    "exhibits": "EX-99.1, 8-K"
+  },
+  {
+    "date": "2025-09-26",
+    "type": "S-8",
+    "title": "Offering Registrations",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-25-036313_320193",
+    "exhibits": "S-8, EX-23.2, EX-5.1, EX-FILING FEES"
+  },
+  {
+    "date": "2025-08-01",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-25-000073_320193",
+    "exhibits": "10-Q, EX-31.1, EX-31.2, EX-32.1"
+  },
+  {
+    "date": "2025-07-31",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-25-000071_320193",
+    "exhibits": "8-K, EX-99.1"
+  },
+  {
+    "date": "2025-07-25",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-25-027340_320193",
+    "exhibits": "8-K"
+  },
+  {
+    "date": "2025-07-09",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-25-025275_320193",
+    "exhibits": "8-K"
+  },
+  {
+    "date": "2025-05-12",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-25-018400_320193",
+    "exhibits": "8-K, EX-1.1, EX-4.1, EX-5.1, EXCEL"
+  },
+  {
+    "date": "2025-05-02",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-25-000057_320193",
+    "exhibits": "EX-31.1, EX-31.2, EX-32.1, EXCEL, 10-Q"
+  },
+  {
+    "date": "2025-05-01",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-25-000055_320193",
+    "exhibits": "EX-99.1, EXCEL, 8-K"
+  },
+  {
+    "date": "2025-04-04",
+    "type": "SD",
+    "title": "Specialized Disclosure Report filed pursuant to Section 1502 of the Dodd-Frank Wall Street Reform and Consumer Protection Act relating to the use of conflict minerals (Rule 13p-1)",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-25-012359_320193",
+    "exhibits": "SD, EX-1.01"
+  },
+  {
+    "date": "2025-02-25",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-25-005876_320193",
+    "exhibits": "EXCEL, 8-K"
+  },
+  {
+    "date": "2025-01-31",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-25-000008_320193",
+    "exhibits": "10-Q, EX-10.1, EX-10.2, EX-31.1, EX-31.2, EX-32.1, EXCEL"
+  },
+  {
+    "date": "2025-01-30",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-25-000007_320193",
+    "exhibits": "8-K, EX-99.1, EXCEL"
+  },
+  {
+    "date": "2025-01-10",
+    "type": "DEFA14A",
+    "title": "Proxy Statements",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001308179-25-000009_320193",
+    "exhibits": "DEFA14A"
+  },
+  {
+    "date": "2025-01-03",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-25-000228_320193",
+    "exhibits": "EXCEL, 8-K"
+  },
+  {
+    "date": "2024-11-01",
+    "type": "10-K",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000123_320193",
+    "exhibits": "EX-10.19, EX-10.20, EX-10.21, EX-10.22, EX-19.1, EX-21.1, EX-23.1, EX-31.1, EX-31.2, EX-32.1, EX-4.1, EX-97.1, EXCEL, 10-K"
+  },
+  {
+    "date": "2024-10-31",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000120_320193",
+    "exhibits": "EX-99.1, EXCEL, 8-K"
+  },
+  {
+    "date": "2024-09-10",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-24-040659_320193",
+    "exhibits": "8-K, EXCEL"
+  },
+  {
+    "date": "2024-08-26",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-24-038601_320193",
+    "exhibits": "EXCEL, 8-K"
+  },
+  {
+    "date": "2024-08-23",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-24-038403_320193",
+    "exhibits": "EXCEL, EX-3.2, 8-K"
+  },
+  {
+    "date": "2024-08-02",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000081_320193",
+    "exhibits": "10-Q, EX-31.1, EX-31.2, EX-32.1, EXCEL"
+  },
+  {
+    "date": "2024-08-01",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000080_320193",
+    "exhibits": "8-K, EX-99.1, EXCEL"
+  },
+  {
+    "date": "2024-05-03",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-24-024352_320193",
+    "exhibits": "EX-99.1, EX-99.2, EXCEL, 8-K"
+  },
+  {
+    "date": "2024-05-02",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000067_320193",
+    "exhibits": "8-K, EX-99.1, EXCEL"
+  },
+  {
+    "date": "2024-04-29",
+    "type": "CORRESP",
+    "title": "A correspondence can be sent as a document with another submission type or can be sent as a separate submission",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000061_320193",
+    "exhibits": "CORRESP"
+  },
+  {
+    "date": "2024-04-05",
+    "type": "CORRESP",
+    "title": "A correspondence can be sent as a document with another submission type or can be sent as a separate submission",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-24-018378_320193",
+    "exhibits": "CORRESP"
+  },
+  {
+    "date": "2024-03-27",
+    "type": "SD",
+    "title": "Specialized Disclosure Report filed pursuant to Section 1502 of the Dodd-Frank Wall Street Reform and Consumer Protection Act relating to the use of conflict minerals (Rule 13p-1)",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-24-015633_320193",
+    "exhibits": "EX-1.01, SD"
+  },
+  {
+    "date": "2024-03-20",
+    "type": "CORRESP",
+    "title": "A correspondence can be sent as a document with another submission type or can be sent as a separate submission",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000042_320193",
+    "exhibits": "CORRESP"
+  },
+  {
+    "date": "2024-02-28",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-24-010155_320193",
+    "exhibits": "8-K, EXCEL"
+  },
+  {
+    "date": "2024-02-14",
+    "type": "SC 13G/A",
+    "title": "Tender Offer/Acquisition Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001193125-24-036431_320193",
+    "exhibits": "EX-99.A, EX-99.B, SC 13G/A"
+  },
+  {
+    "date": "2024-02-12",
+    "type": "SC 13G/A",
+    "title": "Tender Offer/Acquisition Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001086364-24-006980_320193",
+    "exhibits": null
+  },
+  {
+    "date": "2024-02-02",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000006_320193",
+    "exhibits": "EX-31.1, EX-31.2, EX-32.1, EXCEL, 10-Q"
+  },
+  {
+    "date": "2024-02-01",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-24-000005_320193",
+    "exhibits": "8-K, EX-99.1, EXCEL"
+  },
+  {
+    "date": "2024-01-11",
+    "type": "DEFA14A",
+    "title": "Proxy Statements",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001308179-24-000011_320193",
+    "exhibits": "DEFA14A"
+  },
+  {
+    "date": "2023-11-03",
+    "type": "10-K",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-23-000106_320193",
+    "exhibits": "10-K, EX-21.1, EX-23.1, EX-31.1, EX-31.2, EX-32.1, EX-4.1, EXCEL"
+  },
+  {
+    "date": "2023-11-02",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-23-000104_320193",
+    "exhibits": "EX-99.1, EXCEL, 8-K"
+  },
+  {
+    "date": "2023-08-04",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-23-000077_320193",
+    "exhibits": "EX-31.1, EX-31.2, EX-32.1, EXCEL, 10-Q"
+  },
+  {
+    "date": "2023-08-03",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-23-000075_320193",
+    "exhibits": "8-K, EX-99.1, EXCEL"
+  },
+  {
+    "date": "2023-05-10",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-23-023909_320193",
+    "exhibits": "EXCEL, EX-5.1, EX-1.1, EX-4.1, 8-K"
+  },
+  {
+    "date": "2023-05-05",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-23-000064_320193",
+    "exhibits": "EX-31.1, EX-31.2, EX-32.1, EXCEL, 10-Q"
+  },
+  {
+    "date": "2023-05-04",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-23-000063_320193",
+    "exhibits": "8-K, EX-99.1, EXCEL"
+  },
+  {
+    "date": "2023-03-16",
+    "type": "SD",
+    "title": "Specialized Disclosure Report filed pursuant to Section 1502 of the Dodd-Frank Wall Street Reform and Consumer Protection Act relating to the use of conflict minerals (Rule 13p-1)",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-23-012065_320193",
+    "exhibits": "EX-1.01, SD"
+  },
+  {
+    "date": "2023-03-10",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001140361-23-011192_320193",
+    "exhibits": "8-K, EXCEL"
+  },
+  {
+    "date": "2023-02-22",
+    "type": "PX14A6G",
+    "title": "Notice of exempt solicitation",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001096906-23-000438_320193",
+    "exhibits": "PX14A6G"
+  },
+  {
+    "date": "2023-02-14",
+    "type": "PX14A6G",
+    "title": "Notice of exempt solicitation",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001096906-23-000372_320193",
+    "exhibits": "PX14A6G"
+  },
+  {
+    "date": "2023-02-09",
+    "type": "SC 13G/A",
+    "title": "Tender Offer/Acquisition Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001104659-23-015055_320193",
+    "exhibits": "SC 13G/A"
+  },
+  {
+    "date": "2023-02-07",
+    "type": "SC 13G/A",
+    "title": "Tender Offer/Acquisition Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001306550-23-008266_320193",
+    "exhibits": null
+  },
+  {
+    "date": "2023-02-03",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-23-000006_320193",
+    "exhibits": "10-Q, EX-10.1, EX-10.2, EX-31.1, EX-31.2, EX-32.1, EXCEL"
+  },
+  {
+    "date": "2023-02-02",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-23-000005_320193",
+    "exhibits": "EX-99.1, EXCEL, 8-K"
+  },
+  {
+    "date": "2023-01-30",
+    "type": "PX14A6G",
+    "title": "Notice of exempt solicitation",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001214659-23-001246_320193",
+    "exhibits": "PX14A6G"
+  },
+  {
+    "date": "2023-01-12",
+    "type": "DEFA14A",
+    "title": "Proxy Statements",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001308179-23-000020_320193",
+    "exhibits": "DEFA14A"
+  },
+  {
+    "date": "2022-11-09",
+    "type": "25-NSE",
+    "title": "Notification filed by national security exchange to report the removal from listing and registration of matured",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001354457-22-000638_320193",
+    "exhibits": null
+  },
+  {
+    "date": "2022-11-07",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001193125-22-278435_320193",
+    "exhibits": "EX-99.1, EXCEL, 8-K"
+  },
+  {
+    "date": "2022-10-28",
+    "type": "10-K",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-22-000108_320193",
+    "exhibits": "EX-21.1, EX-23.1, EX-31.1, EX-31.2, EX-32.1, EX-4.1, EXCEL, 10-K"
+  },
+  {
+    "date": "2022-10-27",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-22-000107_320193",
+    "exhibits": "EX-99.1, EXCEL, 8-K"
+  },
+  {
+    "date": "2022-08-19",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001193125-22-225365_320193",
+    "exhibits": "EX-10.1, EX-3.2, EXCEL, 8-K"
+  },
+  {
+    "date": "2022-08-08",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001193125-22-214914_320193",
+    "exhibits": "EX-1.1, EX-4.1, EX-5.1, EXCEL, 8-K"
+  },
+  {
+    "date": "2022-07-29",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-22-000070_320193",
+    "exhibits": "EX-31.1, EX-31.2, EX-32.1, EXCEL, 10-Q"
+  },
+  {
+    "date": "2022-07-28",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-22-000069_320193",
+    "exhibits": "EX-99.1, EXCEL, 8-K"
+  },
+  {
+    "date": "2022-04-29",
+    "type": "S-8",
+    "title": "Offering Registrations",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001193125-22-128368_320193",
+    "exhibits": "S-8, EX-23.2, EX-5.1, EX-FILING FEES"
+  },
+  {
+    "date": "2022-04-28",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-22-000058_320193",
+    "exhibits": "8-K, EX-99.1, EXCEL"
+  },
+  {
+    "date": "2022-03-04",
+    "type": "8-K",
+    "title": "Corporate Changes & Voting Matters",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001193125-22-066169_320193",
+    "exhibits": "8-K, EX-10.1, EX-10.2, EX-10.3, EXCEL"
+  },
+  {
+    "date": "2022-02-09",
+    "type": "SD",
+    "title": "Specialized Disclosure Report filed pursuant to Section 1502 of the Dodd-Frank Wall Street Reform and Consumer Protection Act relating to the use of conflict minerals (Rule 13p-1)",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001193125-22-032738_320193",
+    "exhibits": "EX-1.01, SD"
+  },
+  {
+    "date": "2022-02-01",
+    "type": "PX14A6G",
+    "title": "Notice of exempt solicitation",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001214659-22-001473_320193",
+    "exhibits": "PX14A6G"
+  },
+  {
+    "date": "2022-01-28",
+    "type": "10-Q",
+    "title": "Periodic Financial Reports",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0000320193-22-000007_320193",
+    "exhibits": "10-Q, EX-10.1, EX-31.1, EX-31.2, EX-32.1, EXCEL"
+  },
+  {
+    "date": "2022-01-27",
+    "type": "PX14A6N",
+    "title": "Notice of exempt solicitation for the purpose of determining whether to solicit proxies",
+    "edgar_url": "https://finance.yahoo.com/sec-filing/AAPL/0001377739-22-000005_320193",
+    "exhibits": "PX14A6N"
+  }
+]

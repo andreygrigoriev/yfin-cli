@@ -1,12 +1,18 @@
 package io.github.andreygrigoriev.yfin.cli;
 
 import io.github.andreygrigoriev.yfin.YFinance;
+import io.github.andreygrigoriev.yfin.cli.cmd.ActionsCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.CapitalGainsCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.DividendsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.EventsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.FundCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.HistoryCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.InfoCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.IsinCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.QuoteCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.SecFilingsCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.SharesCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.SplitsCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.SustainabilityCommand;
 import io.github.andreygrigoriev.yfin.cli.output.Output;
 import io.github.andreygrigoriev.yfin.cli.output.Terminal;
@@ -36,7 +42,13 @@ import picocli.CommandLine.Spec;
             IsinCommand.class,
             EventsCommand.class,
             SustainabilityCommand.class,
-            FundCommand.class
+            FundCommand.class,
+            DividendsCommand.class,
+            SplitsCommand.class,
+            CapitalGainsCommand.class,
+            ActionsCommand.class,
+            SharesCommand.class,
+            SecFilingsCommand.class
         },
         versionProvider = YfinCommand.VersionProvider.class,
         description = "Yahoo Finance market data from the command line.")

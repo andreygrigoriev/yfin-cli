@@ -15,9 +15,9 @@ Every request first hits the cookie and crumb bootstrap, which `CliRunner` regis
 | `quote SYM…` | `/v8/finance/chart`, `/v7/finance/quote` | `chart/aapl-1d-1y`, `quote/aapl` (+ `btc-usd`, `spy` for multi) | — | `quote/not-found`, `chart/not-found` |
 | `history SYM…` | `/v8/finance/chart` | `chart/aapl-1d-1mo`, `aapl-15m-prepost`, `aapl-1h-5d-prepost`, `btc-usd-1d-5d` | `chart/aapl-weekend-empty` | `chart/not-found` |
 | `info SYM` | `/v10/finance/quoteSummary`, `/v7/finance/quote` | `quoteSummary/aapl` + `quote/aapl` | `quoteSummary/btc-usd` (sparse) | `quoteSummary/not-found` |
-| `dividends`, `splits`, `actions SYM` | `/v8/finance/chart` | `chart/aapl-split-dividend-2020` | `chart/aapl-1d-1mo` (no events) | `chart/not-found` |
+| `dividends`, `splits`, `actions SYM` | `/v8/finance/chart` | `chart/aapl-split-dividend-2020` (+ `schd-1wk-capital-gains` for `actions`) | `chart/aapl-1d-1mo` (no events) | `chart/not-found` |
 | `capital-gains SYM` | `/v8/finance/chart` | `chart/schd-1wk-capital-gains` | `chart/aapl-1d-1mo` | `chart/not-found` |
-| `shares SYM` | `/ws/fundamentals-timeseries/…/timeseries`, chart (timezone) | `shares/aapl` | `shares/btc-usd` | `shares/unknown` |
+| `shares SYM` | `/ws/fundamentals-timeseries/…/timeseries`, chart (timezone) | `shares/aapl` + `chart/aapl-tz` | `shares/btc-usd` + `chart/btc-usd-1d-5d` | `chart/not-found` (zone lookup); synthetic 400 (`shares/unknown` is empty, not an error) |
 | `isin SYM` | Business Insider ISIN search, `/v7/finance/quote` | `isin/aapl.txt`, `isin/sap-de.txt` | `isin/unknown.txt` | ⚠️ gap |
 | `sec-filings SYM` | quoteSummary `secFilings` | `quoteSummary/secfilings/aapl` | `quoteSummary/secfilings/spy` | `quoteSummary/not-found` |
 | `sustainability SYM` | quoteSummary `esgScores` | `quoteSummary/analysis/msft-esg-synthetic` | `quoteSummary/analysis/aapl-esg` | `quoteSummary/not-found` |

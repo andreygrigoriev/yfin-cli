@@ -6,8 +6,13 @@ import io.github.andreygrigoriev.yfin.cli.output.Spec;
 import io.github.andreygrigoriev.yfin.cli.output.Symbol;
 import io.github.andreygrigoriev.yfin.model.Bar;
 import io.github.andreygrigoriev.yfin.model.Calendar;
+import io.github.andreygrigoriev.yfin.model.CapitalGain;
+import io.github.andreygrigoriev.yfin.model.Dividend;
 import io.github.andreygrigoriev.yfin.model.FundHolding;
 import io.github.andreygrigoriev.yfin.model.FundsData;
+import io.github.andreygrigoriev.yfin.model.SecFiling;
+import io.github.andreygrigoriev.yfin.model.SharesCount;
+import io.github.andreygrigoriev.yfin.model.Split;
 import io.github.andreygrigoriev.yfin.model.Sustainability;
 import io.github.andreygrigoriev.yfin.model.TickerInfo;
 import io.github.andreygrigoriev.yfin.request.Interval;
@@ -197,6 +202,52 @@ public final class Specs {
     public static final Spec<Map.Entry<String, Double>> FUND_SECTOR = Spec.<Map.Entry<String, Double>>builder()
             .col("sector", Map.Entry::getKey, Kind.TEXT)
             .col("weight", Map.Entry::getValue, Kind.PERCENT)
+            .build();
+
+    /** Per-share cash amounts (dividends, capital gains): four fraction digits in tables. */
+    public static final Kind AMOUNT = Kind.decimal(4);
+
+    /** Dividends, as {@code dividends} prints them: the ex-date in the exchange zone and the amount. */
+    public static final Spec<Dividend> DIVIDEND = Spec.<Dividend>builder()
+            .col("date", Dividend::time, Kind.DATE)
+            .col("amount", Dividend::amount, AMOUNT)
+            .build();
+
+    /** Stock splits, as {@code splits} prints them: the terms and their ratio ({@code 4} for 4:1). */
+    public static final Spec<Split> SPLIT = Spec.<Split>builder()
+            .col("date", Split::time, Kind.DATE)
+            .col("numerator", Split::numerator, RATIO)
+            .col("denominator", Split::denominator, RATIO)
+            .col("ratio", Split::ratio, RATIO)
+            .build();
+
+    /** Capital gains distributions, as {@code capital-gains} prints them. */
+    public static final Spec<CapitalGain> CAPITAL_GAIN = Spec.<CapitalGain>builder()
+            .col("date", CapitalGain::time, Kind.DATE)
+            .col("amount", CapitalGain::amount, AMOUNT)
+            .build();
+
+    /** Dividends, splits and capital gains merged by day, as {@code actions} prints them. */
+    public static final Spec<ActionRow> ACTION = Spec.<ActionRow>builder()
+            .col("date", ActionRow::date, Kind.DATE)
+            .col("dividend", ActionRow::dividend, AMOUNT)
+            .col("split", ActionRow::split, RATIO)
+            .col("capital_gain", ActionRow::capitalGain, AMOUNT)
+            .build();
+
+    /** Shares outstanding, as {@code shares} prints them; Yahoo may report several per day. */
+    public static final Spec<SharesCount> SHARES = Spec.<SharesCount>builder()
+            .col("date", SharesCount::time, Kind.DATE)
+            .col("shares", SharesCount::shares, Kind.INTEGER)
+            .build();
+
+    /** SEC filings, as {@code sec-filings} prints them; {@code exhibits} lists the exhibit types. */
+    public static final Spec<SecFiling> SEC_FILING = Spec.<SecFiling>builder()
+            .col("date", SecFiling::date, Kind.DATE)
+            .col("type", SecFiling::type, Kind.TEXT)
+            .col("title", SecFiling::title, Kind.TEXT)
+            .col("edgar_url", SecFiling::edgarUrl, Kind.TEXT)
+            .col("exhibits", f -> joined(List.copyOf(f.exhibits().keySet())), Kind.TEXT)
             .build();
 
     private Specs() {}

@@ -1,0 +1,16 @@
+exit: 0
+--- stdout
+[
+  {
+    "date": "2020-08-07",
+    "dividend": 0.205,
+    "split": null,
+    "capital_gain": null
+  },
+  {
+    "date": "2020-08-31",
+    "dividend": null,
+    "split": 4,
+    "capital_gain": null
+  }
+]

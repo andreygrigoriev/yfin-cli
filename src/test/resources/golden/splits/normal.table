@@ -1,0 +1,4 @@
+exit: 0
+--- stdout
+date        numerator  denominator  ratio
+2020-08-31       4.00         1.00   4.00

@@ -1,0 +1,16 @@
+exit: 0
+--- stdout
+[
+  {
+    "date": "2026-06-24",
+    "dividend": 0.253,
+    "split": null,
+    "capital_gain": null
+  },
+  {
+    "date": "2026-09-23",
+    "dividend": 0.267,
+    "split": null,
+    "capital_gain": 0.1234
+  }
+]

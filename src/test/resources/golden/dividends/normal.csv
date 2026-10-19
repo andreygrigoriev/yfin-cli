@@ -1,0 +1,4 @@
+exit: 0
+--- stdout
+date,amount
+2020-08-07,0.205

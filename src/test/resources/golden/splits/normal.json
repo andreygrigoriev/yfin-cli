@@ -1,0 +1,10 @@
+exit: 0
+--- stdout
+[
+  {
+    "date": "2020-08-31",
+    "numerator": 4,
+    "denominator": 1,
+    "ratio": 4
+  }
+]

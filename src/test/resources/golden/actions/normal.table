@@ -1,0 +1,5 @@
+exit: 0
+--- stdout
+date        dividend  split  capital_gain
+2020-08-07    0.2050      —             —
+2020-08-31         —   4.00             —
