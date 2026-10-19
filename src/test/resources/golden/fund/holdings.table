@@ -1,0 +1,13 @@
+exit: 0
+--- stdout
+symbol  name                        weight
+NVDA    NVIDIA Corp                  8.36%
+AAPL    Apple Inc                    7.35%
+MSFT    Microsoft Corp               5.76%
+AMZN    Amazon.com Inc               3.70%
+GOOGL   Alphabet Inc Class A         3.05%
+AVGO    Broadcom Inc                 2.53%
+GOOG    Alphabet Inc Class C         2.45%
+META    Meta Platforms Inc Class A   2.42%
+MU      Micron Technology Inc        1.82%
+TSLA    Tesla Inc                    1.51%

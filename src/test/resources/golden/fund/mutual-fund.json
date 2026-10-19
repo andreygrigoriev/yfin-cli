@@ -1,0 +1,20 @@
+exit: 0
+--- stdout
+{
+  "symbol": "AGTHX",
+  "quote_type": "MUTUALFUND",
+  "category": null,
+  "family": "Capital Group",
+  "legal_type": null,
+  "expense_ratio": 0.0058999998,
+  "category_expense_ratio": null,
+  "turnover": null,
+  "total_net_assets": null,
+  "cash_position": 0.0225,
+  "stock_position": 0.946,
+  "bond_position": 0,
+  "preferred_position": 0.0094,
+  "convertible_position": 0.0002,
+  "other_position": 0.0219,
+  "description": "The fund invests primarily in common stocks and seeks to invest in companies that appear to offer superior opportunities for growth of capital. It may invest up to 25% of its assets in securities of issuers domiciled outside the United States. The investment adviser uses a system of multiple portfolio managers in managing the fund's assets. Under this approach, the portfolio of the fund is divided into segments managed by individual managers."
+}

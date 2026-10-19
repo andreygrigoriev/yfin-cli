@@ -1,0 +1,62 @@
+exit: 0
+--- stdout
+field,value
+symbol,AAPL
+quote_type,EQUITY
+short_name,Apple Inc.
+long_name,Apple Inc.
+currency,USD
+financial_currency,USD
+exchange,NMS
+full_exchange_name,NasdaqGS
+exchange_timezone,America/New_York
+market,us_market
+market_state,REGULAR
+sector,Technology
+industry,Consumer Electronics
+country,United States
+website,https://www.apple.com
+full_time_employees,150000
+current_price,340.478
+regular_market_price,340.49
+previous_close,336.64
+open,338.16
+day_high,342.63
+day_low,337.6
+volume,9000406
+average_volume,45268204
+fifty_two_week_high,345.34
+fifty_two_week_low,243.42
+fifty_day_average,322.3886
+two_hundred_day_average,290.74344
+beta,1.069
+market_cap,4969172303872
+enterprise_value,4934930006016
+shares_outstanding,14594180000
+float_shares,14568786127
+trailing_pe,39.047016
+forward_pe,35.513283
+trailing_peg_ratio,2.706
+price_to_book,46.262226
+price_to_sales,10.644285
+trailing_eps,8.72
+forward_eps,9.58768
+book_value,7.36
+dividend_rate,1.08
+dividend_yield,0.32
+payout_ratio,0.1204
+ex_dividend_date,2026-08-10
+total_revenue,466822987776
+ebitda,167959003136
+total_cash,62399000576
+total_debt,84343996416
+profit_margins,0.27618998
+return_on_equity,1.4875101
+revenue_growth,0.164
+earnings_growth,0.287
+target_mean_price,328.09384
+recommendation,buy
+total_assets,
+yield,
+category,
+fund_family,

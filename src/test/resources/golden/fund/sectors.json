@@ -1,0 +1,48 @@
+exit: 0
+--- stdout
+[
+  {
+    "sector": "realestate",
+    "weight": 0.017
+  },
+  {
+    "sector": "consumer_cyclical",
+    "weight": 0.0874
+  },
+  {
+    "sector": "basic_materials",
+    "weight": 0.0156
+  },
+  {
+    "sector": "consumer_defensive",
+    "weight": 0.0433
+  },
+  {
+    "sector": "technology",
+    "weight": 0.4045
+  },
+  {
+    "sector": "communication_services",
+    "weight": 0.0995
+  },
+  {
+    "sector": "financial_services",
+    "weight": 0.111999996
+  },
+  {
+    "sector": "utilities",
+    "weight": 0.0188
+  },
+  {
+    "sector": "industrials",
+    "weight": 0.0754
+  },
+  {
+    "sector": "energy",
+    "weight": 0.034
+  },
+  {
+    "sector": "healthcare",
+    "weight": 0.0926
+  }
+]

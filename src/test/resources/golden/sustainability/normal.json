@@ -1,0 +1,16 @@
+exit: 0
+--- stdout
+{
+  "total_esg": 15.21,
+  "environment_score": 1.67,
+  "social_score": 7.79,
+  "governance_score": 5.75,
+  "percentile": 12.38,
+  "highest_controversy": 3,
+  "esg_performance": "AVG_PERF",
+  "peer_group": "Software & Services",
+  "peer_count": 256,
+  "rating_year": 2024,
+  "rating_month": 9,
+  "related_controversy": "Business Ethics Incidents, Anticompetitive Practices"
+}

@@ -1,0 +1,14 @@
+exit: 0
+--- stdout
+field,value
+earnings_date,2026-11-02
+earnings_date_end,
+earnings_date_estimate,false
+earnings_average,1.9822
+earnings_low,1.93
+earnings_high,2.07
+revenue_average,113617923250
+revenue_low,112248100000
+revenue_high,117219700000
+ex_dividend_date,2026-08-10
+dividend_date,2026-08-13

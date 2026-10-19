@@ -1,0 +1,5 @@
+exit: 0
+--- stdout
+field,value
+symbol,AAPL
+isin,US0378331005

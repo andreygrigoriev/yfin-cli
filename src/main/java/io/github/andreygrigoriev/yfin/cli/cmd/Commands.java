@@ -1,5 +1,6 @@
 package io.github.andreygrigoriev.yfin.cli.cmd;
 
+import io.github.andreygrigoriev.yfin.Ticker;
 import io.github.andreygrigoriev.yfin.Tickers;
 import io.github.andreygrigoriev.yfin.YFinance;
 import java.util.List;
@@ -22,6 +23,23 @@ final class Commands {
     static Tickers tickers(CommandSpec spec, YFinance client, List<String> symbols) {
         try {
             return client.tickers(symbols);
+        } catch (IllegalArgumentException e) {
+            throw new ParameterException(spec.commandLine(), "Invalid symbol: " + e.getMessage());
+        }
+    }
+
+    /**
+     * The handle of one symbol, normalized.
+     *
+     * @param spec the command, for the usage error
+     * @param client the client
+     * @param symbol the symbol as given
+     * @return the handle
+     * @throws ParameterException if the symbol is blank or otherwise invalid (exit 2)
+     */
+    static Ticker ticker(CommandSpec spec, YFinance client, String symbol) {
+        try {
+            return client.ticker(symbol);
         } catch (IllegalArgumentException e) {
             throw new ParameterException(spec.commandLine(), "Invalid symbol: " + e.getMessage());
         }

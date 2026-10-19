@@ -1,0 +1,14 @@
+exit: 0
+--- stdout
+sector                  weight
+realestate               1.70%
+consumer_cyclical        8.74%
+basic_materials          1.56%
+consumer_defensive       4.33%
+technology              40.45%
+communication_services   9.95%
+financial_services      11.20%
+utilities                1.88%
+industrials              7.54%
+energy                   3.40%
+healthcare               9.26%

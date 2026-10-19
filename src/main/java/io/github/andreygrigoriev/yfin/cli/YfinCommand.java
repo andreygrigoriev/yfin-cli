@@ -1,8 +1,13 @@
 package io.github.andreygrigoriev.yfin.cli;
 
 import io.github.andreygrigoriev.yfin.YFinance;
+import io.github.andreygrigoriev.yfin.cli.cmd.EventsCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.FundCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.HistoryCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.InfoCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.IsinCommand;
 import io.github.andreygrigoriev.yfin.cli.cmd.QuoteCommand;
+import io.github.andreygrigoriev.yfin.cli.cmd.SustainabilityCommand;
 import io.github.andreygrigoriev.yfin.cli.output.Output;
 import io.github.andreygrigoriev.yfin.cli.output.Terminal;
 import java.util.Objects;
@@ -24,7 +29,15 @@ import picocli.CommandLine.Spec;
         name = "yfin",
         mixinStandardHelpOptions = true,
         scope = ScopeType.INHERIT,
-        subcommands = {QuoteCommand.class, HistoryCommand.class},
+        subcommands = {
+            QuoteCommand.class,
+            HistoryCommand.class,
+            InfoCommand.class,
+            IsinCommand.class,
+            EventsCommand.class,
+            SustainabilityCommand.class,
+            FundCommand.class
+        },
         versionProvider = YfinCommand.VersionProvider.class,
         description = "Yahoo Finance market data from the command line.")
 public final class YfinCommand implements Runnable, AutoCloseable {

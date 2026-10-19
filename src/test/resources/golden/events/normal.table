@@ -1,0 +1,13 @@
+exit: 0
+--- stdout
+earnings_date           2026-11-02
+earnings_date_end       —
+earnings_date_estimate  false
+earnings_average        1.98
+earnings_low            1.93
+earnings_high           2.07
+revenue_average         113.62B
+revenue_low             112.25B
+revenue_high            117.22B
+ex_dividend_date        2026-08-10
+dividend_date           2026-08-13

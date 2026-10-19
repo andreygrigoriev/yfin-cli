@@ -1,0 +1,19 @@
+exit: 0
+--- stdout
+field,value
+symbol,SPY
+quote_type,ETF
+category,Large Blend
+family,State Street Investment Management
+legal_type,Exchange Traded Fund
+expense_ratio,0.000945
+category_expense_ratio,0.0072176997
+turnover,0.03
+total_net_assets,542460.75
+cash_position,0.0025
+stock_position,0.9975
+bond_position,0
+preferred_position,0
+convertible_position,0
+other_position,0
+description,"The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the “Portfolio”), with the weight of each stock in the Portfolio substantially corresponding to the weight of such stock in the index."

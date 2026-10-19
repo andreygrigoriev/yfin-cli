@@ -1,0 +1,18 @@
+exit: 0
+--- stdout
+symbol                  AGTHX
+quote_type              MUTUALFUND
+category                —
+family                  Capital Group
+legal_type              —
+expense_ratio           0.59%
+category_expense_ratio  —
+turnover                —
+total_net_assets        —
+cash_position           2.25%
+stock_position          94.60%
+bond_position           0.00%
+preferred_position      0.94%
+convertible_position    0.02%
+other_position          2.19%
+description             The fund invests primarily in common stocks and seeks to invest in companies that appear to offer superior opportunities for growth of capital. It may invest up to 25% of its assets in securities of issuers domiciled outside the United States. The investment adviser uses a system of multiple portfolio managers in managing the fund's assets. Under this approach, the portfolio of the fund is divided into segments managed by individual managers.

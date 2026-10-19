@@ -54,7 +54,7 @@ which reads the quote endpoint and the 1y daily / 5d hourly charts.
 ## Gaps (new `FixtureRecorder.CASES` in yfin)
 
 - `isin/error`: the ISIN lookup service failing (non-200 or garbage body). Until then the error
-  case uses a synthetic transport failure (`respond(500, …)`), named in the test.
+  case uses a synthetic suggest-service failure (`respond(403, "forbidden")`), named in the test.
 - `timeseries/aapl-annual-balance-sheet` / `cash-flow` for a symbol with no statements (e.g. an
   ETF such as SPY), for the `financials balance|cashflow` empty cases. `spy-annual-financials-*`
   covers only the income statement.

@@ -3,8 +3,17 @@ package io.github.andreygrigoriev.yfin.cli.spec;
 import io.github.andreygrigoriev.yfin.FastInfo;
 import io.github.andreygrigoriev.yfin.cli.output.Kind;
 import io.github.andreygrigoriev.yfin.cli.output.Spec;
+import io.github.andreygrigoriev.yfin.cli.output.Symbol;
 import io.github.andreygrigoriev.yfin.model.Bar;
+import io.github.andreygrigoriev.yfin.model.Calendar;
+import io.github.andreygrigoriev.yfin.model.FundHolding;
+import io.github.andreygrigoriev.yfin.model.FundsData;
+import io.github.andreygrigoriev.yfin.model.Sustainability;
+import io.github.andreygrigoriev.yfin.model.TickerInfo;
 import io.github.andreygrigoriev.yfin.request.Interval;
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import org.jspecify.annotations.Nullable;
 
@@ -12,6 +21,9 @@ import org.jspecify.annotations.Nullable;
 public final class Specs {
     /** Prices: two fraction digits in tables, full precision in CSV and JSON. */
     public static final Kind PRICE = Kind.decimal(2);
+
+    /** Ratios and scores (P/E, beta, ESG): two fraction digits in tables, full precision elsewhere. */
+    public static final Kind RATIO = Kind.decimal(2);
 
     /**
      * A {@link FastInfo} snapshot, as {@code quote} prints it. {@code change} and {@code change_pct}
@@ -38,6 +50,154 @@ public final class Specs {
 
     /** Daily and longer price bars: the bar's date in the exchange zone. */
     public static final Spec<Bar> DAILY_BAR = bars("date", b -> b.time().toLocalDate(), Kind.DATE);
+
+    /**
+     * The curated fields of {@link TickerInfo}, as {@code info} prints them: identity, profile,
+     * price, size and valuation, dividends, financials, and the fund-only fields.
+     */
+    public static final Spec<TickerInfo> TICKER_INFO = Spec.<TickerInfo>builder()
+            .col("symbol", TickerInfo::symbol, Kind.TEXT)
+            .col("quote_type", TickerInfo::quoteType, Kind.TEXT)
+            .col("short_name", TickerInfo::shortName, Kind.TEXT)
+            .col("long_name", TickerInfo::longName, Kind.TEXT)
+            .col("currency", TickerInfo::currency, Kind.TEXT)
+            .col("financial_currency", TickerInfo::financialCurrency, Kind.TEXT)
+            .col("exchange", TickerInfo::exchange, Kind.TEXT)
+            .col("full_exchange_name", TickerInfo::fullExchangeName, Kind.TEXT)
+            .col("exchange_timezone", TickerInfo::exchangeTimezoneName, Kind.TEXT)
+            .col("market", TickerInfo::market, Kind.TEXT)
+            .col("market_state", TickerInfo::marketState, Kind.TEXT)
+            .col("sector", TickerInfo::sector, Kind.TEXT)
+            .col("industry", TickerInfo::industry, Kind.TEXT)
+            .col("country", TickerInfo::country, Kind.TEXT)
+            .col("website", TickerInfo::website, Kind.TEXT)
+            .col("full_time_employees", TickerInfo::fullTimeEmployees, Kind.INTEGER)
+            .col("current_price", TickerInfo::currentPrice, PRICE)
+            .col("regular_market_price", TickerInfo::regularMarketPrice, PRICE)
+            .col("previous_close", TickerInfo::previousClose, PRICE)
+            .col("open", TickerInfo::open, PRICE)
+            .col("day_high", TickerInfo::dayHigh, PRICE)
+            .col("day_low", TickerInfo::dayLow, PRICE)
+            .col("volume", TickerInfo::volume, Kind.INTEGER)
+            .col("average_volume", TickerInfo::averageVolume, Kind.INTEGER)
+            .col("fifty_two_week_high", TickerInfo::fiftyTwoWeekHigh, PRICE)
+            .col("fifty_two_week_low", TickerInfo::fiftyTwoWeekLow, PRICE)
+            .col("fifty_day_average", TickerInfo::fiftyDayAverage, PRICE)
+            .col("two_hundred_day_average", TickerInfo::twoHundredDayAverage, PRICE)
+            .col("beta", TickerInfo::beta, RATIO)
+            .col("market_cap", TickerInfo::marketCap, Kind.INTEGER)
+            .col("enterprise_value", TickerInfo::enterpriseValue, Kind.INTEGER)
+            .col("shares_outstanding", TickerInfo::sharesOutstanding, Kind.INTEGER)
+            .col("float_shares", TickerInfo::floatShares, Kind.INTEGER)
+            .col("trailing_pe", TickerInfo::trailingPE, RATIO)
+            .col("forward_pe", TickerInfo::forwardPE, RATIO)
+            .col("trailing_peg_ratio", TickerInfo::trailingPegRatio, RATIO)
+            .col("price_to_book", TickerInfo::priceToBook, RATIO)
+            .col("price_to_sales", TickerInfo::priceToSalesTrailing12Months, RATIO)
+            .col("trailing_eps", TickerInfo::trailingEps, PRICE)
+            .col("forward_eps", TickerInfo::forwardEps, PRICE)
+            .col("book_value", TickerInfo::bookValue, PRICE)
+            .col("dividend_rate", TickerInfo::dividendRate, PRICE)
+            // Yahoo reports dividendYield in percent already (0.32 = 0.32%), unlike the other ratios
+            .col("dividend_yield", TickerInfo::dividendYield, RATIO)
+            .col("payout_ratio", TickerInfo::payoutRatio, Kind.PERCENT)
+            .col("ex_dividend_date", TickerInfo::exDividendDate, Kind.DATE)
+            .col("total_revenue", TickerInfo::totalRevenue, Kind.INTEGER)
+            .col("ebitda", TickerInfo::ebitda, Kind.INTEGER)
+            .col("total_cash", TickerInfo::totalCash, Kind.INTEGER)
+            .col("total_debt", TickerInfo::totalDebt, Kind.INTEGER)
+            .col("profit_margins", TickerInfo::profitMargins, Kind.PERCENT)
+            .col("return_on_equity", TickerInfo::returnOnEquity, Kind.PERCENT)
+            .col("revenue_growth", TickerInfo::revenueGrowth, Kind.PERCENT)
+            .col("earnings_growth", TickerInfo::earningsGrowth, Kind.PERCENT)
+            .col("target_mean_price", TickerInfo::targetMeanPrice, PRICE)
+            .col("recommendation", TickerInfo::recommendationKey, Kind.TEXT)
+            .col("total_assets", TickerInfo::totalAssets, Kind.INTEGER)
+            .col("yield", TickerInfo::yield, Kind.PERCENT)
+            .col("category", TickerInfo::category, Kind.TEXT)
+            .col("fund_family", TickerInfo::fundFamily, Kind.TEXT)
+            .build();
+
+    /** A symbol's ISIN, as {@code isin} prints it. */
+    public static final Spec<Symbol<String>> ISIN = Spec.<Symbol<String>>builder()
+            .col("symbol", Symbol::symbol, Kind.TEXT)
+            .col("isin", Symbol::value, Kind.TEXT)
+            .build();
+
+    /**
+     * The per-ticker {@link Calendar}, as {@code events} prints it. Yahoo gives the next earnings
+     * date as a one- or two-day window: {@code earnings_date} is its first day and {@code
+     * earnings_date_end} its last, when the window has two.
+     */
+    public static final Spec<Calendar> CALENDAR = Spec.<Calendar>builder()
+            .col(
+                    "earnings_date",
+                    c -> c.earningsDates().isEmpty() ? null : c.earningsDates().getFirst(),
+                    Kind.DATE)
+            .col("earnings_date_end", Specs::earningsDateEnd, Kind.DATE)
+            .col("earnings_date_estimate", Calendar::earningsDateEstimate, Kind.TEXT)
+            .col("earnings_average", Calendar::earningsAverage, PRICE)
+            .col("earnings_low", Calendar::earningsLow, PRICE)
+            .col("earnings_high", Calendar::earningsHigh, PRICE)
+            .col("revenue_average", Calendar::revenueAverage, Kind.INTEGER)
+            .col("revenue_low", Calendar::revenueLow, Kind.INTEGER)
+            .col("revenue_high", Calendar::revenueHigh, Kind.INTEGER)
+            .col("ex_dividend_date", Calendar::exDividendDate, Kind.DATE)
+            .col("dividend_date", Calendar::dividendDate, Kind.DATE)
+            .build();
+
+    /** ESG risk scores, as {@code sustainability} prints them. */
+    public static final Spec<Sustainability> SUSTAINABILITY = Spec.<Sustainability>builder()
+            .col("total_esg", Sustainability::totalEsg, RATIO)
+            .col("environment_score", Sustainability::environmentScore, RATIO)
+            .col("social_score", Sustainability::socialScore, RATIO)
+            .col("governance_score", Sustainability::governanceScore, RATIO)
+            .col("percentile", Sustainability::percentile, RATIO)
+            .col("highest_controversy", Sustainability::highestControversy, RATIO)
+            .col("esg_performance", Sustainability::esgPerformance, Kind.TEXT)
+            .col("peer_group", Sustainability::peerGroup, Kind.TEXT)
+            .col("peer_count", Sustainability::peerCount, Kind.INTEGER)
+            .col("rating_year", Sustainability::ratingYear, Kind.INTEGER)
+            .col("rating_month", Sustainability::ratingMonth, Kind.INTEGER)
+            .col("related_controversy", s -> joined(s.relatedControversy()), Kind.TEXT)
+            .build();
+
+    /**
+     * A fund's overview, as {@code fund} prints it: profile, the main operations metrics and the
+     * asset-class split. Holdings and sector weights are separate lists ({@link #FUND_HOLDING},
+     * {@link #FUND_SECTOR}).
+     */
+    public static final Spec<FundsData> FUND = Spec.<FundsData>builder()
+            .col("symbol", FundsData::symbol, Kind.TEXT)
+            .col("quote_type", FundsData::quoteType, Kind.TEXT)
+            .col("category", FundsData::categoryName, Kind.TEXT)
+            .col("family", FundsData::family, Kind.TEXT)
+            .col("legal_type", FundsData::legalType, Kind.TEXT)
+            .col("expense_ratio", f -> operation(f, "annualReportExpenseRatio"), Kind.PERCENT)
+            .col("category_expense_ratio", f -> categoryOperation(f, "annualReportExpenseRatio"), Kind.PERCENT)
+            .col("turnover", f -> operation(f, "annualHoldingsTurnover"), Kind.PERCENT)
+            .col("total_net_assets", f -> operation(f, "totalNetAssets"), Kind.decimal(2))
+            .col("cash_position", f -> f.assetClasses().get("cashPosition"), Kind.PERCENT)
+            .col("stock_position", f -> f.assetClasses().get("stockPosition"), Kind.PERCENT)
+            .col("bond_position", f -> f.assetClasses().get("bondPosition"), Kind.PERCENT)
+            .col("preferred_position", f -> f.assetClasses().get("preferredPosition"), Kind.PERCENT)
+            .col("convertible_position", f -> f.assetClasses().get("convertiblePosition"), Kind.PERCENT)
+            .col("other_position", f -> f.assetClasses().get("otherPosition"), Kind.PERCENT)
+            .col("description", FundsData::description, Kind.TEXT)
+            .build();
+
+    /** A fund's top holdings, as {@code fund --holdings} prints them. */
+    public static final Spec<FundHolding> FUND_HOLDING = Spec.<FundHolding>builder()
+            .col("symbol", FundHolding::symbol, Kind.TEXT)
+            .col("name", FundHolding::name, Kind.TEXT)
+            .col("weight", FundHolding::holdingPercent, Kind.PERCENT)
+            .build();
+
+    /** A fund's sector weights, as {@code fund --sectors} prints them: Yahoo's sector key and weight. */
+    public static final Spec<Map.Entry<String, Double>> FUND_SECTOR = Spec.<Map.Entry<String, Double>>builder()
+            .col("sector", Map.Entry::getKey, Kind.TEXT)
+            .col("weight", Map.Entry::getValue, Kind.PERCENT)
+            .build();
 
     private Specs() {}
 
@@ -73,5 +233,24 @@ public final class Specs {
         Double change = change(info);
         Double previous = info.regularMarketPreviousClose();
         return change == null || previous == null || previous == 0 ? null : change / previous;
+    }
+
+    private static @Nullable LocalDate earningsDateEnd(Calendar calendar) {
+        List<LocalDate> dates = calendar.earningsDates();
+        return dates.size() < 2 ? null : dates.getLast();
+    }
+
+    private static @Nullable Double operation(FundsData fund, String key) {
+        FundsData.Metric metric = fund.operations().get(key);
+        return metric == null ? null : metric.fund();
+    }
+
+    private static @Nullable Double categoryOperation(FundsData fund, String key) {
+        FundsData.Metric metric = fund.operations().get(key);
+        return metric == null ? null : metric.categoryAverage();
+    }
+
+    private static @Nullable String joined(List<String> values) {
+        return values.isEmpty() ? null : String.join(", ", values);
     }
 }
