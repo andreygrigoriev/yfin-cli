@@ -1,0 +1,14 @@
+yfin-cli
+Copyright 2026 Andrey Grigoriev
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It is built on yfin (https://github.com/andreygrigoriev/yfin), a Java port of yfinance
+(https://github.com/ranaroussi/yfinance), Copyright Ran Aroussi and contributors, licensed
+under the Apache License, Version 2.0.
+
+The native binary bundles picocli (https://picocli.info) and Jackson
+(https://github.com/FasterXML/jackson), both licensed under the Apache License, Version 2.0.
+
+yfin-cli is not affiliated with, endorsed by, or vetted by Yahoo, Inc. Yahoo Finance data is
+intended for personal use only; refer to Yahoo's terms of use.

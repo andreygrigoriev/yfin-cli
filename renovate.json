@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["io.github.andreygrigoriev:yfin-core"],
+      "groupName": "yfin-core"
+    }
+  ]
+}
