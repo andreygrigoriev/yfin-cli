@@ -1,5 +1,14 @@
 # yfin-cli
 
+[![CI](https://github.com/andreygrigoriev/yfin-cli/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/andreygrigoriev/yfin-cli/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/andreygrigoriev/yfin-cli)](https://github.com/andreygrigoriev/yfin-cli/releases/latest)
+[![Homebrew](https://img.shields.io/badge/homebrew-andreygrigoriev%2Ftap-FBB040?logo=homebrew&logoColor=white)](https://github.com/andreygrigoriev/homebrew-tap)
+[![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux-lightgrey)](#install)
+[![GraalVM native](https://img.shields.io/badge/GraalVM-native%20image-E76F00)](#size-and-startup)
+[![yfin-core](https://img.shields.io/maven-central/v/io.github.andreygrigoriev/yfin-core?label=yfin-core)](https://github.com/andreygrigoriev/yfin)
+[![Claude Code skill](https://img.shields.io/badge/Claude%20Code-skill-D97757?logo=claude&logoColor=white)](#claude-code-skill)
+[![License](https://img.shields.io/github/license/andreygrigoriev/yfin-cli)](LICENSE)
+
 `yfin` is a command-line tool for Yahoo Finance market data. It is built on the
 [yfin](https://github.com/andreygrigoriev/yfin) Java library (`io.github.andreygrigoriev:yfin-core`)
 and compiled to a GraalVM native image, so it starts instantly and needs no JVM.
@@ -178,6 +187,62 @@ autoload -U bashcompinit && bashcompinit && source <(yfin completion)
 Measured on an Apple Silicon Mac (GraalVM 25, `-Os`): the binary is 27.5 MiB, and
 `yfin --version` starts in about 14 ms (median of 30 runs). Each data command is dominated by the
 round trip to Yahoo.
+
+## Comparison with other tools
+
+Other open-source command-line tools for Yahoo Finance data, as of October 2026:
+
+- [yahoo-finance2](https://github.com/gadicc/yahoo-finance2) (Node): a library whose `yahoo-finance`
+  CLI exposes its modules and prints Yahoo's raw JSON.
+- [yahoo-finance-pp-cli](https://github.com/mvanhorn/printing-press-library/tree/main/library/commerce/yahoo-finance)
+  (Go): a generated CLI with a local SQLite store, portfolios and watchlists.
+- [yfinance-cli](https://github.com/narumiruna/yfinance-cli) (Python): a CLI over the
+  [yfinance](https://github.com/ranaroussi/yfinance) library.
+- [ticker-cli](https://github.com/sderosiaux/ticker-cli) (Go): prices and history only.
+
+[ticker](https://github.com/achannarasappa/ticker) and [tickrs](https://github.com/tarkah/tickrs)
+are live terminal dashboards rather than data CLIs, and yfinance and yahoo-finance2 are mainly
+libraries.
+
+| | yfin | yahoo-finance2 CLI | yahoo-finance-pp-cli | yfinance-cli | ticker-cli |
+|---|---|---|---|---|---|
+| Version tested | 0.1.0 | 4.0.4 | 2026.7.1 | 0.0.1 | 0.1.0 |
+| Runtime | none (native) | Node.js | none (Go) | Python 3.12+ | none (Go) |
+| Quotes, several symbols | ✓ | ✓ | ✗¹ | – | ✓ |
+| Price history | ✓ | ✓ | ✓ | ✓ | ✓ (up to 1y) |
+| Profile and key statistics | ✓ | ✓ | – | ✓ | – |
+| Financial statements | ✓ | ✓ | ✓ | ✓ | – |
+| Options | ✓ | ✓ | ✓ | ✓ | – |
+| News and symbol search | ✓ | ✓ | ✓ | ✓ | – |
+| Predefined screens | ✓ | ✓ | ✓ | – | – |
+| Analyst estimates and ratings | ✓ | ✓ | – | – | – |
+| Holders and insider trades | ✓ | ✓ | partial | – | – |
+| Market-wide calendars | ✓ | – | – | – | – |
+| Sectors and industries | ✓ | – | – | ✓ | – |
+| Output | table, CSV, JSON | raw Yahoo JSON | table, CSV, JSON | table, JSON | table, CSV, JSON |
+| Agent integration | Claude skill | MCP, skill | MCP, skill | – | Claude skill |
+| Extras | | | portfolio, watchlists, SQL | chart images | |
+
+`–` means there is no command for it. A tool may still reach the data through a raw endpoint.
+
+¹ HTTP 401 on our test network: its cookie/crumb handshake fails, and the documented workaround
+is importing a Chrome session with `auth login --chrome`.
+
+Performance on an Apple Silicon Mac over the same connection. Each figure is the median of 10
+runs, with the tools interleaved, after one warm-up run. pp-cli ran with
+`--no-cache --data-source live`, so it fetched live data every time.
+
+| | yfin | yahoo-finance2 CLI | yahoo-finance-pp-cli | yfinance-cli | ticker-cli |
+|---|---|---|---|---|---|
+| Size on disk | 28 MB | 39 MB (`node_modules`) | 12 MB | 255 MB (venv) | 6.2 MB |
+| Startup (`--version` or `--help`) | 15 ms | 151 ms | 10 ms | 646 ms | 7 ms |
+| 1 year of daily AAPL bars | 154 ms | 343 ms | 158 ms | 1,105 ms | 394 ms |
+| Quotes for 4 symbols | 323 ms | 703 ms | failed¹ | – | 422 ms |
+| Peak memory (history) | 36 MiB | 78 MiB | 22 MiB | 143 MiB | 18 MiB |
+
+Network round trips dominate the data commands, so expect different numbers on another
+connection. yfin and pp-cli are within noise of each other on history. The startup gap between the
+native binaries and Node or Python carries over to every command.
 
 ## Build
 
