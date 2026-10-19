@@ -21,9 +21,10 @@ If `command -v yfin` finds nothing, tell the user that it installs with
 - JSON is an array of objects for lists and a single object for one record. Keys are snake_case
   and stay stable, so you can rely on them.
 - **Percentages are fractions.** `change_pct: -0.0056` means -0.56%, and the same holds for
-  margins, yields and growth rates. Multiply by 100 before you show a percentage. There is one
-  exception: `dividend_yield` in `info` is already in percent (`0.31` means 0.31%), because that's
-  how Yahoo sends it. The fund `yield` field is a fraction like the others.
+  margins, yields and growth rates. Multiply by 100 before you show a percentage. A few fields are
+  exceptions and are already in percent, because that's how Yahoo sends them: `dividend_yield` in
+  `info` (`0.31` means 0.31%), and `surprise_pct` in `earnings` and `calendar earnings` (`6.16`
+  means a 6.16% beat). The fund `yield` field is a fraction like the others.
 - Numbers are raw: `market_cap: 4984204193264` is about $4.98T. Dates are ISO strings. A missing
   value is `null`.
 - Symbols are Yahoo symbols: `AAPL`, `BRK-B`, `^GSPC` (S&P 500), `^IXIC`, `SAP.DE`, `7203.T`,
